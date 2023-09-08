@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] float cameraSpeed;
+    [SerializeField] private float cameraSpeed;
 
     // Update is called once per frame
     void Update()

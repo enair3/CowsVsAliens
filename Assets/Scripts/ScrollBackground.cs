@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ScrollBackground : MonoBehaviour
 {
-    [SerializeField] float scrollSpeed;
-    [SerializeField] Renderer backgroundRenderer;
+    [SerializeField] private float scrollSpeed;
+    [SerializeField] private Renderer backgroundRenderer;
 
     // Update is called once per frame
     void Update()
