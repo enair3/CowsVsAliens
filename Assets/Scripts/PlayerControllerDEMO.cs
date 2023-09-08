@@ -8,6 +8,10 @@ public class PlayerControllerDEMO : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 playerMovement;
 
+    public int cowCount = 0;
+    public int happiness = 5;
+    public int conspiracy = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +30,22 @@ public class PlayerControllerDEMO : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(playerMovement.x * playerSpeed, playerMovement.y * playerSpeed);
+
+        //cast ray
+        /*RaycastHit2D beam = Physics2D.Raycast(transform.position, Vector2.down);
+        Debug.DrawRay(transform.position, Vector2.down, Color.cyan);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (beam)
+            {
+                Debug.Log("ray hit");
+                if (beam.transform.CompareTag("cow")) Debug.Log("cow identified");
+                {
+                    Debug.Log("got cow");
+                    Destroy(this.gameObject); //destroys player currently
+                }
+            }
+        }*/
     }
 }
