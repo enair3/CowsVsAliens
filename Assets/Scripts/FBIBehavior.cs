@@ -22,6 +22,7 @@ public class FBIBehavior : MonoBehaviour
             {
                 Debug.Log("got fbi");
                 playerBehavior.conspiracy++; // add 1 to conspiracy
+                playerBehavior.happiness--; // subtract 1 from happiness
                 Destroy(this.gameObject);
             }
         }

@@ -6,11 +6,11 @@ using TMPro;
 public class CowCountUI : MonoBehaviour
 {
     public TextMeshProUGUI cowCountText;
-    public PlayerControllerDEMO playerBehavior;
+    //public PlayerControllerDEMO playerBehavior;
 
     // Update is called once per frame
     void Update()
     {
-        cowCountText.text = string.Format("Cows Collected: {0}", playerBehavior.cowCount);
+        cowCountText.text = string.Format("Cows Collected: {0}", PlayerControllerDEMO.player.cowCount);
     }
 }

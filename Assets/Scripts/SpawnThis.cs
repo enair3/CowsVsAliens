@@ -35,7 +35,7 @@ public class SpawnThis : MonoBehaviour
         // spawn within range
         float randomX = Random.Range(minX, maxX);
 
-        GameObject prefab = animals[UnityEngine.Random.Range(0, animals.Length)];
+        GameObject prefab = animals[Random.Range(0, animals.Length)];
         GameObject clone = Instantiate(prefab, transform.position + new Vector3(randomX, 5, 0), transform.rotation);
 
         // add spawned to list
