@@ -6,6 +6,7 @@ public class FBIBehavior : MonoBehaviour
 {
     public PlayerControllerDEMO playerBehavior;
     private GameObject player;
+    private bool _fbiInBeam;
 
     // Start is called before the first frame update
     void Start()
@@ -13,7 +14,20 @@ public class FBIBehavior : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Update()
+    {
+        if (_fbiInBeam)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.Log("got fbi");
+                playerBehavior.conspiracy++; // add 1 to conspiracy
+                Destroy(this.gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "bottomBorder")
         {
@@ -22,13 +36,17 @@ public class FBIBehavior : MonoBehaviour
 
         if (collision.tag == "Player")
         {
-            Debug.Log("player fbi collision");
-            if (Input.GetKeyDown(KeyCode.Space)) //can turn to && later
-            {
-                Debug.Log("got fbi");
-                playerBehavior.conspiracy++; // add 1 to conspiracy
-                Destroy(this.gameObject);
-            }
+            //Debug.Log("player fbi collision");
+            _fbiInBeam = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.tag == "Player")
+        {
+            _fbiInBeam = false; // reset bool
         }
     }
 }
