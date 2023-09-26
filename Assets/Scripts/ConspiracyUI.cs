@@ -11,6 +11,6 @@ public class ConspiracyUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        conspiracyText.text = string.Format("Conspiracy: {0}", PlayerControllerDEMO.player.conspiracy);
+        conspiracyText.text = string.Format("Conspiracy: {0}", PlayerControllerDEMO.playerInfo.conspiracy);
     }
 }

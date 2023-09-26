@@ -9,8 +9,7 @@ public class SpawnThis : MonoBehaviour
     // insert spawn obstacles later
 
     //spawn parameters
-    [SerializeField] private float maxX;
-    [SerializeField] private float minX;
+    [SerializeField] private float minX, maxX;
 
     [SerializeField] private float timeBetweenSpawn;
     //private float spawnTime;
