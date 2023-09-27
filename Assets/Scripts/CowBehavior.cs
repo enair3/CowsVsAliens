@@ -4,30 +4,48 @@ using UnityEngine;
 
 public class CowBehavior : MonoBehaviour
 {
-    public PlayerControllerDEMO playerBehavior;
+    //public PlayerControllerDEMO playerBehavior;
     private GameObject player;
     private bool _cowInBeam;
+    [SerializeField] private float timeWithoutCowCollected;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        timeWithoutCowCollected = 0f;
+        
     }
 
     private void Update()
     {
+        timeWithoutCowCollected += Time.deltaTime; // timer between cow collections
+
+        // collect cow
         if (_cowInBeam)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("got cow");
-                playerBehavior.cowCount++; // add 1 to cowCount
-                playerBehavior.happiness++; // add 1 to happiness
+                PlayerControllerDEMO.playerInfo.cowCount++; // add 1 to cowCount. NEED TO ADAPT TO GETCOMPONENT FOR SPECIAL COW
+                PlayerControllerDEMO.playerInfo.happiness++; // add 1 to happiness
+
+                timeWithoutCowCollected = 0f; // reset timer
+
                 Destroy(this.gameObject);
             }
         }
+
+        // cow drought penalty
+        if (timeWithoutCowCollected >= 8.0f)
+        {
+            // decrease happiness by value per time in drought, not incl threshold
+            PlayerControllerDEMO.playerInfo.happiness -= (0.2f * (timeWithoutCowCollected - 8.0f)); 
+        }
+
     }
 
+    // hi cow
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "bottomBorder")
@@ -42,6 +60,7 @@ public class CowBehavior : MonoBehaviour
         }
     }
 
+    // bye cow
     private void OnTriggerExit2D(Collider2D collision)
     {
 

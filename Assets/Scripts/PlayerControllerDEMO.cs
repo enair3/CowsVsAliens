@@ -21,14 +21,14 @@ public class PlayerControllerDEMO : MonoBehaviour
     private float maxY = 5f;
 
     // player stats
-    public int cowCount = 0;
-    public int happiness = 5;
-    public int conspiracy = 0;
+    public float cowCount = 0f;
+    public float happiness = 5f;
+    public float conspiracy = 0f;
 
     private void Awake()
     {
         playerInfo = this;
-        DontDestroyOnLoad(transform.root);
+        //DontDestroyOnLoad(transform.root);
     }
 
     // Start is called before the first frame update
@@ -82,7 +82,7 @@ public class PlayerControllerDEMO : MonoBehaviour
         }
     }
 
-    // ref sprite renderers of children
+    // ref sprite renderers of children. can act/deact later
     [System.Serializable]
     public class PlayerSpriteRenderers
     {
