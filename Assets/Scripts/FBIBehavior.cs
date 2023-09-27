@@ -42,11 +42,6 @@ public class FBIBehavior : MonoBehaviour
     // start fbi detection
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "bottomBorder")
-        {
-            Destroy(this.gameObject);
-        }
-
         if (collision.tag == "Player")
         {
             //Debug.Log("player fbi collision");

@@ -11,4 +11,13 @@ public class MoveObject : MonoBehaviour
     {
         transform.position += new Vector3(0, -objectSpeed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "bottomBorder")
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
 }

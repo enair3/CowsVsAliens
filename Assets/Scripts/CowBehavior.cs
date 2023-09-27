@@ -6,8 +6,8 @@ public class CowBehavior : MonoBehaviour
 {
     private GameObject player;
     private bool _cowInBeam;
+    public float happinessValue;
     //[SerializeField] private float timeWithoutCowCollected;
-    //private bool inCowDrought;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +21,13 @@ public class CowBehavior : MonoBehaviour
         // collect cow
         if (_cowInBeam)
         {
+            // change to outlined cow indicator sprite
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("got cow");
                 PlayerControllerDEMO.playerInfo.cowCount++; // add 1 to cowCount. NEED TO ADAPT TO GETCOMPONENT FOR SPECIAL COW
-                PlayerControllerDEMO.playerInfo.happiness++; // add 1 to happiness
+                PlayerControllerDEMO.playerInfo.happiness+= happinessValue; // add 1 to happiness
 
                 PlayerControllerDEMO.playerInfo.timeWithoutCowCollected = 0f; // reset timer
                 PlayerControllerDEMO.playerInfo.inCowDrought = false;
@@ -58,10 +60,6 @@ public class CowBehavior : MonoBehaviour
     // hi cow
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "bottomBorder")
-        {
-            Destroy(this.gameObject);
-        }
 
         if (collision.tag == "Player")
         {

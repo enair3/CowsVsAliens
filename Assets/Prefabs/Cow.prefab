@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82599b0f9e480bb46a17f22d5ba8ce38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBehavior: {fileID: 0}
+  happinessValue: 1
 --- !u!114 &2011546710663241942
 MonoBehaviour:
   m_ObjectHideFlags: 0
