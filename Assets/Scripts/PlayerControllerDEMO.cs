@@ -52,8 +52,8 @@ public class PlayerControllerDEMO : MonoBehaviour
         float directionY = Input.GetAxisRaw("Vertical");
 
         // movement
-        playerMovement = new Vector2(directionX, directionY); // direction
-        rb.velocity = new Vector2(playerMovement.x * playerSpeed, playerMovement.y * playerSpeed); // speed, physics for collision
+        playerMovement = new Vector3(directionX, directionY); // direction
+        rb.velocity = new Vector3(playerMovement.x * playerSpeed, playerMovement.y * playerSpeed); // speed, physics for collision
 
         // get rb position
         float posX = rb.position.x + rb.velocity.x * Time.fixedDeltaTime;
@@ -64,9 +64,9 @@ public class PlayerControllerDEMO : MonoBehaviour
         if (posX < minX || posX > maxX)
         {
             if (posX > maxX)
-                rb.position = new Vector2(maxX, rb.position.y);
+                rb.position = new Vector3(maxX, rb.position.y);
             else
-                rb.position = new Vector2(minX, rb.position.y);
+                rb.position = new Vector3(minX, rb.position.y);
 
             playerMovement.x = 0;
         }
@@ -74,9 +74,9 @@ public class PlayerControllerDEMO : MonoBehaviour
         if (posY < minY || posY > maxY)
         {
             if (posY > maxY)
-                rb.position = new Vector2(rb.position.x, maxY);
+                rb.position = new Vector3(rb.position.x, maxY);
             else
-                rb.position = new Vector2(rb.position.x, minY);
+                rb.position = new Vector3(rb.position.x, minY);
 
             playerMovement.x = 0;
         }

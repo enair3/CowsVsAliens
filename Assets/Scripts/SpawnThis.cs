@@ -10,23 +10,14 @@ public class SpawnThis : MonoBehaviour
 
     //spawn parameters
     [SerializeField] private float minX, maxX;
-
     [SerializeField] private float timeBetweenSpawn;
+
     //private float spawnTime;
 
     void Start()
     {
         InvokeRepeating("SpawnAnimals", 0f, timeBetweenSpawn);
     }
-    // Update is called once per frame
-    /*void Update()
-    {
-        if (Time.time > spawnTime)
-        {
-            SpawnAnimals();
-            //spawnTime = Time.time + timeBetweenSpawn;
-        }
-    }*/
 
     void SpawnAnimals()
     {
@@ -35,7 +26,9 @@ public class SpawnThis : MonoBehaviour
         float randomX = Random.Range(minX, maxX);
 
         GameObject prefab = animals[Random.Range(0, animals.Length)];
-        GameObject clone = Instantiate(prefab, transform.position + new Vector3(randomX, 5, 0), transform.rotation);
+        GameObject clone = Instantiate(prefab, transform.position + 
+            new Vector3(randomX, 5, 0), 
+            transform.rotation);
 
         // add spawned to list
         spawnedObjects.Add(clone);
