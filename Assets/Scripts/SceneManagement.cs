@@ -12,13 +12,13 @@ public class SceneManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerControllerDEMO.player.happiness <= 0 || PlayerControllerDEMO.player.conspiracy >= 10)
+        if (PlayerControllerDEMO.playerInfo.happiness <= 0 || PlayerControllerDEMO.playerInfo.conspiracy >= 10)
         {
             SceneManager.LoadScene("GameOver");
         }
