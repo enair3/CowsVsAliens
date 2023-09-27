@@ -25,6 +25,9 @@ public class PlayerControllerDEMO : MonoBehaviour
     public float happiness = 5f;
     public float conspiracy = 0f;
 
+    public bool inCowDrought;
+    public float timeWithoutCowCollected;
+
     private void Awake()
     {
         playerInfo = this;
@@ -43,6 +46,30 @@ public class PlayerControllerDEMO : MonoBehaviour
         maxX -= playerSizeX;
         minY += playerSizeX;
         maxY -= playerSizeX;
+
+        // cow drought
+        inCowDrought = false;
+        timeWithoutCowCollected = 0f;
+    }
+
+    private void Update()
+    {
+        // cow drought
+        timeWithoutCowCollected += Time.deltaTime; // timer between cow collections
+
+        // edge cases
+        if (cowCount < 0)
+        {
+            cowCount = 0;
+        }
+
+        if (happiness < 0 || happiness > 10)
+        {
+            if (happiness < 0)
+                happiness = 0;
+            else
+                happiness = 10;
+        }
     }
 
     private void FixedUpdate()

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FBIBehavior : MonoBehaviour
 {
-    //public PlayerControllerDEMO playerBehavior;
     private GameObject player;
     private bool _fbiInBeam;
     [SerializeField] private float timeDetectedByFBI;
