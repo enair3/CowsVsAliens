@@ -48,7 +48,7 @@ public class PlayerControllerDEMO : MonoBehaviour
         beamRenderer.enabled = false; // start beam off
 
         alienSprite = playerSpriteRenderers.Alien.sprite;
-        var playerSizeX = playerInfo.alienSprite.bounds.size.x / 2; // get alien sprite, get size for object boundaries
+        var playerSizeX = playerInfo.alienSprite.bounds.size.x / 4; // get alien sprite, get size for object boundaries
 
         // new bounds
         minX += playerSizeX;
