@@ -5,14 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    public static SceneManagement scenes;
-    //public PlayerControllerDEMO player;
+    public static SceneManagement sceneManager;
 
+
+    private void Awake()
+    {
+        sceneManager = this;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        var currentScene = SceneManager.GetActiveScene();
+        var currentSceneName = currentScene.name;
     }
 
     // Update is called once per frame

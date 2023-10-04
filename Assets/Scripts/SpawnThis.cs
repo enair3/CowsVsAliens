@@ -6,7 +6,7 @@ public class SpawnThis : MonoBehaviour
 {
     // categories, lists of objects to spawn
     // interactables
-    public GameObject[] cows; 
+    public GameObject[] cows;
     public GameObject[] fbi;
     public GameObject[] obstacles;
 
@@ -22,16 +22,19 @@ public class SpawnThis : MonoBehaviour
     // may need to randomize time spawning within a range
     [SerializeField] private float timeBetweenSpawn_cow;
     [SerializeField] private float timeBetweenSpawn_fbi;
-    [SerializeField] private float timeBetweenSpawn_obstacles; // need to do 
+    [SerializeField] private float timeBetweenSpawn_obstacles;
 
     [SerializeField] private float timeBetweenSpawn_backgrounds;
-    [SerializeField] private float timeBetweenSpawn_decor; // need to do
+    [SerializeField] private float timeBetweenSpawn_decor;
 
     void Start()
     {
         InvokeRepeating("SpawnCows", 0f, timeBetweenSpawn_cow);
         InvokeRepeating("SpawnFBI", 0f, timeBetweenSpawn_fbi);
+        InvokeRepeating("SpawnObstacles", 0f, timeBetweenSpawn_obstacles);
+
         InvokeRepeating("SpawnBackgrounds", 0f, timeBetweenSpawn_backgrounds);
+        InvokeRepeating("SpawnDecor", 0f, timeBetweenSpawn_decor);
     }
 
     // spawn cows
@@ -42,8 +45,8 @@ public class SpawnThis : MonoBehaviour
         float randomX = Random.Range(minX, maxX);
 
         GameObject prefab = cows[Random.Range(0, cows.Length)]; // will need to revise to include order
-        GameObject clone = Instantiate(prefab, transform.position + 
-            new Vector3(randomX, 5, 0), 
+        GameObject clone = Instantiate(prefab, transform.position +
+            new Vector3(randomX, 5, 0),
             transform.rotation);
 
         // add spawned to list
@@ -65,6 +68,21 @@ public class SpawnThis : MonoBehaviour
         spawnedObjects.Add(clone);
     }
 
+    void SpawnObstacles()
+    {
+        WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_fbi);
+        // spawn within range
+        float randomX = Random.Range(minX, maxX);
+
+        GameObject prefab = obstacles[Random.Range(0, obstacles.Length)];
+        GameObject clone = Instantiate(prefab, transform.position +
+            new Vector3(randomX, 5, 0),
+            transform.rotation);
+
+        // add spawned to list
+        spawnedObjects.Add(clone);
+    }
+
     void SpawnBackgrounds()
     {
         WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_backgrounds);
@@ -72,6 +90,21 @@ public class SpawnThis : MonoBehaviour
         GameObject prefab = backgrounds[Random.Range(0, backgrounds.Length)];
         GameObject clone = Instantiate(prefab, transform.position +
             new Vector3(0, 5, 0), // constant spawn point
+            transform.rotation);
+
+        // add spawned to list
+        spawnedObjects.Add(clone);
+    }
+
+    void SpawnDecor()
+    {
+        WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_fbi);
+        // spawn within range
+        float randomX = Random.Range(minX, maxX);
+
+        GameObject prefab = decor[Random.Range(0, decor.Length)];
+        GameObject clone = Instantiate(prefab, transform.position +
+            new Vector3(randomX, 5, 0),
             transform.rotation);
 
         // add spawned to list

@@ -21,20 +21,35 @@ public class CowBehavior : MonoBehaviour
         // collect cow
         if (_cowInBeam)
         {
-            // change to outlined cow indicator sprite
+            // enable outlined cow indicator sprite
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            // BOTH buttons to collect
+            if (PlayerControllerDEMO.playerInfo._beamOn)
             {
-                Debug.Log("got cow");
-                PlayerControllerDEMO.playerInfo.cowCount++; // add 1 to cowCount. NEED TO ADAPT TO GETCOMPONENT FOR SPECIAL COW
-                PlayerControllerDEMO.playerInfo.happiness+= happinessValue; // add 1 to happiness
+                //AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
+                //AudioManager.audioManager.sfx.Play();
 
-                PlayerControllerDEMO.playerInfo.timeWithoutCowCollected = 0f; // reset timer
-                PlayerControllerDEMO.playerInfo.inCowDrought = false;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    // collection visuals
+                    //PlayerControllerDEMO.playerInfo.beamRenderer.color = new Color(128, 255, 128, 0.79f);
 
-                Destroy(this.gameObject);
+                    Debug.Log("got cow");
+
+                    AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[2];
+                    AudioManager.audioManager.sfx.Play();
+
+                    PlayerControllerDEMO.playerInfo.cowCount++; // add 1 to cowCount. NEED TO ADAPT TO GETCOMPONENT FOR SPECIAL COW
+                    PlayerControllerDEMO.playerInfo.happiness += happinessValue; // add 1 to happiness
+
+                    PlayerControllerDEMO.playerInfo.timeWithoutCowCollected = 0f; // reset timer
+                    PlayerControllerDEMO.playerInfo.inCowDrought = false;
+
+                    Destroy(this.gameObject);
+                }
+
             }
-        }
+        } 
 
         // cow drought penalty
         if (PlayerControllerDEMO.playerInfo.timeWithoutCowCollected >= 8.0f)
@@ -51,9 +66,11 @@ public class CowBehavior : MonoBehaviour
     void CowDroughtPenalty()
     {
         if (PlayerControllerDEMO.playerInfo.inCowDrought)
+        {
             PlayerControllerDEMO.playerInfo.happiness -= (0.0001f * (PlayerControllerDEMO.playerInfo.timeWithoutCowCollected - 8.0f));
-        else
+        } else {
             PlayerControllerDEMO.playerInfo.timeWithoutCowCollected = 0f;
+        }
         
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - bottomBorder
   - cow
+  - beam
   layers:
   - Default
   - TransparentFX
