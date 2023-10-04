@@ -6,8 +6,13 @@ public class PlayerControllerDEMO : MonoBehaviour
 {
     public static PlayerControllerDEMO playerInfo; // ref this script in other scripts
 
+    // sprite vars
     [SerializeField] public PlayerSpriteRenderers playerSpriteRenderers; // ref children
     private Sprite alienSprite;
+
+    // beam vars
+    public bool _beamOn;
+    public SpriteRenderer beamRenderer;
 
     // movement var
     [SerializeField] private float playerSpeed = 3f;
@@ -38,6 +43,10 @@ public class PlayerControllerDEMO : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _beamOn = false;
+        beamRenderer = playerSpriteRenderers.Pointer;
+        beamRenderer.enabled = false; // start beam off
+
         alienSprite = playerSpriteRenderers.Alien.sprite;
         var playerSizeX = playerInfo.alienSprite.bounds.size.x / 2; // get alien sprite, get size for object boundaries
 
@@ -54,6 +63,14 @@ public class PlayerControllerDEMO : MonoBehaviour
 
     private void Update()
     {
+        // beam sfx, play on first press. need to work sfx loop t/f
+        if (Input.GetKeyDown(KeyCode.Backslash))
+        {
+            //AudioManager.audioManager.sfx.loop = true;
+            AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
+            AudioManager.audioManager.sfx.Play();
+        }
+
         // cow drought
         timeWithoutCowCollected += Time.deltaTime; // timer between cow collections
 
@@ -73,6 +90,25 @@ public class PlayerControllerDEMO : MonoBehaviour
     }
 
     private void FixedUpdate()
+    {
+        PlayerMovement();
+
+        // beam bools, holding key
+        if (Input.GetKey(KeyCode.Backslash))
+        {
+            Debug.Log("beam on");
+            _beamOn = true;
+            beamRenderer.enabled = true;
+        }
+        if (!Input.GetKey(KeyCode.Backslash))
+        {
+            Debug.Log("beam off");
+            _beamOn = false;
+            beamRenderer.enabled = false;
+        }
+    }
+
+    private void PlayerMovement()
     {
         // inputs
         float directionX = Input.GetAxisRaw("Horizontal");
