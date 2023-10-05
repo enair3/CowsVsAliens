@@ -25,7 +25,7 @@ public class PlayerControllerDEMO : MonoBehaviour
     private float minY = -5f;
     private float maxY = 5f;
 
-    // player stats
+    // player stats, can connect to UI objects
     public float cowCount = 0f;
     public float happiness = 5f;
     public float conspiracy = 0f;
