@@ -24,7 +24,7 @@ public class FBIBehavior : MonoBehaviour
             // if beam is off
             PlayerControllerDEMO.playerInfo.conspiracy += 0.02f * timeDetectedByFBI;
 
-            // level 2 severity: hover over FBI with beam on, 1 BUTTON PRESSED (Shift)
+            // level 2 severity: hover over FBI with beam on, 1 BUTTON PRESSED (\)
             // if beam is on
             if (PlayerControllerDEMO.playerInfo._beamOn)
             {
@@ -33,8 +33,8 @@ public class FBIBehavior : MonoBehaviour
 
                 PlayerControllerDEMO.playerInfo.conspiracy += 0.04f * timeDetectedByFBI;
 
-                // level 3 severity: pick up FBI, BOTH BUTTONS PRESSED (Shift AND Space)
-                if (Input.GetKeyDown(KeyCode.Space))
+                // level 3 severity: pick up FBI and NOT hiding FBI nor satellite, BOTH BUTTONS PRESSED (\ AND Space)
+                if (this.gameObject.tag == "FBI" && Input.GetKeyDown(KeyCode.Space))
                 {
                     AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
                     AudioManager.audioManager.sfx.Play();

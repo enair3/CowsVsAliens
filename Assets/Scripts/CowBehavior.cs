@@ -7,7 +7,7 @@ public class CowBehavior : MonoBehaviour
     private GameObject player;
     private bool _cowInBeam;
     public float happinessValue;
-    //[SerializeField] private float timeWithoutCowCollected;
+    public Sprite greenBeam;
 
     // Start is called before the first frame update
     void Start()
@@ -31,12 +31,12 @@ public class CowBehavior : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    // collection visuals
-                    //PlayerControllerDEMO.playerInfo.beamRenderer.color = new Color(128, 255, 128, 0.79f);
+                    // collection visuals - REVISIT
+                    //PlayerControllerDEMO.playerInfo.beamRenderer.sprite = greenBeam;
 
-                    Debug.Log("got cow");
+                    //Debug.Log("got cow");
 
-                    AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[2];
+                    AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[3]; //switch to alternating sfx
                     AudioManager.audioManager.sfx.Play();
 
                     PlayerControllerDEMO.playerInfo.cowCount++; // add 1 to cowCount. NEED TO ADAPT TO GETCOMPONENT FOR SPECIAL COW

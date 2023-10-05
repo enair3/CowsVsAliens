@@ -9,7 +9,7 @@ public class ObstacleBehavior : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[3];
+            AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[4];
             AudioManager.audioManager.sfx.Play();
 
             PlayerControllerDEMO.playerInfo.happiness = 0;

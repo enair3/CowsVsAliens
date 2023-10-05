@@ -47,6 +47,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(AudioClip clip)
 	{
+		//randomize pitch for all of them .95-1.05
+
 		//sfx[0].clip = clip;
 		//sfx[0].Play();
 	}

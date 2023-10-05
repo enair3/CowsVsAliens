@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class SpawnThis : MonoBehaviour
 {
-    // categories, lists of objects to spawn
+    private List<GameObject> spawnedObjects = new List<GameObject>(); // keep track of what's spawned
+
+    // spawn parameters
+    [SerializeField] private float minX, maxX;
+
+    // BLOCKS to spawn
+    public GameObject[] blocks;
+    [SerializeField] private float timeBetweenSpawn_blocks;
+
+    // categories of OBJECTS to spawn
     // interactables
     public GameObject[] cows;
     public GameObject[] fbi;
@@ -14,12 +23,7 @@ public class SpawnThis : MonoBehaviour
     public GameObject[] backgrounds;
     public GameObject[] decor;
 
-    private List<GameObject> spawnedObjects = new List<GameObject>(); // keep track of what's spawned
-
-    // spawn parameters
-    [SerializeField] private float minX, maxX;
-
-    // may need to randomize time spawning within a range
+    // time spawning within a range
     [SerializeField] private float timeBetweenSpawn_cow;
     [SerializeField] private float timeBetweenSpawn_fbi;
     [SerializeField] private float timeBetweenSpawn_obstacles;
@@ -29,15 +33,32 @@ public class SpawnThis : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnCows", 0f, timeBetweenSpawn_cow);
+        InvokeRepeating("SpawnBlocks", 0f, timeBetweenSpawn_blocks);
+
+        /*InvokeRepeating("SpawnCows", 0f, timeBetweenSpawn_cow);
         InvokeRepeating("SpawnFBI", 0f, timeBetweenSpawn_fbi);
         InvokeRepeating("SpawnObstacles", 0f, timeBetweenSpawn_obstacles);
 
         InvokeRepeating("SpawnBackgrounds", 0f, timeBetweenSpawn_backgrounds);
-        InvokeRepeating("SpawnDecor", 0f, timeBetweenSpawn_decor);
+        InvokeRepeating("SpawnDecor", 0f, timeBetweenSpawn_decor);*/
     }
 
+    // level design block spawning
+    void SpawnBlocks()
+    {
+        WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
+        GameObject prefab = blocks[Random.Range(0, blocks.Length)]; // will need to revise to include order
+        GameObject clone = Instantiate(prefab, transform.position +
+            new Vector3(0, 5, 0),
+            transform.rotation);
+
+        // add spawned to list
+        spawnedObjects.Add(clone);
+    }
+
+    // randomly spawn OBJECTS ONLY
     // spawn cows
+    /*
     void SpawnCows()
     {
         WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_cow);
@@ -109,5 +130,5 @@ public class SpawnThis : MonoBehaviour
 
         // add spawned to list
         spawnedObjects.Add(clone);
-    }
+    } */
 }
