@@ -457,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 157694379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1004692739}
@@ -1480,7 +1480,7 @@ Transform:
   m_GameObject: {fileID: 921743350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.075, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1004692739}
@@ -2024,11 +2024,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156580379}
   m_CullTransparentMesh: 1
---- !u!1 &1298125618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6168783085761378750, guid: c52ea5efa9a9fe44eb0b9780feb769eb, type: 3}
-  m_PrefabInstance: {fileID: 2370374755659373168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1301193139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,11 +2126,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1320111129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1253139193885868752, guid: 2ba54e3c491f08940b13c2a78b9a73c5, type: 3}
-  m_PrefabInstance: {fileID: 7469328304090457496}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1334944954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,7 +2684,7 @@ Transform:
   m_GameObject: {fileID: 1536500026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.93, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1004692739}
@@ -2911,31 +2901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7227c875693495b44b93917c65d872e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minX: -2.8
-  maxX: 2.8
   blocks:
   - {fileID: 7479439334033556410, guid: 923a734ff85929543b9420c69531f4d8, type: 3}
   timeBetweenSpawn_blocks: 3
-  cows:
-  - {fileID: 7282757557686535043, guid: 5a126c59708004f4aaf854a9e252fe9b, type: 3}
-  - {fileID: 809905036042086347, guid: e052d10c57ff24647b77d6d403170b29, type: 3}
-  fbi:
-  - {fileID: 1138130981160308220, guid: 71695209c6933f447863563a9e6caf28, type: 3}
-  - {fileID: 5356879479978550696, guid: 3b02eb5a136138443b05b07e6e0ec233, type: 3}
-  - {fileID: 8498307526737461963, guid: e192311f7e886304c8762fe976780d8c, type: 3}
-  - {fileID: 4041423614017333563, guid: 107c2ad4b5982fe47a918a682d1216fd, type: 3}
-  obstacles:
-  - {fileID: 4185313780417367702, guid: 3daa4fc923c97934a8129617c97e2bb8, type: 3}
-  - {fileID: 1298125618}
-  backgrounds:
-  - {fileID: 1320111129}
-  decor:
-  - {fileID: 7547372709276432232, guid: 94761277146b7c6429e77e311e260650, type: 3}
-  timeBetweenSpawn_cow: 1
-  timeBetweenSpawn_fbi: 0.8
-  timeBetweenSpawn_obstacles: 8
-  timeBetweenSpawn_backgrounds: 3
-  timeBetweenSpawn_decor: 4
 --- !u!1 &1988203606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,6 +3312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corn
       objectReference: {fileID: 0}
+    - target: {fileID: 8714144832775534422, guid: 94761277146b7c6429e77e311e260650, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94761277146b7c6429e77e311e260650, type: 3}
 --- !u!1001 &809905036445571114
@@ -3648,7 +3620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1374886761987266877, guid: 107c2ad4b5982fe47a918a682d1216fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.98
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 1374886761987266877, guid: 107c2ad4b5982fe47a918a682d1216fd, type: 3}
       propertyPath: m_LocalPosition.y
