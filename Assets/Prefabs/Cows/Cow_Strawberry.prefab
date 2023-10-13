@@ -120,7 +120,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2259649919185385133}
   - component: {fileID: 5364371900553259964}
-  - component: {fileID: 2816660739743366613}
   m_Layer: 0
   m_Name: strbCow_sparkle_spritesheet_0
   m_TagString: Untagged
@@ -184,7 +183,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -591876243, guid: 0f45372a0a72e7d448b3caf44e972ba0, type: 3}
+  m_Sprite: {fileID: 828170034, guid: 0f45372a0a72e7d448b3caf44e972ba0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -195,23 +194,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2816660739743366613
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5544885302498905758}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a0d9dc6de4e4764d8d027c60f5a1f33, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
