@@ -27,8 +27,10 @@ public class PlayerControllerDEMO : MonoBehaviour
 
     // player stats, can connect to UI objects
     public float cowCount = 0f;
-    public float happiness = 5f;
+    public float happiness = 10f;
+    public float maxHappiness = 20f;
     public float conspiracy = 0f;
+    public float maxConspiracy = 20f;
 
     public bool inCowDrought;
     public float timeWithoutCowCollected;
@@ -80,12 +82,12 @@ public class PlayerControllerDEMO : MonoBehaviour
             cowCount = 0;
         }
 
-        if (happiness < 0 || happiness > 10)
+        if (happiness < 0 || happiness > maxHappiness)
         {
             if (happiness < 0)
                 happiness = 0;
             else
-                happiness = 10;
+                happiness = maxHappiness;
         }
     }
 
