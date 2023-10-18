@@ -23,7 +23,7 @@ public class SceneManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerControllerDEMO.playerInfo.happiness <= 0 || PlayerControllerDEMO.playerInfo.conspiracy >= 10)
+        if (PlayerControllerDEMO.playerInfo.happiness <= 0 || PlayerControllerDEMO.playerInfo.conspiracy >= PlayerControllerDEMO.playerInfo.maxConspiracy)
         {
             SceneManager.LoadScene("GameOver");
         }

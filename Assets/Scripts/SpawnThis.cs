@@ -20,8 +20,7 @@ public class SpawnThis : MonoBehaviour
     {
         WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
         GameObject prefab = blocks[Random.Range(0, blocks.Length)]; // will need to revise to include order
-        GameObject clone = Instantiate(prefab, transform.position +
-            new Vector3(0, 5, 0),
+        GameObject clone = Instantiate(prefab, transform.position,
             transform.rotation);
 
         // add spawned to list
