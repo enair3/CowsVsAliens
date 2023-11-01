@@ -24,12 +24,12 @@ public class CowBehavior : MonoBehaviour
             // enable outlined cow indicator sprite
 
             // BOTH buttons to collect
-            if (PlayerControllerDEMO.playerInfo._beamOn)
+            if (BCollect_PlayerController.playerInfo._beamOn)
             {
                 //AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
                 //AudioManager.audioManager.sfx.Play();
 
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Backslash))
                 {
                     // collection visuals - REVISIT
                     //PlayerControllerDEMO.playerInfo.beamRenderer.sprite = greenBeam;
@@ -39,11 +39,11 @@ public class CowBehavior : MonoBehaviour
                     AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[3]; //switch to alternating sfx
                     AudioManager.audioManager.sfx.Play();
 
-                    PlayerControllerDEMO.playerInfo.cowCount++; // add 1 to cowCount. NEED TO ADAPT TO GETCOMPONENT FOR SPECIAL COW
-                    PlayerControllerDEMO.playerInfo.happiness += happinessValue; // add 1 to happiness
+                    BCollect_PlayerController.playerInfo.cowCount++; // add 1 to cowCount. NEED TO ADAPT TO GETCOMPONENT FOR SPECIAL COW
+                    BCollect_PlayerController.playerInfo.happiness += happinessValue; // add 1 to happiness
 
-                    PlayerControllerDEMO.playerInfo.timeWithoutCowCollected = 0f; // reset timer
-                    PlayerControllerDEMO.playerInfo.inCowDrought = false;
+                    BCollect_PlayerController.playerInfo.timeWithoutCowCollected = 0f; // reset timer
+                    BCollect_PlayerController.playerInfo.inCowDrought = false;
 
                     Destroy(this.gameObject);
                 }
@@ -52,9 +52,9 @@ public class CowBehavior : MonoBehaviour
         } 
 
         // cow drought penalty
-        if (PlayerControllerDEMO.playerInfo.timeWithoutCowCollected >= 8.0f)
+        if (BCollect_PlayerController.playerInfo.timeWithoutCowCollected >= 8.0f)
         {
-            PlayerControllerDEMO.playerInfo.inCowDrought = true;
+            BCollect_PlayerController.playerInfo.inCowDrought = true;
             CowDroughtPenalty();
             // decrease happiness by value per time in drought, not incl threshold
             //PlayerControllerDEMO.playerInfo.happiness -= (0.2f * (timeWithoutCowCollected - 8.0f)); 
@@ -65,11 +65,11 @@ public class CowBehavior : MonoBehaviour
     // need to recheck this
     void CowDroughtPenalty()
     {
-        if (PlayerControllerDEMO.playerInfo.inCowDrought)
+        if (BCollect_PlayerController.playerInfo.inCowDrought)
         {
-            PlayerControllerDEMO.playerInfo.happiness -= (0.0001f * (PlayerControllerDEMO.playerInfo.timeWithoutCowCollected - 8.0f));
+            BCollect_PlayerController.playerInfo.happiness -= (0.0001f * (BCollect_PlayerController.playerInfo.timeWithoutCowCollected - 8.0f));
         } else {
-            PlayerControllerDEMO.playerInfo.timeWithoutCowCollected = 0f;
+            BCollect_PlayerController.playerInfo.timeWithoutCowCollected = 0f;
         }
         
     }

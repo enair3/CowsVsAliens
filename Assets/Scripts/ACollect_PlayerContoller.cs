@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerDEMO : MonoBehaviour
+public class ACollect_PlayerController : MonoBehaviour
 {
-    public static PlayerControllerDEMO playerInfo; // ref this script in other scripts
+    public static ACollect_PlayerController playerInfo; // ref this script in other scripts
+
+    // button press vars
+    // if either space or \ pressed, hold beam
+    // remaining button pressed while beam, collect
 
     // sprite vars
     [SerializeField] public PlayerSpriteRenderers playerSpriteRenderers; // ref children
@@ -20,7 +24,7 @@ public class PlayerControllerDEMO : MonoBehaviour
     private Vector2 playerMovement;
 
     // background bounds
-    private float minX= -2.85f;
+    private float minX = -2.85f;
     private float maxX = 2.85f;
     private float minY = -5f;
     private float maxY = 5f;
@@ -66,7 +70,7 @@ public class PlayerControllerDEMO : MonoBehaviour
     private void Update()
     {
         // beam sfx, play on first press. need to work sfx loop t/f
-        if (Input.GetKeyDown(KeyCode.Backslash))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //AudioManager.audioManager.sfx.loop = true;
             AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
@@ -96,13 +100,13 @@ public class PlayerControllerDEMO : MonoBehaviour
         PlayerMovement();
 
         // beam bools, holding key
-        if (Input.GetKey(KeyCode.Backslash))
+        if (Input.GetKey(KeyCode.Space))
         {
             Debug.Log("beam on");
             _beamOn = true;
             beamRenderer.enabled = true;
         }
-        if (!Input.GetKey(KeyCode.Backslash))
+        if (!Input.GetKey(KeyCode.Space))
         {
             Debug.Log("beam off");
             _beamOn = false;
@@ -160,3 +164,4 @@ public class PlayerControllerDEMO : MonoBehaviour
         public SpriteRenderer Pointer { get { return this.pointer; } }
     }
 }
+

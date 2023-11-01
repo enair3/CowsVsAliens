@@ -22,16 +22,17 @@ public class FBIBehavior : MonoBehaviour
         {
             // level 1 severity: hover over FBI, NO BUTTONS PRESSED
             // if beam is off
-            PlayerControllerDEMO.playerInfo.conspiracy += 0.02f * timeDetectedByFBI;
+            BCollect_PlayerController.playerInfo.conspiracy += 0.02f * timeDetectedByFBI;
+            BCollect_PlayerController.playerInfo.conspiracy += 0.02f * timeDetectedByFBI;
 
             // level 2 severity: hover over FBI with beam on, 1 BUTTON PRESSED (\)
             // if beam is on
-            if (PlayerControllerDEMO.playerInfo._beamOn)
+            if (BCollect_PlayerController.playerInfo._beamOn)
             {
                 //AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[0];
                 //AudioManager.audioManager.sfx.Play();
 
-                PlayerControllerDEMO.playerInfo.conspiracy += 0.04f * timeDetectedByFBI;
+                BCollect_PlayerController.playerInfo.conspiracy += 0.04f * timeDetectedByFBI;
 
                 // level 3 severity: pick up FBI and NOT hiding FBI nor satellite, BOTH BUTTONS PRESSED (\ AND Space)
                 if (this.gameObject.tag == "FBI" && Input.GetKeyDown(KeyCode.Space))
@@ -40,8 +41,8 @@ public class FBIBehavior : MonoBehaviour
                     AudioManager.audioManager.sfx.Play();
 
                     Debug.Log("got fbi");
-                    PlayerControllerDEMO.playerInfo.conspiracy++; // add 1 to conspiracy
-                    PlayerControllerDEMO.playerInfo.cowCount--; // subtract 1 cow
+                    BCollect_PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
+                    BCollect_PlayerController.playerInfo.cowCount--; // subtract 1 cow
                     Destroy(this.gameObject);
                 }
             }

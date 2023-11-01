@@ -27,4 +27,17 @@ public class SpawnThis : MonoBehaviour
         spawnedObjects.Add(clone);
     }
 
+    // determine time using block tag/length
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.tag == "1Xblock")
+        {
+            timeBetweenSpawn_blocks = 3f;
+        }
+        if (collision.tag == "2Xblock")
+        {
+            timeBetweenSpawn_blocks = 6f;
+        }
+    }
 }

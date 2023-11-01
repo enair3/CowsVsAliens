@@ -11,9 +11,10 @@ public class ObstacleBehavior : MonoBehaviour
         {
             AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[4];
             AudioManager.audioManager.sfx.Play();
+            // add delay
 
-            PlayerControllerDEMO.playerInfo.happiness = 0;
-            PlayerControllerDEMO.playerInfo.conspiracy = 0;
+            BCollect_PlayerController.playerInfo.happiness = 0;
+            BCollect_PlayerController.playerInfo.conspiracy = 0;
 
         }
     }
