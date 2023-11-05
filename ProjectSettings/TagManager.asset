@@ -10,6 +10,7 @@ TagManager:
   - FBI
   - 2Xblock
   - 1Xblock
+  - HidingFBI
   layers:
   - Default
   - TransparentFX

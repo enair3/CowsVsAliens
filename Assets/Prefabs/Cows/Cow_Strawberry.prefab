@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happinessValue: 2
-  greenBeam: {fileID: 0}
+  cowRenderer: {fileID: 5364371900553259964}
 --- !u!1 &5544885302498905758
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,43 +7,45 @@ public class CowBehavior : MonoBehaviour
     private GameObject player;
     private bool _cowInBeam;
     public float happinessValue;
-    public Sprite greenBeam;
+
+    public SpriteRenderer cowRenderer;
+
+    private GameObject cowSFX;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        cowSFX = GameObject.Find("AudioSource_cow");
+
     }
 
     private void Update()
     {
-
         // collect cow
         if (_cowInBeam)
         {
             // enable outlined cow indicator sprite
 
             // BOTH buttons to collect
-            if (BCollect_PlayerController.playerInfo._beamOn)
+            if (PlayerController.playerInfo.collectionControls._beamOn)
             {
-                //AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
-                //AudioManager.audioManager.sfx.Play();
+                // cow collection visuals - REVISIT
 
-                if (Input.GetKeyDown(KeyCode.Backslash))
+                //if (Input.GetKeyDown(KeyCode.Backslash))
+                if (PlayerController.playerInfo.collectionControls._collect)
                 {
-                    // collection visuals - REVISIT
-                    //PlayerControllerDEMO.playerInfo.beamRenderer.sprite = greenBeam;
-
                     //Debug.Log("got cow");
 
-                    AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[3]; //switch to alternating sfx
-                    AudioManager.audioManager.sfx.Play();
+                    //cowSFX.GetComponent<AudioSource>().pitch = Random.Range(0, 1);
+                    //cowSFX.GetComponent<AudioSource>().PlayOneShot(cowSFX.GetComponent<AudioSource>().clip);
+                    cowSFX.GetComponent<AudioSource>().Play();
 
-                    BCollect_PlayerController.playerInfo.cowCount++; // add 1 to cowCount. NEED TO ADAPT TO GETCOMPONENT FOR SPECIAL COW
-                    BCollect_PlayerController.playerInfo.happiness += happinessValue; // add 1 to happiness
+                    PlayerController.playerInfo.cowCount++;
+                    PlayerController.playerInfo.happiness += happinessValue; // add 1 to happiness
 
-                    BCollect_PlayerController.playerInfo.timeWithoutCowCollected = 0f; // reset timer
-                    BCollect_PlayerController.playerInfo.inCowDrought = false;
+                    PlayerController.playerInfo.timeWithoutCowCollected = 0f; // reset timer
+                    PlayerController.playerInfo.inCowDrought = false;
 
                     Destroy(this.gameObject);
                 }
@@ -52,9 +54,9 @@ public class CowBehavior : MonoBehaviour
         } 
 
         // cow drought penalty
-        if (BCollect_PlayerController.playerInfo.timeWithoutCowCollected >= 8.0f)
+        if (PlayerController.playerInfo.timeWithoutCowCollected >= 8.0f)
         {
-            BCollect_PlayerController.playerInfo.inCowDrought = true;
+            PlayerController.playerInfo.inCowDrought = true;
             CowDroughtPenalty();
             // decrease happiness by value per time in drought, not incl threshold
             //PlayerControllerDEMO.playerInfo.happiness -= (0.2f * (timeWithoutCowCollected - 8.0f)); 
@@ -65,11 +67,11 @@ public class CowBehavior : MonoBehaviour
     // need to recheck this
     void CowDroughtPenalty()
     {
-        if (BCollect_PlayerController.playerInfo.inCowDrought)
+        if (PlayerController.playerInfo.inCowDrought)
         {
-            BCollect_PlayerController.playerInfo.happiness -= (0.0001f * (BCollect_PlayerController.playerInfo.timeWithoutCowCollected - 8.0f));
+            PlayerController.playerInfo.happiness -= (0.0001f * (PlayerController.playerInfo.timeWithoutCowCollected - 8.0f));
         } else {
-            BCollect_PlayerController.playerInfo.timeWithoutCowCollected = 0f;
+            PlayerController.playerInfo.timeWithoutCowCollected = 0f;
         }
         
     }

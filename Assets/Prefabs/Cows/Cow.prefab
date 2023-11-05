@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happinessValue: 1
-  greenBeam: {fileID: 0}
+  cowRenderer: {fileID: 5201102234377260379}
 --- !u!114 &2011546710663241942
 MonoBehaviour:
   m_ObjectHideFlags: 0

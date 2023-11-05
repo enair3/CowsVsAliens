@@ -8,11 +8,17 @@ public class FBIBehavior : MonoBehaviour
     private bool _fbiInBeam;
     [SerializeField] private float timeDetectedByFBI;
 
+    public SpriteRenderer fbiRenderer;
+    public Sprite fbiGone;
+
+    private GameObject fbiSFX;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        timeDetectedByFBI = 0f;
+        fbiSFX = GameObject.Find("AudioSource_fbi");
+        timeDetectedByFBI = 0f;  
     }
 
     private void Update()
@@ -22,28 +28,41 @@ public class FBIBehavior : MonoBehaviour
         {
             // level 1 severity: hover over FBI, NO BUTTONS PRESSED
             // if beam is off
-            BCollect_PlayerController.playerInfo.conspiracy += 0.02f * timeDetectedByFBI;
-            BCollect_PlayerController.playerInfo.conspiracy += 0.02f * timeDetectedByFBI;
+            PlayerController.playerInfo.conspiracy += 0.02f * timeDetectedByFBI;
+            PlayerController.playerInfo.conspiracy += 0.02f * timeDetectedByFBI;
 
             // level 2 severity: hover over FBI with beam on, 1 BUTTON PRESSED (\)
             // if beam is on
-            if (BCollect_PlayerController.playerInfo._beamOn)
+            if (PlayerController.playerInfo.collectionControls._beamOn)
             {
-                //AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[0];
-                //AudioManager.audioManager.sfx.Play();
-
-                BCollect_PlayerController.playerInfo.conspiracy += 0.04f * timeDetectedByFBI;
+                PlayerController.playerInfo.conspiracy += 0.04f * timeDetectedByFBI;
 
                 // level 3 severity: pick up FBI and NOT hiding FBI nor satellite, BOTH BUTTONS PRESSED (\ AND Space)
-                if (this.gameObject.tag == "FBI" && Input.GetKeyDown(KeyCode.Space))
+                if (this.gameObject.tag == "FBI" && PlayerController.playerInfo.collectionControls._collect)
                 {
-                    AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
-                    AudioManager.audioManager.sfx.Play();
+                    fbiSFX.GetComponent<AudioSource>().Play();
+
+                    //Debug.Log("got fbi");
+                    PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
+                    PlayerController.playerInfo.cowCount--; // subtract 1 cow
+
+                    Destroy(this.gameObject);
+                    //fbiRenderer.enabled = false;
+                    //this.GetComponent<Collider2D>().enabled = false;
+                }
+
+                if (this.gameObject.tag == "HidingFBI" && PlayerController.playerInfo.collectionControls._collect)
+                {
+                    //fbiSFX.GetComponent<AudioSource>().PlayOneShot(fbiSFX.GetComponent<AudioSource>().clip);
+                    fbiSFX.GetComponent<AudioSource>().Play();
 
                     Debug.Log("got fbi");
-                    BCollect_PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
-                    BCollect_PlayerController.playerInfo.cowCount--; // subtract 1 cow
-                    Destroy(this.gameObject);
+                    PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
+                    PlayerController.playerInfo.cowCount--; // subtract 1 cow
+
+                    // change to no more FBI upon pickup (visual and no collider interactions), now acts as decor
+                    fbiRenderer.sprite = fbiGone;
+                    GetComponent<Collider2D>().enabled = false;
                 }
             }
         }
@@ -52,22 +71,47 @@ public class FBIBehavior : MonoBehaviour
     // start fbi detection
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (this.GetComponent<Collider2D>().enabled == true)
         {
-            //Debug.Log("player fbi collision");
-            _fbiInBeam = true;
-            timeDetectedByFBI += Time.deltaTime; // start timer
+            if (collision.tag == "Player")
+            {
+                //Debug.Log("player fbi collision");
+                _fbiInBeam = true;
+                timeDetectedByFBI += Time.deltaTime; // start timer
+            }
+        }
+
+        if (this.GetComponent<Collider2D>().enabled == false)
+        {
+            if (collision.tag == "Player")
+            {
+                //Debug.Log("player fbi collision");
+                _fbiInBeam = false;
+                timeDetectedByFBI += 0; // stop timer
+            }
         }
     }
 
     // end fbi detection
     private void OnTriggerExit2D(Collider2D collision)
     {
-
-        if (collision.tag == "Player")
+        if (this.GetComponent<Collider2D>().enabled == true)
         {
-            _fbiInBeam = false; // reset bool
-            timeDetectedByFBI = 0f; // reset timer
+            if (collision.tag == "Player")
+            {
+                _fbiInBeam = false; // reset bool
+                timeDetectedByFBI = 0f; // reset timer
+            }
+        }
+
+        if (this.GetComponent<Collider2D>().enabled == false)
+        {
+            if (collision.tag == "Player")
+            {
+                //Debug.Log("player fbi collision");
+                _fbiInBeam = false;
+                timeDetectedByFBI += 0; // stop timer
+            }
         }
     }
 }

@@ -2,21 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ACollect_PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    public static ACollect_PlayerController playerInfo; // ref this script in other scripts
-
-    // button press vars
-    // if either space or \ pressed, hold beam
-    // remaining button pressed while beam, collect
+    public static PlayerController playerInfo; // ref this script in other scripts
+    public CollectionControls collectionControls;
 
     // sprite vars
     [SerializeField] public PlayerSpriteRenderers playerSpriteRenderers; // ref children
     private Sprite alienSprite;
-
-    // beam vars
-    public bool _beamOn;
-    public SpriteRenderer beamRenderer;
 
     // movement var
     [SerializeField] private float playerSpeed = 3f;
@@ -24,17 +17,17 @@ public class ACollect_PlayerController : MonoBehaviour
     private Vector2 playerMovement;
 
     // background bounds
-    private float minX = -2.85f;
+    private float minX= -2.85f;
     private float maxX = 2.85f;
     private float minY = -5f;
     private float maxY = 5f;
 
     // player stats, can connect to UI objects
     public float cowCount = 0f;
-    public float happiness = 10f;
-    public float maxHappiness = 20f;
+    public float happiness = 25f;
+    public float maxHappiness = 50f;
     public float conspiracy = 0f;
-    public float maxConspiracy = 20f;
+    public float maxConspiracy = 50f;
 
     public bool inCowDrought;
     public float timeWithoutCowCollected;
@@ -48,10 +41,9 @@ public class ACollect_PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        collectionControls = GameObject.FindObjectOfType<CollectionControls>();
+        
         rb = GetComponent<Rigidbody2D>();
-        _beamOn = false;
-        beamRenderer = playerSpriteRenderers.Pointer;
-        beamRenderer.enabled = false; // start beam off
 
         alienSprite = playerSpriteRenderers.Alien.sprite;
         var playerSizeX = playerInfo.alienSprite.bounds.size.x / 4; // get alien sprite, get size for object boundaries
@@ -69,14 +61,6 @@ public class ACollect_PlayerController : MonoBehaviour
 
     private void Update()
     {
-        // beam sfx, play on first press. need to work sfx loop t/f
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //AudioManager.audioManager.sfx.loop = true;
-            AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
-            AudioManager.audioManager.sfx.Play();
-        }
-
         // cow drought
         timeWithoutCowCollected += Time.deltaTime; // timer between cow collections
 
@@ -98,20 +82,6 @@ public class ACollect_PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMovement();
-
-        // beam bools, holding key
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log("beam on");
-            _beamOn = true;
-            beamRenderer.enabled = true;
-        }
-        if (!Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log("beam off");
-            _beamOn = false;
-            beamRenderer.enabled = false;
-        }
     }
 
     private void PlayerMovement()
@@ -163,5 +133,5 @@ public class ACollect_PlayerController : MonoBehaviour
         [SerializeField] private SpriteRenderer pointer;
         public SpriteRenderer Pointer { get { return this.pointer; } }
     }
-}
 
+}

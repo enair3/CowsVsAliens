@@ -14,8 +14,8 @@ public class HappinessUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        happinessText.text = string.Format("Happiness: {0}", BCollect_PlayerController.playerInfo.happiness);
-        happinessMeter.value = BCollect_PlayerController.playerInfo.happiness;
+        happinessText.text = string.Format("Happiness: {0}", PlayerController.playerInfo.happiness);
+        happinessMeter.value = PlayerController.playerInfo.happiness;
 
         //gradient.Evaluate(1f);
     }

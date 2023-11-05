@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 6749769159040191505}
   m_Layer: 0
   m_Name: FBI_bush
-  m_TagString: Untagged
+  m_TagString: HidingFBI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,3 +198,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDetectedByFBI: 0
+  fbiRenderer: {fileID: 345934652164575297}
+  fbiGone: {fileID: 21300000, guid: 75b5e105bea2bfe46b199462df7cd6ca, type: 3}
