@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerDEMO : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    public static PlayerControllerDEMO playerInfo; // ref this script in other scripts
+    public static PlayerController playerInfo; // ref this script in other scripts
+    public CollectionControls collectionControls;
 
     // sprite vars
     [SerializeField] public PlayerSpriteRenderers playerSpriteRenderers; // ref children
     private Sprite alienSprite;
-
-    // beam vars
-    public bool _beamOn;
-    public SpriteRenderer beamRenderer;
 
     // movement var
     [SerializeField] private float playerSpeed = 3f;
@@ -27,10 +24,10 @@ public class PlayerControllerDEMO : MonoBehaviour
 
     // player stats, can connect to UI objects
     public float cowCount = 0f;
-    public float happiness = 10f;
-    public float maxHappiness = 20f;
+    public float happiness = 25f;
+    public float maxHappiness = 50f;
     public float conspiracy = 0f;
-    public float maxConspiracy = 20f;
+    public float maxConspiracy = 50f;
 
     public bool inCowDrought;
     public float timeWithoutCowCollected;
@@ -44,10 +41,9 @@ public class PlayerControllerDEMO : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        collectionControls = GameObject.FindObjectOfType<CollectionControls>();
+        
         rb = GetComponent<Rigidbody2D>();
-        _beamOn = false;
-        beamRenderer = playerSpriteRenderers.Pointer;
-        beamRenderer.enabled = false; // start beam off
 
         alienSprite = playerSpriteRenderers.Alien.sprite;
         var playerSizeX = playerInfo.alienSprite.bounds.size.x / 4; // get alien sprite, get size for object boundaries
@@ -65,14 +61,6 @@ public class PlayerControllerDEMO : MonoBehaviour
 
     private void Update()
     {
-        // beam sfx, play on first press. need to work sfx loop t/f
-        if (Input.GetKeyDown(KeyCode.Backslash))
-        {
-            //AudioManager.audioManager.sfx.loop = true;
-            AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[1];
-            AudioManager.audioManager.sfx.Play();
-        }
-
         // cow drought
         timeWithoutCowCollected += Time.deltaTime; // timer between cow collections
 
@@ -94,20 +82,6 @@ public class PlayerControllerDEMO : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMovement();
-
-        // beam bools, holding key
-        if (Input.GetKey(KeyCode.Backslash))
-        {
-            Debug.Log("beam on");
-            _beamOn = true;
-            beamRenderer.enabled = true;
-        }
-        if (!Input.GetKey(KeyCode.Backslash))
-        {
-            Debug.Log("beam off");
-            _beamOn = false;
-            beamRenderer.enabled = false;
-        }
     }
 
     private void PlayerMovement()
@@ -159,4 +133,5 @@ public class PlayerControllerDEMO : MonoBehaviour
         [SerializeField] private SpriteRenderer pointer;
         public SpriteRenderer Pointer { get { return this.pointer; } }
     }
+
 }

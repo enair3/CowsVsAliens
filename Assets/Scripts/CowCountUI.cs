@@ -10,6 +10,6 @@ public class CowCountUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cowCountText.text = string.Format("Cows Collected: {0}", PlayerControllerDEMO.playerInfo.cowCount);
+        cowCountText.text = string.Format("Cows Collected: {0}", PlayerController.playerInfo.cowCount);
     }
 }

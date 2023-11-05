@@ -10,8 +10,10 @@ public class AudioManager : MonoBehaviour
 	public AudioSource music;
 	public AudioClip[] musicClips;
 
-    public AudioSource sfx;
-	public AudioClip[] sfxClips;
+	/*public AudioSource beamSFX;
+	public AudioSource cowSFX;
+	public AudioSource fbiSFX;
+	public AudioSource obsSFX; */
 
 	public static AudioManager Instance = null;
 
@@ -36,28 +38,28 @@ public class AudioManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F4))
         {
 			music.volume -= 0.1f;
-			sfx.volume -= 0.1f;
+			//sfx.volume -= 0.1f;
 		}
 		if (Input.GetKeyDown(KeyCode.F5))
         {
 			music.volume += 0.1f;
-			sfx.volume += 0.1f;
+			//sfx.volume += 0.1f;
 		}
 	}
 
-    public void PlaySFX(AudioClip clip)
+    /*public void PlaySFX(AudioClip clip)
 	{
 		//randomize pitch for all of them .95-1.05
 
 		//sfx[0].clip = clip;
 		//sfx[0].Play();
-	}
+	} */
 
 	public void PlayMusic(AudioClip clip)
 	{
 		// get scene name, play right music
 
-		// gameplay
+		// gameplay, edit to check for fbi hideout to switch
 		music.clip = musicClips[0];
 		music.Play();
 	}

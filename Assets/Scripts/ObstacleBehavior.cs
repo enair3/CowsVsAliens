@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class ObstacleBehavior : MonoBehaviour
 {
+    private GameObject obsSFX;
+
+    private void Start()
+    {
+        obsSFX = GameObject.Find("AudioSource_obs");
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            AudioManager.audioManager.sfx.clip = AudioManager.audioManager.sfxClips[4];
-            AudioManager.audioManager.sfx.Play();
+            //obsSFX.GetComponent<AudioSource>().PlayOneShot(obsSFX.GetComponent<AudioSource>().clip);
+            obsSFX.GetComponent<AudioSource>().Play();
 
-            PlayerControllerDEMO.playerInfo.happiness = 0;
-            PlayerControllerDEMO.playerInfo.conspiracy = 0;
+            PlayerController.playerInfo.happiness -= 1;
+            PlayerController.playerInfo.cowCount -= 1;
 
         }
     }

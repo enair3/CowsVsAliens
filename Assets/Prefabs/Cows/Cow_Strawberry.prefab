@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happinessValue: 2
-  greenBeam: {fileID: 0}
+  cowRenderer: {fileID: 5364371900553259964}
 --- !u!1 &5544885302498905758
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,8 +180,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1822124341
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 828170034, guid: 0f45372a0a72e7d448b3caf44e972ba0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
