@@ -1030,6 +1030,7 @@ GameObject:
   - component: {fileID: 753998352}
   - component: {fileID: 753998351}
   - component: {fileID: 753998350}
+  - component: {fileID: 753998355}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1062,11 +1063,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e09c89207e53184fbccd68b72868712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectionControls: {fileID: 0}
   playerSpriteRenderers:
     alien: {fileID: 1070747846}
     pointer: {fileID: 468507620}
-  _beamOn: 0
-  beamRenderer: {fileID: 468507620}
   playerSpeed: 5
   cowCount: 0
   happiness: 10
@@ -1149,6 +1149,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753998355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753998349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08769bd17c61d4042a3bb35e3b3eece0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _beamOn: 0
+  _collect: 0
+  beamRenderer: {fileID: 468507620}
+  neutralBeam: {fileID: 21300000, guid: 15d3501fcc6e22e45b3cd36dae3afe33, type: 3}
+  greenBeam: {fileID: 21300000, guid: 1efe86eff9aae364ea7791c8ff840c29, type: 3}
 --- !u!1001 &947505527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2274,13 +2291,6 @@ MonoBehaviour:
   music: {fileID: 571181637}
   musicClips:
   - {fileID: 8300000, guid: 67970f58baecc594ba45837a0328a41f, type: 3}
-  sfx: {fileID: 1986981881}
-  sfxClips:
-  - {fileID: 8300000, guid: b597637e7dd01fc4db812b9183c24eeb, type: 3}
-  - {fileID: 8300000, guid: 9e78f38e8de280640aeefa3deafb0aab, type: 3}
-  - {fileID: 8300000, guid: 9e3c9fea64a61214aad95f87300972a8, type: 3}
-  - {fileID: 8300000, guid: 518084789c3bbd644ba291288f7a7af1, type: 3}
-  - {fileID: 8300000, guid: da3f29330fc1cb343b9c30db0461094f, type: 3}
 --- !u!4 &1460513012
 Transform:
   m_ObjectHideFlags: 0
