@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3333604900561260551}
   - component: {fileID: -6151405052237354147}
   m_Layer: 0
-  m_Name: Block_4_trqs-grn
+  m_Name: Block_4_trqs-med
   m_TagString: 2Xblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
