@@ -9,7 +9,7 @@ public class SpawnThisDouble : MonoBehaviour
     // spawning vars
     public int mode;
     public int blocksSpawned;
-    [SerializeField] private float timeBetweenSpawn_blocks = 6f;
+    [SerializeField] private float timeBetweenSpawn_blocks;
 
     // BLOCKS to spawn
     //public GameObject[] blocks;
@@ -20,10 +20,26 @@ public class SpawnThisDouble : MonoBehaviour
 
     void Start()
     {
+        timeBetweenSpawn_blocks = 6.5f;
         mode = 1;
         blocksSpawned = 0;
         activeList = easy;
         InvokeRepeating("SpawnBlocks", 0f, timeBetweenSpawn_blocks);
+    }
+
+    private void Update()
+    {
+        Debug.Log(timeBetweenSpawn_blocks);
+
+        if (blocksSpawned > 5 && blocksSpawned <= 10)
+        {
+            activeList = med;
+        }
+
+        if (blocksSpawned > 10)
+        {
+            activeList = hard;
+        }
     }
 
     // level design block spawning
@@ -36,6 +52,7 @@ public class SpawnThisDouble : MonoBehaviour
 
         // add spawned to list
         spawnedObjects.Add(clone);
+        blocksSpawned++;
     }
 
 }
