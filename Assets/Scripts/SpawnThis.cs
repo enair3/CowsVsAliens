@@ -6,15 +6,15 @@ using UnityEngine;
 public class SpawnThis : MonoBehaviour
 {
     private List<GameObject> spawnedObjects = new List<GameObject>(); // keep track of what's spawned
-    //public int mode;
-    //public int blocksSpawned;
+    public int mode;
+    public int blocksSpawned;
 
     // BLOCKS to spawn
-    public GameObject[] blocks;
-    /*public GameObject[] activeList;
+    //public GameObject[] blocks;
+    public GameObject[] activeList;
     public GameObject[] easy;
     public GameObject[] med;
-    public GameObject[] hard;*/
+    public GameObject[] hard;
 
     //public GameObject prefab;
     //public GameObject clone;
@@ -23,13 +23,13 @@ public class SpawnThis : MonoBehaviour
 
     //public List<List<GameObject>> Meadow_easy = new List<List<GameObject>>();
 
-    [SerializeField] private float timeBetweenSpawn_blocks;
+    [SerializeField] private float timeBetweenSpawn_blocks = 3f;
 
     void Start()
     {
-        //mode = 1;
-        //blocksSpawned = 0;
-        //activeList = easy;
+        mode = 1;
+        blocksSpawned = 0;
+        activeList = easy;
         //timeBetweenSpawn_blocks = 3f;
         //Invoke("SpawnBlocks", timeBetweenSpawn_blocks);
         InvokeRepeating("SpawnBlocks", 0f, timeBetweenSpawn_blocks);
@@ -39,7 +39,9 @@ public class SpawnThis : MonoBehaviour
 
     /*private void Update()
     {
-        Debug.Log(timeBetweenSpawn_blocks);/*if (blocksSpawned > 5 && blocksSpawned <= 10)
+        //InvokeRepeating("SpawnBlocks", 0f, timeBetweenSpawn_blocks);
+
+        if (blocksSpawned > 5 && blocksSpawned <= 10)
         {
             activeList = med;
         }
@@ -48,9 +50,9 @@ public class SpawnThis : MonoBehaviour
         {
             activeList = hard;
         }
-    }
+    }*/
 
-    IEnumerator UpdateSpawnTime()
+    /*IEnumerator UpdateSpawnTime()
     {
         while (true)
         {
@@ -81,30 +83,31 @@ public class SpawnThis : MonoBehaviour
     // level design block spawning
     void SpawnBlocks()
     {
-        
-        WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
 
-        GameObject prefab = blocks[Random.Range(0, blocks.Length)]; // will need to revise to include order
+        WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
+        GameObject prefab = activeList[Random.Range(0, activeList.Length)]; // will need to revise to include order
         GameObject clone = Instantiate(prefab, transform.position,
             transform.rotation);
+
+        //Invoke("SpawnBlocks", timeBetweenSpawn_blocks);
 
         // add spawned to list
         spawnedObjects.Add(clone);
         
-        //blocksSpawned++;
+        blocksSpawned++;
 
         //GameObject prefab = Easy[]
 
         /*if (blocksSpawned <= 5)
         {
-            //WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
+            resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
             //resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
             //yield return new WaitForSeconds(timeBetweenSpawn_blocks);
             mode = 1;
             
             prefab = easy[Random.Range(0, easy.Length)]; // will need to revise to include order
-            //clone = Instantiate(prefab, transform.position,
-            //transform.rotation);
+            clone = Instantiate(prefab, transform.position,
+            transform.rotation);
 
             blocksSpawned++;
             Debug.Log(timeBetweenSpawn_blocks + " mode 1");
@@ -113,13 +116,13 @@ public class SpawnThis : MonoBehaviour
 
         if (blocksSpawned > 5 && blocksSpawned <= 10)
         {
-            //WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
+            resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
             //yield return new WaitForSeconds(timeBetweenSpawn_blocks);
             mode = 2;
 
             prefab = med[Random.Range(0, med.Length)]; // will need to revise to include order
-            //clone = Instantiate(prefab, transform.position,
-            //    transform.rotation);
+            clone = Instantiate(prefab, transform.position,
+                transform.rotation);
 
             blocksSpawned++;
             Debug.Log(timeBetweenSpawn_blocks + " mode 2");
@@ -128,20 +131,19 @@ public class SpawnThis : MonoBehaviour
 
         if (blocksSpawned > 10)
         {
-            //WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
+            resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
             //yield return new WaitForSeconds(timeBetweenSpawn_blocks);
             mode = 3;
 
             prefab = hard[Random.Range(0, hard.Length)]; // will need to revise to include order
-            //clone = Instantiate(prefab, transform.position,
-            //    transform.rotation);
+            clone = Instantiate(prefab, transform.position,
+                transform.rotation);
 
             blocksSpawned++;
             Debug.Log(timeBetweenSpawn_blocks + " mode 3");
-            //spawnedObjects.Add(clone);
-        }
-        */
-        
+            spawnedObjects.Add(clone);
+        } */
+
     }
 
     // determine time for next spawn using prev block tag/length
@@ -150,10 +152,12 @@ public class SpawnThis : MonoBehaviour
         if (collision.tag == "1Xblock")
         {
             timeBetweenSpawn_blocks = 3f;
+            SpawnBlocks();
         }
         if (collision.tag == "2Xblock")
         {
             timeBetweenSpawn_blocks = 6f;
+            SpawnBlocks();
         }
     }
 }

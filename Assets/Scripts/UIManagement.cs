@@ -27,7 +27,7 @@ public class UIManagement : MonoBehaviour
     // menu buttons
     public void PlayGame() // use for menu "play", pause panel "restart", game over "play again", just change text
     {
-        //Invoke("Gameplay", delay);
+        Invoke("Gameplay", delay);
         SceneManager.LoadScene("Gameplay");
         Time.timeScale = 1;
     }
