@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8194400233281592121}
   - component: {fileID: -8863652174876332397}
   m_Layer: 0
-  m_Name: Block7_5Cows_MeadowsPonds
+  m_Name: Block7_5Cows_MeadowsPonds_Easy
   m_TagString: 2Xblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

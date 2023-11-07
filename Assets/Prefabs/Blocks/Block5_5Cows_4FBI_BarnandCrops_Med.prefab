@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7304534189872460932}
   - component: {fileID: -345318318679091063}
   m_Layer: 0
-  m_Name: Block5_5Cows_4FBI_BarnandCrops
+  m_Name: Block5_5Cows_4FBI_BarnandCrops_Med
   m_TagString: 2Xblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4803,7 +4803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4857930306187066624, guid: 5a126c59708004f4aaf854a9e252fe9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4890352
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4857930306187066624, guid: 5a126c59708004f4aaf854a9e252fe9b, type: 3}
       propertyPath: m_LocalPosition.y

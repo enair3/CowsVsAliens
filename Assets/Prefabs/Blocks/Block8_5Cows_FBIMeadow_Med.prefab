@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5313107287693875149}
   - component: {fileID: -6737312224308990112}
   m_Layer: 0
-  m_Name: Block8_5Cows_FBIMeadow
+  m_Name: Block8_5Cows_FBIMeadow_Med
   m_TagString: 2Xblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
