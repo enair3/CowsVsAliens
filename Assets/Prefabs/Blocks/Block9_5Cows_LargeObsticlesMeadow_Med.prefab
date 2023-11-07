@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4065230108754818900}
   - component: {fileID: 7051040608405327160}
   m_Layer: 0
-  m_Name: Block9_5Cows_LargeObsticlesMeadow
+  m_Name: Block9_5Cows_LargeObsticlesMeadow_Med
   m_TagString: 2Xblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

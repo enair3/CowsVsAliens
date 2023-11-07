@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7280773031785365394}
   - component: {fileID: 7325600722410834296}
   m_Layer: 0
-  m_Name: Block6_5Cows_4FBI_WindmillMeadow
+  m_Name: Block6_5Cows_4FBI_WindmillMeadow_Easy
   m_TagString: 2Xblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
