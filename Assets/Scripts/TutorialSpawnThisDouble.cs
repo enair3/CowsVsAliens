@@ -54,16 +54,18 @@ public class TutorialSpawnThisDouble : MonoBehaviour
         Debug.Log(timeBetweenSpawn_blocks);
 
         // next collect cows
-        if (blocksSpawned >= 0 && blocksSpawned <= 1)
+        if (blocksSpawned == 1)
         {
+            activeText.SetActive(false);
             currentBlock = tutorialList[1];
             activeText = tutorialText[1];
             activeText.SetActive(true);
+            //activeText.SetActive(true);
 
         }
 
         // next cow drought
-        if (blocksSpawned > 2 && blocksSpawned <= 4)
+        if (blocksSpawned >= 2 && blocksSpawned <= 4)
         {
             currentBlock = tutorialList[2];
             activeText = tutorialText[2];

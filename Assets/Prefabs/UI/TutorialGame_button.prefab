@@ -202,15 +202,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c9999a7145c0a4143bc4053361281e4f, type: 2}
-  m_sharedMaterial: {fileID: -4703436863681416974, guid: c9999a7145c0a4143bc4053361281e4f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b96af350724461d49b7ac96af14ae2ee, type: 2}
+  m_sharedMaterial: {fileID: 5216920814648631396, guid: b96af350724461d49b7ac96af14ae2ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4291742198
+  m_fontColor: {r: 0.9647059, g: 0.7882353, b: 0.80784315, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -227,13 +227,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
