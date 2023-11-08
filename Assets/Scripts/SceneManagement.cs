@@ -26,7 +26,14 @@ public class SceneManagement : MonoBehaviour
         if (PlayerController.playerInfo.happiness <= 0 || 
             PlayerController.playerInfo.conspiracy >= PlayerController.playerInfo.maxConspiracy)
         {
-            SceneManager.LoadScene("GameOver");
+            if (SceneManager.GetActiveScene().name == "Gameplay" )
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+            if (SceneManager.GetActiveScene().name == "Tutorial_game")
+            {
+                SceneManager.LoadScene("Tutorial_GameOver");
+            }
         }
     }
 }
