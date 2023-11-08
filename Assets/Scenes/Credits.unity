@@ -360,11 +360,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4111099482245079384, guid: 13bd788e3760477439f0b8404453d496, type: 3}
   m_PrefabInstance: {fileID: 1274779488}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1274779490 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4111099482245079387, guid: 13bd788e3760477439f0b8404453d496, type: 3}
+--- !u!114 &1274779490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4111099482245079385, guid: 13bd788e3760477439f0b8404453d496, type: 3}
   m_PrefabInstance: {fileID: 1274779488}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1400297025
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +455,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1541868631
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 340.69113
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1097.1299
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.606966
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845784, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845786, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: m_Name
+      value: ButtonManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845787, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: buttons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214392864661845787, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1274779490}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
 --- !u!1 &1770213499
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1274779490}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2042378190
