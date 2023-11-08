@@ -248,11 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4111099483563730853, guid: 13bd788e3760477439f0b8404453d496, type: 3}
       propertyPath: m_fontSize
-      value: 45
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 4111099483563730853, guid: 13bd788e3760477439f0b8404453d496, type: 3}
       propertyPath: m_fontSizeBase
-      value: 45
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 8773306430467092644, guid: 13bd788e3760477439f0b8404453d496, type: 3}
       propertyPath: m_AnchorMax.x
