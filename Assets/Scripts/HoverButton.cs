@@ -1,23 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class HoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class HoverButton : MonoBehaviour
 {
-    public SpriteRenderer buttonTopper;
+    public Button[] buttons;
+    public int currentButton;
 
-    public void OnPointerEnter(PointerEventData buttonData)
+    // button sprites
+    public Sprite unselected;
+    public Sprite selected;
+
+    void Start()
     {
-        buttonTopper.transform.position = this.transform.position;
-        buttonTopper.transform.localScale = this.transform.localScale;
-        buttonTopper.enabled = true;
+        currentButton = 0;
+        buttons[0].image.sprite = selected;
     }
 
-        //Detect when Cursor leaves the GameObject
-   public void OnPointerExit(PointerEventData pointerEventData)
+    void Update()
     {
-        buttonTopper.enabled = false;
+        // check if active before action
+        if (buttons[currentButton].isActiveAndEnabled)
+        {
+            // to next (right, down)
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S))
+            {
+                ToNextButton();
+            }
+            // to previous (left, up)
+            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A))
+            {
+                ToPreviousButton();
+            }
+        }
     }
 
+    void ToNextButton()
+    {
+        buttons[currentButton].image.sprite = unselected;
+        currentButton++;
+
+        // go back to first button if at end
+        if (currentButton >= buttons.Length)
+        {
+            currentButton = 0;
+        }
+        // currentButton uses selected sprite
+        buttons[currentButton].image.sprite = selected;
+    }
+
+    void ToPreviousButton()
+    {
+        buttons[currentButton].image.sprite = unselected;
+        currentButton--;
+
+        if (currentButton < 0)
+        {
+            currentButton = (buttons.Length - 1);
+        }
+
+        buttons[currentButton].image.sprite = selected;
+    }
 }
+

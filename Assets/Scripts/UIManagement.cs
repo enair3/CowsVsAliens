@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class UIManagement : MonoBehaviour
 {
     // prefab buttons
+
+    public float delay = 0.2f;
+
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("Title");
@@ -24,7 +27,15 @@ public class UIManagement : MonoBehaviour
     // menu buttons
     public void PlayGame() // use for menu "play", pause panel "restart", game over "play again", just change text
     {
+        Invoke("Gameplay", delay);
         SceneManager.LoadScene("Gameplay");
+        Time.timeScale = 1;
+    }
+
+    public void TutorialGame() // use for menu "play", pause panel "restart", game over "play again", just change text
+    {
+        Invoke("Tutorial_game", delay);
+        SceneManager.LoadScene("Tutorial_game");
         Time.timeScale = 1;
     }
 

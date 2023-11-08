@@ -1007,7 +1007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1372440045744228113, guid: 26a5a24ac020faf449030670721a9a21, type: 3}
       propertyPath: m_Name
-      value: Block1_4Cows_Wheat_Feild_med
+      value: Block1_4Cows_Wheat_Feild_Easy
       objectReference: {fileID: 0}
     - target: {fileID: 4389466469499927066, guid: 26a5a24ac020faf449030670721a9a21, type: 3}
       propertyPath: m_LocalPosition.x
