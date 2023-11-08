@@ -32,6 +32,13 @@ public class UIManagement : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void TutorialGame() // use for menu "play", pause panel "restart", game over "play again", just change text
+    {
+        Invoke("Tutorial_game", delay);
+        SceneManager.LoadScene("Tutorial_game");
+        Time.timeScale = 1;
+    }
+
     public void HowToPlay() // likely expand to multiple parts
     {
         SceneManager.LoadScene("HowToPlay");

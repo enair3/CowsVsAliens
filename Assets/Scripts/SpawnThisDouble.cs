@@ -18,6 +18,10 @@ public class SpawnThisDouble : MonoBehaviour
     public GameObject[] med;
     public GameObject[] hard;
 
+    // class for difficulty to randomize between 2 or more difficulties
+
+    public 
+
     void Start()
     {
         timeBetweenSpawn_blocks = 6.5f;
@@ -36,7 +40,12 @@ public class SpawnThisDouble : MonoBehaviour
             activeList = med;
         }
 
-        if (blocksSpawned > 10)
+        if (blocksSpawned > 10 && blocksSpawned < 15)
+        {
+            activeList = hard;
+        }
+
+        if (blocksSpawned > 15)
         {
             activeList = hard;
         }
