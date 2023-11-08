@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 2bfcad7e360a8ee46bd24f5e481bd936
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1820
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1087c3898aa5d4e8c4a1d9de569a30
+      internalID: 250177818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1820
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21c1e281b4a4f7479d9aceeb73e4c19
+      internalID: 1812183334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_2
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1820
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40e03da332830a458c7b01f865000f9
+      internalID: 1441602585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_3
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1820
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c688db43ee460041a9bdd97ff307a91
+      internalID: -483377042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_4
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1820
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6781e2b267511b4f87898547699b610
+      internalID: -1720474563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1365
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fe6109d11332745a247be4bd82c32a
+      internalID: 1469984903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_6
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1365
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c98a39f44749d4896596bb3174d22c
+      internalID: -1043010776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_7
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1365
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8790fd386bc864d8da6aecb619fa19
+      internalID: -25913116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_8
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1365
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7d85d1a48d54d4aac11854f1ff321e
+      internalID: 943427319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_9
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1365
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ea24017e03d3a44ad4bc5afedf189b
+      internalID: -1604822387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 910
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3346656ad2f804d980cb218da12497
+      internalID: 1565300409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_11
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 910
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33176212d7fec65479c3a4f9b1e7f9c5
+      internalID: 293689578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_12
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 910
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d01e5221e59d024bb9e128353cc891c
+      internalID: 906631931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_13
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 910
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c5550de8bc5f647bfaa4a369a2926d
+      internalID: -705453170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_14
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 910
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa55ed7005ed0c847b96d7cb15c9e662
+      internalID: -422446991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 455
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fceb9d77abb1d344b0fd48f71fd7278
+      internalID: 1331358137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_16
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 455
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fec3b8275170284296fef22beacbfc9
+      internalID: -819940351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_17
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 455
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239c0e9b65ed2724f80f4b412025cf8c
+      internalID: 2083548101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_18
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 455
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7957c67abb6a9ad4f9819c1bb756fdd3
+      internalID: 1283490936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_19
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 455
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d754b1abc3bbe6f4fac301447651e87d
+      internalID: -1596943023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4a14629f9ed0347aae9f316b36f642
+      internalID: -402437786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_21
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d305bda8a62954c8a04c4a8cf38f37
+      internalID: 163354853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_22
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb6b29f5bb55f74d948b3f8413886db
+      internalID: -38045211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TS_collectAnim_Spritesheet_New_23
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 0
+        width: 513
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9329354f582c21e409723b77caeb8f94
+      internalID: 1039171228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TS_collectAnim_Spritesheet_New_9: -1604822387
+      TS_collectAnim_Spritesheet_New_15: 1331358137
+      TS_collectAnim_Spritesheet_New_1: 1812183334
+      TS_collectAnim_Spritesheet_New_5: 1469984903
+      TS_collectAnim_Spritesheet_New_8: 943427319
+      TS_collectAnim_Spritesheet_New_20: -402437786
+      TS_collectAnim_Spritesheet_New_13: -705453170
+      TS_collectAnim_Spritesheet_New_19: -1596943023
+      TS_collectAnim_Spritesheet_New_12: 906631931
+      TS_collectAnim_Spritesheet_New_3: -483377042
+      TS_collectAnim_Spritesheet_New_23: 1039171228
+      TS_collectAnim_Spritesheet_New_0: 250177818
+      TS_collectAnim_Spritesheet_New_6: -1043010776
+      TS_collectAnim_Spritesheet_New_2: 1441602585
+      TS_collectAnim_Spritesheet_New_16: -819940351
+      TS_collectAnim_Spritesheet_New_22: -38045211
+      TS_collectAnim_Spritesheet_New_10: 1565300409
+      TS_collectAnim_Spritesheet_New_21: 163354853
+      TS_collectAnim_Spritesheet_New_17: 2083548101
+      TS_collectAnim_Spritesheet_New_7: -25913116
+      TS_collectAnim_Spritesheet_New_14: -422446991
+      TS_collectAnim_Spritesheet_New_18: 1283490936
+      TS_collectAnim_Spritesheet_New_11: 293689578
+      TS_collectAnim_Spritesheet_New_4: -1720474563
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
