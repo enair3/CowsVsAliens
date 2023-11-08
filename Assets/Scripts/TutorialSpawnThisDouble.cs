@@ -13,18 +13,21 @@ public class TutorialSpawnThisDouble : MonoBehaviour
     // BLOCKS to spawn
     //public GameObject[] blocks;
     public GameObject[] tutorialList;
+    public GameObject[] tutorialText;
     public GameObject currentBlock;
 
     // tutorial text
-    public GameObject movementText;
+    /*public GameObject movementText;
     public GameObject collectCowsText;
     public GameObject cowDroughtText;
     public GameObject FBI_text;
-    public GameObject obstacle_text;
+    public GameObject obstacle_text;*/
+
+    public GameObject activeText;
 
     public GameObject readyToPlayPanel;
 
-    public float textTimer;
+    //public float textTimer;
 
     void Start()
     {
@@ -34,11 +37,14 @@ public class TutorialSpawnThisDouble : MonoBehaviour
         InvokeRepeating("SpawnBlocks", 0f, timeBetweenSpawn_blocks);
 
         // tutorial text
-        movementText.SetActive(true);
+        /*movementText.SetActive(true);
         collectCowsText.SetActive(false);
         cowDroughtText.SetActive(false);
         FBI_text.SetActive(false);
-        obstacle_text.SetActive(false);
+        obstacle_text.SetActive(false);*/
+        //activeText.SetActive(true);
+        activeText = tutorialText[0];
+        activeText.SetActive(true);
 
         readyToPlayPanel.SetActive(false);
     }
@@ -48,54 +54,56 @@ public class TutorialSpawnThisDouble : MonoBehaviour
         Debug.Log(timeBetweenSpawn_blocks);
 
         // next collect cows
-        if (blocksSpawned >= 0 && blocksSpawned <= 1)
+        if (blocksSpawned == 1)
         {
+            activeText.SetActive(false);
             currentBlock = tutorialList[1];
-            
+            activeText = tutorialText[1];
+            activeText.SetActive(true);
+            //activeText.SetActive(true);
+
         }
 
         // next cow drought
-        if (blocksSpawned > 2 && blocksSpawned <= 4)
+        if (blocksSpawned >= 2 && blocksSpawned <= 4)
         {
             currentBlock = tutorialList[2];
-            movementText.SetActive(false);
-            collectCowsText.SetActive(true);
-            
+            activeText = tutorialText[2];
+            /*movementText.SetActive(false);
+            collectCowsText.SetActive(true);*/
+
         }
 
         // next fbi
         if (blocksSpawned > 4 && blocksSpawned <= 6)
         {
             currentBlock = tutorialList[3];
-            collectCowsText.SetActive(false);
-            cowDroughtText.SetActive(true);
-            
+            activeText = tutorialText[3];
+            /*collectCowsText.SetActive(false);
+            cowDroughtText.SetActive(true);*/
+
         }
 
         // next dodge obstacles
         if (blocksSpawned > 6 && blocksSpawned <= 8)
         {
             currentBlock = tutorialList[4];
-            cowDroughtText.SetActive(false);
-            FBI_text.SetActive(true);
-            
+            activeText = tutorialText[4];
+            /*cowDroughtText.SetActive(false);
+            FBI_text.SetActive(true);*/
+
         }
 
         // next empty field, ask to repeat tutorial or play game
-
-        if (blocksSpawned > 8)
-        {
-            currentBlock = tutorialList[5];
-            FBI_text.SetActive(false);
-            obstacle_text.SetActive(true);
-        }
-
         if (blocksSpawned > 9)
         {
-            obstacle_text.SetActive(false);
+            //obstacle_text.SetActive(false);
             readyToPlayPanel.SetActive(true);
+            activeText.SetActive(false);
             Time.timeScale = 0;
         }
+
+       //if pause panel activated, disable activeText
     }
 
     // level design block spawning

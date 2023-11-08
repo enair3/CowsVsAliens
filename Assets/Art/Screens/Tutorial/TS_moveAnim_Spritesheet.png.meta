@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f45372a0a72e7d448b3caf44e972ba0
+guid: 025eed76e3f65c54981e1152db4a1a45
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_0
+      name: TS_moveAnim_Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 173460b0a887dae47962313c1c696c4f
-      internalID: -591876243
+      spriteID: 9a5c815b156266648a32db5f17aedca3
+      internalID: 1053781085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_1
+      name: TS_moveAnim_Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 511
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aabd3b2729f70b84e8388048a2eaf536
-      internalID: 1768803276
+      spriteID: 3474f1971a46d3b438e8820931243db2
+      internalID: -390473158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_2
+      name: TS_moveAnim_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 250
+        x: 1022
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bbf0c732f32ff34282afcf1ef43ee68
-      internalID: -2021309511
+      spriteID: d95135e83e9280a44af2e2c2fe3d607a
+      internalID: -71680751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_3
+      name: TS_moveAnim_Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 375
+        x: 1533
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d3ee1ee69fada64293575e124d8c128
-      internalID: 1809829815
+      spriteID: 623b578b9712eaa45875ba082a5666a6
+      internalID: 154145652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_4
+      name: TS_moveAnim_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 500
+        x: 2044
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba848eb48935b434894662ac3ebc6117
-      internalID: -388958636
+      spriteID: e72bc850a682cfa40a5d74fc37020383
+      internalID: -1429394561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_5
+      name: TS_moveAnim_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 625
+        x: 2555
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5104183fc0fbcc43a39a425c6aadb4a
-      internalID: 828170034
+      spriteID: 494580af527a5d248b53ffc15c9afce9
+      internalID: 490462036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_6
+      name: TS_moveAnim_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 750
+        x: 3066
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f52136f003ca2045a62e4c8caf0a86c
-      internalID: -1709089707
+      spriteID: 970973e3a18d4fc43a85d392e45600f8
+      internalID: 1006231326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_7
+      name: TS_moveAnim_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 875
+        x: 3577
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b81d985ed3bfbc43bd75f369dcab33c
-      internalID: -108828078
+      spriteID: 329e2a203d732b44dae10a18c193a212
+      internalID: 116611977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_8
+      name: TS_moveAnim_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 4088
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4344135c4614d124a80a2159d50b2c82
-      internalID: -1226373985
+      spriteID: 5f20d4373888be84ebe7868b8ce7a57a
+      internalID: -518037460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_9
+      name: TS_moveAnim_Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 1125
+        x: 4599
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99fb459b7376d41468b80908f7c5c71a
-      internalID: -1323963997
+      spriteID: 0a3cedc10555c4c40b076af8ab33ba97
+      internalID: -664706886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_10
+      name: TS_moveAnim_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 1250
+        x: 5110
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,20 +341,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d432f888236427428e098948f4a7b5d
-      internalID: 19733615
+      spriteID: b34464b8271ad4d4db1cceaaac498d2e
+      internalID: -2029109170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_11
+      name: TS_moveAnim_Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 1375
+        x: 5621
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,20 +362,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc8d3fb007e20e842b961deb29ae1ceb
-      internalID: 1841597081
+      spriteID: 439abbcb1f56e3e49a07f4777d5176fb
+      internalID: 1099859151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_12
+      name: TS_moveAnim_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 6132
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,20 +383,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75dfdce1a6f4a5c41ad0d385280120f5
-      internalID: 724142910
+      spriteID: a78a5d604d443fb4086557c0b7bd042c
+      internalID: 149002541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_13
+      name: TS_moveAnim_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 1625
+        x: 6643
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,20 +404,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b8dfc9a3a76fec4a8fadc9937500e1d
-      internalID: -1956231899
+      spriteID: 065a1aee2cd3a424695d87a7e109926f
+      internalID: -778983134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_14
+      name: TS_moveAnim_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 1750
+        x: 7154
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,20 +425,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07a24bce7416c224c820fb046298de6f
-      internalID: -30722691
+      spriteID: 1dfe1fb7751135c4eb34b63ce63e3a14
+      internalID: 580564002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_15
+      name: TS_moveAnim_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 1875
+        x: 7665
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,20 +446,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d015c34afac340b44b05a6cbedbfbf77
-      internalID: 430915308
+      spriteID: 4f3de1a97ccf49243a5b8e00baa1a8c2
+      internalID: -1707658817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_16
+      name: TS_moveAnim_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 8176
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,20 +467,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38ca733678abf594d8b9a3474cea01f1
-      internalID: 1203118221
+      spriteID: dabf3c6ae45ea3a44801b411cb0d7176
+      internalID: -1080290321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_17
+      name: TS_moveAnim_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 2125
+        x: 8687
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,20 +488,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 198b7fea276c8f3478d5d63eac051061
-      internalID: 2101786974
+      spriteID: 850375b327ec0c34abef6d8d43f295a1
+      internalID: -639614228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_18
+      name: TS_moveAnim_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 2250
+        x: 9198
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,20 +509,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5f94d7ed59a3f14bb13eaf5d60cdf7d
-      internalID: -885839367
+      spriteID: 1edd6cd990531764d9d8fa234ed1b34e
+      internalID: 875377681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_19
+      name: TS_moveAnim_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 2375
+        x: 9709
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,20 +530,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f8545e2790db9243afd3df66159de07
-      internalID: 929475058
+      spriteID: 01fe14e77aa7b5d4a8e9735ee9d92078
+      internalID: 309984531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_20
+      name: TS_moveAnim_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 2500
+        x: 10220
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -551,20 +551,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 183fd20311b1cb440a64851a7a65f980
-      internalID: 592435195
+      spriteID: 2d5ea929342a16e40844a7345e1f20b8
+      internalID: 710213300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_21
+      name: TS_moveAnim_Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 2625
+        x: 10731
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,20 +572,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14575f4bc1c179d47b20a861ec24e112
-      internalID: -928578452
+      spriteID: 1625939c048122d428c512dfc6082414
+      internalID: 1956667683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_22
+      name: TS_moveAnim_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 2750
+        x: 11242
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,20 +593,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f96d8e559960014a97aa29960938bc7
-      internalID: 1918805356
+      spriteID: d0bd9300677b54044b4ddfbe74d5b48c
+      internalID: -1592557444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strbCow_sparkle_spritesheet_23
+      name: TS_moveAnim_Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 2875
+        x: 11753
         y: 0
-        width: 125
-        height: 100
+        width: 511
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,8 +614,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3346b4164f17a974e8779a1f58855030
-      internalID: 2121676272
+      spriteID: ec62833befca40f49bf052db2325e399
+      internalID: 2086821807
       vertices: []
       indices: 
       edges: []
@@ -631,30 +631,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      strbCow_sparkle_spritesheet_21: -928578452
-      strbCow_sparkle_spritesheet_1: 1768803276
-      strbCow_sparkle_spritesheet_0: -591876243
-      strbCow_sparkle_spritesheet_5: 828170034
-      strbCow_sparkle_spritesheet_12: 724142910
-      strbCow_sparkle_spritesheet_14: -30722691
-      strbCow_sparkle_spritesheet_18: -885839367
-      strbCow_sparkle_spritesheet_6: -1709089707
-      strbCow_sparkle_spritesheet_16: 1203118221
-      strbCow_sparkle_spritesheet_9: -1323963997
-      strbCow_sparkle_spritesheet_15: 430915308
-      strbCow_sparkle_spritesheet_19: 929475058
-      strbCow_sparkle_spritesheet_4: -388958636
-      strbCow_sparkle_spritesheet_3: 1809829815
-      strbCow_sparkle_spritesheet_22: 1918805356
-      strbCow_sparkle_spritesheet_20: 592435195
-      strbCow_sparkle_spritesheet_8: -1226373985
-      strbCow_sparkle_spritesheet_13: -1956231899
-      strbCow_sparkle_spritesheet_23: 2121676272
-      strbCow_sparkle_spritesheet_7: -108828078
-      strbCow_sparkle_spritesheet_10: 19733615
-      strbCow_sparkle_spritesheet_11: 1841597081
-      strbCow_sparkle_spritesheet_17: 2101786974
-      strbCow_sparkle_spritesheet_2: -2021309511
+      TS_moveAnim_Spritesheet_7: 116611977
+      TS_moveAnim_Spritesheet_22: -1592557444
+      TS_moveAnim_Spritesheet_15: -1707658817
+      TS_moveAnim_Spritesheet_19: 309984531
+      TS_moveAnim_Spritesheet_23: 2086821807
+      TS_moveAnim_Spritesheet_17: -639614228
+      TS_moveAnim_Spritesheet_0: 1053781085
+      TS_moveAnim_Spritesheet_10: -2029109170
+      TS_moveAnim_Spritesheet_12: 149002541
+      TS_moveAnim_Spritesheet_6: 1006231326
+      TS_moveAnim_Spritesheet_5: 490462036
+      TS_moveAnim_Spritesheet_13: -778983134
+      TS_moveAnim_Spritesheet_14: 580564002
+      TS_moveAnim_Spritesheet_3: 154145652
+      TS_moveAnim_Spritesheet_16: -1080290321
+      TS_moveAnim_Spritesheet_9: -664706886
+      TS_moveAnim_Spritesheet_20: 710213300
+      TS_moveAnim_Spritesheet_4: -1429394561
+      TS_moveAnim_Spritesheet_8: -518037460
+      TS_moveAnim_Spritesheet_1: -390473158
+      TS_moveAnim_Spritesheet_18: 875377681
+      TS_moveAnim_Spritesheet_2: -71680751
+      TS_moveAnim_Spritesheet_11: 1099859151
+      TS_moveAnim_Spritesheet_21: 1956667683
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
