@@ -16,8 +16,14 @@ public class PauseGame : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        ActivatePause();
+    }
+
+    void ActivatePause()
+    {
         if (Input.GetKey(KeyCode.Escape))
         {
+            //Invoke("ActivatePause", 2f);
             pauseGamePanel.SetActive(true);
             Time.timeScale = 0;
         }
