@@ -24,17 +24,18 @@ public class HoverButton : MonoBehaviour
         if (buttons[currentButton].isActiveAndEnabled)
         {
             // to next (right, down)
-            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 ToNextButton();
             }
             // to previous (left, up)
-            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 ToPreviousButton();
             }
 
             else if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Backslash))
+            //else if (Input.GetKeyDown(KeyCode.Backslash))
             {
                 buttons[currentButton].onClick.Invoke();
             }

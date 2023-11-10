@@ -12,4 +12,6 @@ public class ReadyPanel : MonoBehaviour
         readyPanel.SetActive(false);
         Time.timeScale = 1;
     }
+
+    //need to add delay for buttons here
 }
