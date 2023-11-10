@@ -35,6 +35,7 @@ public class HoverButton : MonoBehaviour
             }
 
             else if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Backslash))
+            //else if (Input.GetKeyDown(KeyCode.Backslash))
             {
                 buttons[currentButton].onClick.Invoke();
             }

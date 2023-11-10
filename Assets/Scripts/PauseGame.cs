@@ -21,6 +21,8 @@ public class PauseGame : MonoBehaviour
 
     void ActivatePause()
     {
+        //StartCoroutine(DelayShow());
+        
         if (Input.GetKey(KeyCode.Escape))
         {
             //Invoke("ActivatePause", 2f);
@@ -34,4 +36,18 @@ public class PauseGame : MonoBehaviour
         pauseGamePanel.SetActive(false);
         Time.timeScale = 1;
     }
+
+    //add delay activate
+    /*public void AssetCredits()
+    {
+        StartCoroutine(DelayShow());
+        creds.SetActive(true);
+        //thisButton.enabled = true;
+    }
+
+    IEnumerator DelayShow()
+    {
+        yield return new WaitForSeconds(1f);
+        HoverButton.buttons.SetActive(true);
+    }*/
 }
