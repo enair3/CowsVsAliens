@@ -1425,17 +1425,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3222514273635013201, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
   m_PrefabInstance: {fileID: 1343690321}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1343690323 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3222514273635013206, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
-  m_PrefabInstance: {fileID: 1343690321}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1343690324 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3222514273635013200, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
   m_PrefabInstance: {fileID: 1343690321}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343690323}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -1835,7 +1830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1343690323}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1520318920
