@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6828760652767686406}
   - component: {fileID: -3275684294747062063}
+  - component: {fileID: 5466735315013552001}
   m_Layer: 0
   m_Name: Block3_7Cows_4FBICows_Tomatoes_med
   m_TagString: 2Xblock
@@ -90,7 +91,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 5}
@@ -106,6 +107,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.6, y: 19.95}
   m_EdgeRadius: 0
+--- !u!114 &5466735315013552001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338234441603067934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpeed: 3
 --- !u!1001 &15927714827209651
 PrefabInstance:
   m_ObjectHideFlags: 0

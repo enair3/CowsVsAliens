@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1374886761987266877}
   - component: {fileID: 3897759208815034769}
   - component: {fileID: 6785049471849693442}
-  - component: {fileID: 8990892685379135042}
   - component: {fileID: 6650296034301606518}
   m_Layer: 0
   m_Name: FBI_satellite
@@ -73,19 +72,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.00000017029899}
   serializedVersion: 2
   m_Radius: 0.5556367
---- !u!114 &8990892685379135042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4041423614017333563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectSpeed: 3
 --- !u!114 &6650296034301606518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +85,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDetectedByFBI: 0
+  fbiRenderer: {fileID: 0}
+  fbiGone: {fileID: 0}
 --- !u!1 &8045381848184236263
 GameObject:
   m_ObjectHideFlags: 0
