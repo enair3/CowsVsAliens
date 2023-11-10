@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 83922363058882320}
   - component: {fileID: -205563552928209030}
+  - component: {fileID: 3616938698503590786}
   m_Layer: 0
   m_Name: BlockTut_FBI_Intro
   m_TagString: 2Xblock
@@ -80,6 +81,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.6, y: 19.95}
   m_EdgeRadius: 0
+--- !u!114 &3616938698503590786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025600484910880863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpeed: 3
 --- !u!1001 &231639868672847483
 PrefabInstance:
   m_ObjectHideFlags: 0

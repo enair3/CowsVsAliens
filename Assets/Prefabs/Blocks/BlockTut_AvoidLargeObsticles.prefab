@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7256135036136552876}
   - component: {fileID: 1883667634286235351}
+  - component: {fileID: 3870459996939070113}
   m_Layer: 0
   m_Name: BlockTut_AvoidLargeObsticles
   m_TagString: 2Xblock
@@ -71,6 +72,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.6, y: 19.95}
   m_EdgeRadius: 0
+--- !u!114 &3870459996939070113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564678358758580704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpeed: 3
 --- !u!1001 &119117055911617149
 PrefabInstance:
   m_ObjectHideFlags: 0

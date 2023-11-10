@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32727822126762904}
   - component: {fileID: 7858414289352595649}
+  - component: {fileID: -8359636106865446374}
   m_Layer: 0
   m_Name: block_11_meadow-easy
   m_TagString: 1Xblock
@@ -98,6 +99,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.6, y: 19.95}
   m_EdgeRadius: 0
+--- !u!114 &-8359636106865446374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32727822126762905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectSpeed: 3
 --- !u!1001 &32727820588582885
 PrefabInstance:
   m_ObjectHideFlags: 0

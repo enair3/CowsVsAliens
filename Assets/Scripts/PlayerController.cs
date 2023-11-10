@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         playerInfo = this;
+        Time.timeScale = 1;
         //DontDestroyOnLoad(transform.root);
     }
 

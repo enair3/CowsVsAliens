@@ -14,8 +14,9 @@ public class MoveObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "bottomBorder")
+        if (collision.gameObject.tag == "bottomBorder")
         {
+            Debug.Log("destroy block");
             Destroy(this.gameObject);
         }
 

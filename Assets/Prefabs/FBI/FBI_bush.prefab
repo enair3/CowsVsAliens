@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 8982472173028238240}
   - component: {fileID: 1285550466624950535}
   - component: {fileID: 7036904634610134025}
-  - component: {fileID: 4632372066924449918}
   - component: {fileID: 6749769159040191505}
   m_Layer: 0
   m_Name: FBI_bush
@@ -172,19 +171,6 @@ PolygonCollider2D:
       - {x: -0.78378725, y: -0.634793}
       - {x: 0.7728984, y: -0.63479286}
       - {x: 0.7114984, y: -0.050320067}
---- !u!114 &4632372066924449918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8982472173028238241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectSpeed: 3
 --- !u!114 &6749769159040191505
 MonoBehaviour:
   m_ObjectHideFlags: 0
