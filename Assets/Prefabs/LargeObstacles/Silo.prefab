@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6439572044498829023}
   - component: {fileID: 8299586283408435538}
   - component: {fileID: 6561059185566029993}
-  - component: {fileID: 4195475082061051255}
   - component: {fileID: 9042944062426488288}
   m_Layer: 0
   m_Name: Silo
@@ -83,19 +82,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7177012, y: 3.0089707}
   m_EdgeRadius: 0
---- !u!114 &4195475082061051255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6168783085761378750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectSpeed: 3
 --- !u!114 &9042944062426488288
 MonoBehaviour:
   m_ObjectHideFlags: 0

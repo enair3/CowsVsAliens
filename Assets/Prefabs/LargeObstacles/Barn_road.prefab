@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 6714977029747479923}
   - component: {fileID: 1103497047541499687}
   - component: {fileID: 4760316602710852448}
-  - component: {fileID: 7507379225950940583}
   - component: {fileID: -8644337268471525527}
   m_Layer: 0
   m_Name: Barn_road
@@ -173,19 +172,6 @@ PolygonCollider2D:
       - {x: -4.917078, y: -1.0958884}
       - {x: 0.58778536, y: -1.1159488}
       - {x: 0.59362555, y: 2.7010553}
---- !u!114 &7507379225950940583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6714977029747479922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectSpeed: 3
 --- !u!114 &-8644337268471525527
 MonoBehaviour:
   m_ObjectHideFlags: 0

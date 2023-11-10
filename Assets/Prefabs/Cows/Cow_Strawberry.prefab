@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 809905036042086348}
   - component: {fileID: 809905036042086351}
   - component: {fileID: 809905036042086350}
-  - component: {fileID: 809905036042086345}
   - component: {fileID: 809905036042086344}
   m_Layer: 0
   m_Name: Cow_Strawberry
@@ -83,19 +82,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2675002, y: 1}
   m_EdgeRadius: 0
---- !u!114 &809905036042086345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809905036042086347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectSpeed: 3
 --- !u!114 &809905036042086344
 MonoBehaviour:
   m_ObjectHideFlags: 0

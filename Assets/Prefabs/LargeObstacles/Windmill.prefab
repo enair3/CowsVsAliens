@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 6303398888586120831}
   - component: {fileID: 8973355883234542874}
   - component: {fileID: 141981168244668968}
-  - component: {fileID: 602613846845296029}
   - component: {fileID: 1661877355991929238}
   m_Layer: 0
   m_Name: Windmill
@@ -167,19 +166,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7008886, y: 3.1704075}
   m_EdgeRadius: 0
---- !u!114 &602613846845296029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4185313780417367702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectSpeed: 3
 --- !u!114 &1661877355991929238
 MonoBehaviour:
   m_ObjectHideFlags: 0

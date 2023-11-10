@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 3481443741238380819}
   - component: {fileID: 7777015264412955841}
   - component: {fileID: 931872301326475700}
-  - component: {fileID: 4570063327028474545}
   - component: {fileID: 135689338422365109}
   m_Layer: 0
   m_Name: FBI_fence
@@ -167,19 +166,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3487759, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4570063327028474545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8498307526737461963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6810c92fc91b845bf3da4497bb3a04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectSpeed: 3
 --- !u!114 &135689338422365109
 MonoBehaviour:
   m_ObjectHideFlags: 0
