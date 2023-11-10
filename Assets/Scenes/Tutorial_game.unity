@@ -305,12 +305,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4111099482245079385, guid: 13bd788e3760477439f0b8404453d496, type: 3}
   m_PrefabInstance: {fileID: 1595484}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1595486}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1595486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4111099482245079387, guid: 13bd788e3760477439f0b8404453d496, type: 3}
+  m_PrefabInstance: {fileID: 1595484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &53391642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,12 +2115,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3222514273635013200, guid: 4a6e7dda2d1c5b645afa0f58ba4a6432, type: 3}
   m_PrefabInstance: {fileID: 857772703}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 857772706}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &857772706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3222514273635013206, guid: 4a6e7dda2d1c5b645afa0f58ba4a6432, type: 3}
+  m_PrefabInstance: {fileID: 857772703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &866328051
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,6 +2594,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseGamePanel: {fileID: 1156580379}
+  panelButtons:
+  - {fileID: 1334944954}
+  - {fileID: 857772706}
+  - {fileID: 1595486}
 --- !u!114 &1004692744
 MonoBehaviour:
   m_ObjectHideFlags: 0
