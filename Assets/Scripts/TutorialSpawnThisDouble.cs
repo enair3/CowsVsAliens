@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutorialSpawnThisDouble : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class TutorialSpawnThisDouble : MonoBehaviour
     public int blocksSpawned;
     [SerializeField] private float timeBetweenSpawn_blocks;
 
+    // vars
+    public GameObject readyToPlayPanel;
+    public GameObject tutorialPausePanel;
+
+    public float textTimer;
+
     // BLOCKS to spawn
     //public GameObject[] blocks;
     public GameObject[] tutorialList;
@@ -17,93 +24,38 @@ public class TutorialSpawnThisDouble : MonoBehaviour
     public GameObject currentBlock;
 
     // tutorial text
-    /*public GameObject movementText;
-    public GameObject collectCowsText;
-    public GameObject cowDroughtText;
-    public GameObject FBI_text;
-    public GameObject obstacle_text;*/
-
     public GameObject activeText;
 
-    public GameObject readyToPlayPanel;
-
-    //public float textTimer;
+    public GameObject movementText;
+    public GameObject collectCowsText;
+    public GameObject cowDroughtText;
+    public GameObject relieveDroughtText;
+    public GameObject FBI_text;
+    public GameObject obstacle_text;
 
     void Start()
     {
         timeBetweenSpawn_blocks = 6.5f;
-        blocksSpawned = 0; 
+        blocksSpawned = 0;
+        textTimer= 0;
         currentBlock = tutorialList[0]; // start with movement
         InvokeRepeating("SpawnBlocks", 0f, timeBetweenSpawn_blocks);
 
         // tutorial text
-        /*movementText.SetActive(true);
+        movementText.SetActive(true);
         collectCowsText.SetActive(false);
         cowDroughtText.SetActive(false);
         FBI_text.SetActive(false);
-        obstacle_text.SetActive(false);*/
-        //activeText.SetActive(true);
-        activeText = tutorialText[0];
-        activeText.SetActive(true);
+        obstacle_text.SetActive(false);
 
-        readyToPlayPanel.SetActive(false);
+        activeText = movementText;
     }
 
     private void Update()
     {
-        Debug.Log(timeBetweenSpawn_blocks);
-
-        // next collect cows
-        if (blocksSpawned == 1)
-        {
-            activeText.SetActive(false);
-            currentBlock = tutorialList[1];
-            activeText = tutorialText[1];
-            activeText.SetActive(true);
-            //activeText.SetActive(true);
-
-        }
-
-        // next cow drought
-        if (blocksSpawned >= 2 && blocksSpawned <= 4)
-        {
-            currentBlock = tutorialList[2];
-            activeText = tutorialText[2];
-            /*movementText.SetActive(false);
-            collectCowsText.SetActive(true);*/
-
-        }
-
-        // next fbi
-        if (blocksSpawned > 4 && blocksSpawned <= 6)
-        {
-            currentBlock = tutorialList[3];
-            activeText = tutorialText[3];
-            /*collectCowsText.SetActive(false);
-            cowDroughtText.SetActive(true);*/
-
-        }
-
-        // next dodge obstacles
-        if (blocksSpawned > 6 && blocksSpawned <= 8)
-        {
-            currentBlock = tutorialList[4];
-            activeText = tutorialText[4];
-            /*cowDroughtText.SetActive(false);
-            FBI_text.SetActive(true);*/
-
-        }
-
-        // next empty field, ask to repeat tutorial or play game
-        if (blocksSpawned > 9)
-        {
-            //obstacle_text.SetActive(false);
-            readyToPlayPanel.SetActive(true);
-            activeText.SetActive(false);
-            Time.timeScale = 0;
-        }
-
-       //if pause panel activated, disable activeText
+        textTimer += Time.deltaTime;
+        PanelTextVisibility();
+        TutorialBlocks();
     }
 
     // level design block spawning
@@ -119,4 +71,115 @@ public class TutorialSpawnThisDouble : MonoBehaviour
         blocksSpawned++;
     }
 
+
+    void PanelTextVisibility()
+    {
+        //if tutorial pause panel activated, disable activeText
+        if (tutorialPausePanel.activeSelf) //doesn't work now? but just moved order for quick fix
+        {
+            activeText.SetActive(false);
+        }
+
+        if (!tutorialPausePanel.activeSelf) 
+        {
+            activeText.SetActive(true);
+        }
+
+        //if ready panel activated, disable activeText
+        if (readyToPlayPanel.activeSelf)
+        {
+            activeText.SetActive(false);
+        }
+
+        if (!readyToPlayPanel.activeSelf) //doesn't work now? but just moved order for quick fix
+        {
+            activeText.SetActive(true);
+        }
+    }
+
+    // BLOCK & TEXT timing
+    void TutorialBlocks()
+    {
+        // next collect cows
+        if (blocksSpawned >= 1 && blocksSpawned <= 2)
+        {
+            currentBlock = tutorialList[1];
+        }
+
+        if (textTimer > 9f)
+        {
+            tutorialText[0].SetActive(false);
+            collectCowsText.SetActive(true);
+            activeText = collectCowsText;
+        }
+
+        // next cow drought
+        if (blocksSpawned > 2 && blocksSpawned <= 4)
+        {
+            currentBlock = tutorialList[2];
+        }
+
+        if (textTimer > 26f)
+        {
+            collectCowsText.SetActive(false);
+            cowDroughtText.SetActive(true);
+            activeText = cowDroughtText;
+        }
+
+        if (textTimer > 33f)
+        {
+            cowDroughtText.SetActive(false);
+            relieveDroughtText.SetActive(true);
+            activeText = relieveDroughtText;
+        }
+
+        if (blocksSpawned == 5) // relieve cow drought
+        {
+            currentBlock = tutorialList[1];
+        }
+
+        // next fbi
+        if (blocksSpawned == 6) // empty field, buffer for fbi
+        {
+            currentBlock = tutorialList[0];
+        }
+
+        if (blocksSpawned > 6 && blocksSpawned <= 7)
+        {
+            currentBlock = tutorialList[3];
+        }
+
+        if (textTimer > 45f)
+        {
+            relieveDroughtText.SetActive(false);
+            FBI_text.SetActive(true);
+            activeText = FBI_text;
+        }
+
+        // next dodge obstacles
+        if (blocksSpawned == 8) // empty field, buffer for obstacles
+        {
+            currentBlock = tutorialList[0];
+        }
+
+        if (blocksSpawned > 8 && blocksSpawned <= 9)
+        {
+            currentBlock = tutorialList[4];
+        }
+
+        if (textTimer > 58f)
+        {
+            FBI_text.SetActive(false);
+            obstacle_text.SetActive(true);
+            activeText = obstacle_text;
+        }
+
+        // next empty field, ask to repeat tutorial or play game
+        if (blocksSpawned > 12)
+        {
+            obstacle_text.SetActive(false);
+            readyToPlayPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
 }
