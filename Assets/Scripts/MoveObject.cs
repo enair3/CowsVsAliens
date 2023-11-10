@@ -16,6 +16,7 @@ public class MoveObject : MonoBehaviour
     {
         if (collision.tag == "bottomBorder")
         {
+            Debug.Log("destroy block");
             Destroy(this.gameObject);
         }
 

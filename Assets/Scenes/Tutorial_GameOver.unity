@@ -261,6 +261,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3222514273635013201, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
   m_PrefabInstance: {fileID: 40768032}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &40768034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3222514273635013200, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
+  m_PrefabInstance: {fileID: 40768032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &97365040
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,14 +833,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214392864661845787, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
       propertyPath: buttons.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8214392864661845787, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
       propertyPath: buttons.Array.data[0]
       value: 
-      objectReference: {fileID: 1343690324}
+      objectReference: {fileID: 40768034}
     - target: {fileID: 8214392864661845787, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
       propertyPath: buttons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1343690324}
+    - target: {fileID: 8214392864661845787, guid: d3d840d1ae34d864da521dd8470477bd, type: 3}
+      propertyPath: buttons.Array.data[2]
       value: 
       objectReference: {fileID: 476942358}
     m_RemovedComponents: []
@@ -892,7 +907,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I want cows now.
+  m_text: We want cows now.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a581ce1681ce904ca0c86478f2d4779, type: 2}
   m_sharedMaterial: {fileID: -3550068478113886045, guid: 2a581ce1681ce904ca0c86478f2d4779, type: 2}
@@ -1298,7 +1313,7 @@ GameObject:
   - component: {fileID: 1326623047}
   - component: {fileID: 1326623046}
   m_Layer: 0
-  m_Name: 'Audio Source: Title'
+  m_Name: 'Audio Source: Tut Game Over'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1314,11 +1329,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f37c4d3f485f63841ad258a641c06f4c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6791a3fe4c24f774a9e7150bf7711b88, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.757
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

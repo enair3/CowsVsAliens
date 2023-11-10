@@ -48,6 +48,7 @@ public class UIManagement : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
     public void Quit()
     {
         Application.Quit();
