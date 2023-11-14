@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0de53b1b0c453b74dbf5a58b7c3fffd5
+guid: 0f23fd1ebe445534791e6424b1a4fb47
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -117,13 +117,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: normalCow_eating_Spritesheet_0
+      name: anger_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 53
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b1d54835edd2a4d9042370adacf139
+      internalID: 1861150388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anger_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 40
+        width: 53
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1a1c6322b82f840af4a4aa659000bd
+      internalID: 1503329963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anger_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 40
+        width: 53
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b08cd22c979ab4c9e8cfa51ab15871
+      internalID: 778899046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anger_spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 125
-        height: 80
+        width: 53
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39965988755556540bbeb57113e5b5d0
-      internalID: 1373118305
+      spriteID: 4c0a72b8b66a0e342a138686d894139a
+      internalID: -1262865296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: normalCow_eating_Spritesheet_1
+      name: anger_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 125
+        x: 53
         y: 0
-        width: 125
-        height: 80
+        width: 53
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32c96842e1b94d044941922911c0b92b
-      internalID: 1289393100
+      spriteID: d0cf2742e1778564c9384cc8121c07bc
+      internalID: 2127770954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: normalCow_eating_Spritesheet_2
+      name: anger_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 250
+        x: 106
         y: 0
-        width: 125
-        height: 80
+        width: 53
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,71 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4e55ab60db949644889d2d567daf047
-      internalID: 647761885
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: normalCow_eating_Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 375
-        y: 0
-        width: 125
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1faef06206b1f8b46b619a2d20e4b145
-      internalID: 264676673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: normalCow_eating_Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 0
-        width: 125
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c048c9d13ca664c4c917651475f68e49
-      internalID: 1672742996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: normalCow_eating_Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 625
-        y: 0
-        width: 125
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cb77d54f92e35e49a76acb64b36a7d7
-      internalID: -2130557747
+      spriteID: 96d75bf6bc6749944984bb67c96b71ff
+      internalID: -662464394
       vertices: []
       indices: 
       edges: []
@@ -253,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      normalCow_eating_Spritesheet_5: -2130557747
-      normalCow_eating_Spritesheet_0: 1373118305
-      normalCow_eating_Spritesheet_1: 1289393100
-      normalCow_eating_Spritesheet_2: 647761885
-      normalCow_eating_Spritesheet_4: 1672742996
-      normalCow_eating_Spritesheet_3: 264676673
+      anger_spritesheet_4: 2127770954
+      anger_spritesheet_1: 1503329963
+      anger_spritesheet_5: -662464394
+      anger_spritesheet_2: 778899046
+      anger_spritesheet_3: -1262865296
+      anger_spritesheet_0: 1861150388
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
