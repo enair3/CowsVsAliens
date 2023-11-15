@@ -9,7 +9,12 @@ public class RandomCow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int prefabIndex = UnityEngine.Random.Range(0, 2);
-        Instantiate(cowOptions[prefabIndex]);
+        /*cowOptions[0] = Resources.Load("CowStanding") as GameObject;
+        cowOptions[1] = Resources.Load("CowSleeping") as GameObject;
+        cowOptions[2] = Resources.Load("CowEating") as GameObject;*/
+
+        int thisCow = Random.Range(0, 3);
+        cowOptions[thisCow].SetActive(true);
+        //Instantiate(cowOptions[thisCow], transform.position, transform.rotation);
     }
 }
