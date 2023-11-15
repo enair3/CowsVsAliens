@@ -8,7 +8,7 @@ public class CowBehavior : MonoBehaviour
     private bool _cowInBeam;
     public float happinessValue;
 
-    public SpriteRenderer cowRenderer;
+    //public SpriteRenderer cowRenderer;
 
     private GameObject cowSFX;
 
