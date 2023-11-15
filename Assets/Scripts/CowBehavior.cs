@@ -51,29 +51,7 @@ public class CowBehavior : MonoBehaviour
                 }
 
             }
-        } 
-
-        // cow drought penalty
-        if (PlayerController.playerInfo.timeWithoutCowCollected >= 8.0f)
-        {
-            PlayerController.playerInfo.inCowDrought = true;
-            CowDroughtPenalty();
-            // decrease happiness by value per time in drought, not incl threshold
-            //PlayerControllerDEMO.playerInfo.happiness -= (0.2f * (timeWithoutCowCollected - 8.0f)); 
         }
-
-    }
-
-    // need to recheck this
-    void CowDroughtPenalty()
-    {
-        if (PlayerController.playerInfo.inCowDrought)
-        {
-            PlayerController.playerInfo.happiness -= (0.0001f * (PlayerController.playerInfo.timeWithoutCowCollected - 8.0f));
-        } else {
-            PlayerController.playerInfo.timeWithoutCowCollected = 0f;
-        }
-        
     }
 
     // hi cow

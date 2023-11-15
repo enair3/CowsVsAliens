@@ -65,6 +65,16 @@ public class PlayerController : MonoBehaviour
         // cow drought
         timeWithoutCowCollected += Time.deltaTime; // timer between cow collections
 
+        // cow drought penalty
+
+        
+        //PlayerControllerDEMO.playerInfo.happiness -= (0.2f * (timeWithoutCowCollected - 8.0f)); 
+        if (timeWithoutCowCollected >= 8.0f)
+        {
+            inCowDrought = true;
+            CowDroughtPenalty();
+        }
+
         // edge cases
         if (cowCount < 0)
         {
@@ -80,7 +90,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    // need to recheck this
+void CowDroughtPenalty()
+{
+    if (Time.timeScale == 1)
+    {
+        if (inCowDrought)
+        {
+            // decrease happiness by value per time in drought, not incl threshold
+            happiness -= (0.0005f * (timeWithoutCowCollected - 8.0f));
+        }
+        else
+        {
+            timeWithoutCowCollected = 0f;
+        }
+    }
+}
+    
+
+private void FixedUpdate()
     {
         PlayerMovement();
     }
