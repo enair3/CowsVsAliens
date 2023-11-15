@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6725782633884796762}
   m_Layer: 0
   m_Name: Block11_4Cows_1LargeObsticle_easy
-  m_TagString: Untagged
+  m_TagString: easy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 496701799811467188}
   m_Layer: 0
   m_Name: Block19_3Cows_ManytreesPickasideLeft_hard
-  m_TagString: Untagged
+  m_TagString: hard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

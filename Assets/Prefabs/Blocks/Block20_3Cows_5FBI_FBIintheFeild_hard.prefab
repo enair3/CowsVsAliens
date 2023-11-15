@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2372759565177038790}
   m_Layer: 0
   m_Name: Block20_3Cows_5FBI_FBIintheFeild_hard
-  m_TagString: Untagged
+  m_TagString: hard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

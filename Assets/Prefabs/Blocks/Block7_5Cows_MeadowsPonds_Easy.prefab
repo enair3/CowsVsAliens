@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5163743285381205548}
   m_Layer: 0
   m_Name: Block7_5Cows_MeadowsPonds_Easy
-  m_TagString: 2Xblock
+  m_TagString: easy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

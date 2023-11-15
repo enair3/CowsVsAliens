@@ -11,6 +11,9 @@ TagManager:
   - 2Xblock
   - 1Xblock
   - HidingFBI
+  - easy
+  - med
+  - hard
   layers:
   - Default
   - TransparentFX

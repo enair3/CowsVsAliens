@@ -27,6 +27,12 @@ public class SpawnThisDouble : MonoBehaviour
         timeBetweenSpawn_blocks = 6.5f;
         mode = 1;
         blocksSpawned = 0;
+
+        //need to load first
+        /*GameObject[] easy = GameObject.FindGameObjectsWithTag("easy");
+        GameObject[] med = GameObject.FindGameObjectsWithTag("med");
+        GameObject[] hard = GameObject.FindGameObjectsWithTag("hard");*/
+
         activeList = easy;
 
         /*allBlocks.Add(easy);

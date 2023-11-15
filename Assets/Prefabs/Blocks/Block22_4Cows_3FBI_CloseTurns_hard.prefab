@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 714990969116989314}
   m_Layer: 0
   m_Name: Block22_4Cows_3FBI_CloseTurns_hard
-  m_TagString: Untagged
+  m_TagString: hard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: -2536185962490277113}
   m_Layer: 0
   m_Name: Block_2_trqs-hard
-  m_TagString: 2Xblock
+  m_TagString: hard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

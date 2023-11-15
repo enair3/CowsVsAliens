@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8208331956033268304}
   m_Layer: 0
   m_Name: Block15_3cows_3FBI_WheatVert_easy
-  m_TagString: Untagged
+  m_TagString: easy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3019,7 +3019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3450151541657977535, guid: 2ba54e3c491f08940b13c2a78b9a73c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.93
+      value: 9.95
       objectReference: {fileID: 0}
     - target: {fileID: 3450151541657977535, guid: 2ba54e3c491f08940b13c2a78b9a73c5, type: 3}
       propertyPath: m_LocalPosition.z

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4606449257972510}
   m_Layer: 0
   m_Name: Block23_3Cows_5FBI_FBICowFarm_hard
-  m_TagString: Untagged
+  m_TagString: hard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812112762002466800, guid: e5c5039a1eb793c40a1c50e3f26db11d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.88
+      value: 9.95
       objectReference: {fileID: 0}
     - target: {fileID: 8812112762002466800, guid: e5c5039a1eb793c40a1c50e3f26db11d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 998286917109627442}
   m_Layer: 0
   m_Name: block_13_grn-med
-  m_TagString: 2Xblock
+  m_TagString: med
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
