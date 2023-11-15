@@ -17,7 +17,6 @@ public class CowBehavior : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         cowSFX = GameObject.Find("AudioSource_cow");
-
     }
 
     private void Update()

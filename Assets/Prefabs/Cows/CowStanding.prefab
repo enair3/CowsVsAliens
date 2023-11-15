@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 5374247207393693898}
   - component: {fileID: 453088640675945993}
   m_Layer: 0
-  m_Name: Cow
+  m_Name: CowStanding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happinessValue: 1
+  cowOptions: []
 --- !u!95 &453088640675945993
 Animator:
   serializedVersion: 5
