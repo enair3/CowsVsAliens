@@ -11,10 +11,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public PlayerSpriteRenderers playerSpriteRenderers; // ref children
     private Sprite alienSprite;
 
-    // movement var
+    // movement vars
     [SerializeField] private float playerSpeed = 3f;
     private Rigidbody2D rb;
     private Vector2 playerMovement;
+
+    // particle vars
+    public ParticleSystem[] playerParticles;
 
     // background bounds
     private float minX= -2.85f;

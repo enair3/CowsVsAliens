@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CollectionControls : MonoBehaviour
 {
+    // tap vars
+    public float holdBeam = 0.5f;
+    float beamTimer;
+
     // collection controls vars
     public bool _beamOn;
     public bool _collect;
@@ -18,6 +22,8 @@ public class CollectionControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        beamTimer = holdBeam;
+
         _beamOn = false;
         _collect = false;
 
@@ -27,57 +33,6 @@ public class CollectionControls : MonoBehaviour
         beamSFX = GameObject.Find("AudioSource_beam");
     }
 
-    // A collection scheme. whoever presses button first is beam, second press is collect (Space and \ in no specific order, role)
-    /*void Update()
-    {
-        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Backslash)) //beam
-        {
-            //Debug.Log("beam on");
-            _beamOn = true;
-
-            if (Input.GetKey(KeyCode.Space)) //collect
-            {
-                if (Input.GetKeyDown(KeyCode.Backslash))
-                {
-                    //Debug.Log("collect");
-                    _collect = true;
-                }
-
-                if (!Input.GetKeyDown(KeyCode.Backslash))
-                {
-                    //Debug.Log("collect");
-                    _collect = false;
-                }
-            }
-
-            if (Input.GetKey(KeyCode.Backslash)) //collect
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    //Debug.Log("collect");
-                    _collect = true;
-                }
-
-                if (!Input.GetKeyDown(KeyCode.Space))
-                {
-                    //Debug.Log("collect");
-                    _collect = false;
-                }
-            }
-        }
-
-        if (!Input.GetKey(KeyCode.Space) || !Input.GetKey(KeyCode.Backslash))
-        {
-            //Debug.Log("beam, collect off");
-            _beamOn = false;
-            _collect = false;
-        }
-
-        BeamTriggers();
-    }*/
-
-    // B collection scheme. set roles. P1 = beam Space, P2 = collect \
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.Space)) //beam
@@ -85,15 +40,22 @@ public class CollectionControls : MonoBehaviour
             //Debug.Log("beam on");
             _beamOn = true;
 
-            if (Input.GetKeyDown(KeyCode.Backslash)) //collect
+            if (Input.GetKey(KeyCode.Backslash)) //collect
             {
-                //Debug.Log("collect");
+                //Debug.Log("collect")
                 _collect = true;
+
+                beamTimer -= Time.deltaTime;
+                if (beamTimer < 0)
+                {
+                    _collect = false;
+                }
             }
 
-            if (!Input.GetKeyDown(KeyCode.Backslash)) //collect
+            if (!Input.GetKey(KeyCode.Backslash)) //collect
             {
                 _collect = false;
+                beamTimer = holdBeam;
             }
         }
 
@@ -124,12 +86,14 @@ public class CollectionControls : MonoBehaviour
 
             if (_collect)
             {
-                beamRenderer.sprite = greenBeam; // trouble figuring out how to make it stay for 1sec
+                beamRenderer.sprite = greenBeam;
             }
 
             if (!_collect)
             {
                 beamRenderer.sprite = neutralBeam;
+                PlayerController.playerInfo.playerParticles[0].Stop();
+                PlayerController.playerInfo.playerParticles[1].Stop();
             }
         }
 

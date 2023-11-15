@@ -40,6 +40,7 @@ public class CowBehavior : MonoBehaviour
                     //cowSFX.GetComponent<AudioSource>().pitch = Random.Range(0, 1);
                     //cowSFX.GetComponent<AudioSource>().PlayOneShot(cowSFX.GetComponent<AudioSource>().clip);
                     cowSFX.GetComponent<AudioSource>().Play();
+                    PlayerController.playerInfo.playerParticles[0].Play();
 
                     PlayerController.playerInfo.cowCount++;
                     PlayerController.playerInfo.happiness += happinessValue; // add 1 to happiness

@@ -41,6 +41,7 @@ public class FBIBehavior : MonoBehaviour
                 if (this.gameObject.tag == "FBI" && PlayerController.playerInfo.collectionControls._collect)
                 {
                     fbiSFX.GetComponent<AudioSource>().Play();
+                    PlayerController.playerInfo.playerParticles[1].Play();
 
                     //Debug.Log("got fbi");
                     PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
@@ -55,6 +56,7 @@ public class FBIBehavior : MonoBehaviour
                 {
                     //fbiSFX.GetComponent<AudioSource>().PlayOneShot(fbiSFX.GetComponent<AudioSource>().clip);
                     fbiSFX.GetComponent<AudioSource>().Play();
+                    PlayerController.playerInfo.playerParticles[1].Play();
 
                     Debug.Log("got fbi");
                     PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
@@ -65,6 +67,11 @@ public class FBIBehavior : MonoBehaviour
                     GetComponent<Collider2D>().enabled = false;
                 }
             }
+        }
+
+        if (!_fbiInBeam)
+        {
+            timeDetectedByFBI = 0f;
         }
     }
 
