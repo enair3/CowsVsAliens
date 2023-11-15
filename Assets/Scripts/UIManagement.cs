@@ -17,6 +17,7 @@ public class UIManagement : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("Title");
+        Time.timeScale = 1;
     }
 
     public void Back() // for how to play
@@ -48,11 +49,13 @@ public class UIManagement : MonoBehaviour
     public void HowToPlay() // likely expand to multiple parts
     {
         SceneManager.LoadScene("HowToPlay");
+        Time.timeScale = 1;
     }
 
     public void Leaderboard()
     {
         SceneManager.LoadScene("Leaderboard");
+        Time.timeScale = 1;
     }
 
     public void TESTLeaderboard()
@@ -63,6 +66,7 @@ public class UIManagement : MonoBehaviour
     public void Credits()
     {
         SceneManager.LoadScene("Credits");
+        Time.timeScale = 1;
     }
 
     public void Quit()
