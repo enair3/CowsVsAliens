@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8359636106865446374}
   m_Layer: 0
   m_Name: block_11_meadow-easy
-  m_TagString: 1Xblock
+  m_TagString: easy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7597957738602210791}
   m_Layer: 0
   m_Name: Block2_3Cows_SiloWeaving_hard
-  m_TagString: 2Xblock
+  m_TagString: hard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

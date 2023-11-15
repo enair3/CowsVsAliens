@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: -3089174127459570815}
   m_Layer: 0
   m_Name: Block_6_grn-easy
-  m_TagString: 1Xblock
+  m_TagString: easy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

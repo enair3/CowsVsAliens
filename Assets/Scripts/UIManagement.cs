@@ -52,7 +52,12 @@ public class UIManagement : MonoBehaviour
 
     public void Leaderboard()
     {
-        SceneManager.LoadScene("TestingLeaderboard"); //put to real leaderboard later
+        SceneManager.LoadScene("Leaderboard");
+    }
+
+    public void TESTLeaderboard()
+    {
+        SceneManager.LoadScene("TestingLeaderboard");
     }
 
     public void Credits()

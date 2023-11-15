@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -325546921688601797}
   m_Layer: 0
   m_Name: Block4_9Cows_5FBI_Manyroads_Med
-  m_TagString: 2Xblock
+  m_TagString: med
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

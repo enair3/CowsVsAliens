@@ -8,7 +8,7 @@ public class CowBehavior : MonoBehaviour
     private bool _cowInBeam;
     public float happinessValue;
 
-    public SpriteRenderer cowRenderer;
+    //public SpriteRenderer cowRenderer;
 
     private GameObject cowSFX;
 
@@ -17,7 +17,6 @@ public class CowBehavior : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         cowSFX = GameObject.Find("AudioSource_cow");
-
     }
 
     private void Update()
