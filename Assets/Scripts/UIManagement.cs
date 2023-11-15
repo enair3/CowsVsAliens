@@ -50,6 +50,11 @@ public class UIManagement : MonoBehaviour
         SceneManager.LoadScene("HowToPlay");
     }
 
+    public void Leaderboard()
+    {
+        SceneManager.LoadScene("TestingLeaderboard"); //put to real leaderboard later
+    }
+
     public void Credits()
     {
         SceneManager.LoadScene("Credits");

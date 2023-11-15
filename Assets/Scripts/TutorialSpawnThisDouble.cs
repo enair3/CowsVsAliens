@@ -25,6 +25,7 @@ public class TutorialSpawnThisDouble : MonoBehaviour
 
     // tutorial text
     public GameObject activeText;
+    public GameObject toSkipText;
 
     public GameObject movementText;
     public GameObject collectCowsText;
@@ -49,6 +50,8 @@ public class TutorialSpawnThisDouble : MonoBehaviour
         obstacle_text.SetActive(false);
 
         activeText = movementText;
+        toSkipText = GameObject.Find("PauseToSkip_text");
+        toSkipText.SetActive(true);
     }
 
     private void Update()
@@ -74,26 +77,18 @@ public class TutorialSpawnThisDouble : MonoBehaviour
 
     void PanelTextVisibility()
     {
-        //if tutorial pause panel activated, disable activeText
-        if (tutorialPausePanel.activeSelf) //doesn't work now? but just moved order for quick fix
+        // if tutorial pause panel or ready to play activated, disable activeText and toSkipText
+        //doesn't work now? but just moved order for quick fix, but can debug later
+        if (tutorialPausePanel.activeSelf || readyToPlayPanel.activeSelf) 
         {
             activeText.SetActive(false);
+            toSkipText.SetActive(false);
         }
 
-        if (!tutorialPausePanel.activeSelf) 
+        if (!tutorialPausePanel.activeSelf || !readyToPlayPanel.activeSelf) 
         {
             activeText.SetActive(true);
-        }
-
-        //if ready panel activated, disable activeText
-        if (readyToPlayPanel.activeSelf)
-        {
-            activeText.SetActive(false);
-        }
-
-        if (!readyToPlayPanel.activeSelf) //doesn't work now? but just moved order for quick fix
-        {
-            activeText.SetActive(true);
+            toSkipText.SetActive(true);
         }
     }
 

@@ -18,16 +18,23 @@ public class SpawnThisDouble : MonoBehaviour
     public GameObject[] med;
     public GameObject[] hard;
 
+    //public static List<GameObject[]> allBlocks;
+
     // class for difficulty to randomize between 2 or more difficulties
 
-    public 
-
-    void Start()
+    public void Start()
     {
         timeBetweenSpawn_blocks = 6.5f;
         mode = 1;
         blocksSpawned = 0;
         activeList = easy;
+
+        /*allBlocks.Add(easy);
+        allBlocks.Add(med);
+        allBlocks.Add(hard);
+
+        Debug.Log(allBlocks);*/
+
         InvokeRepeating("SpawnBlocks", 0f, timeBetweenSpawn_blocks);
     }
 
@@ -35,17 +42,17 @@ public class SpawnThisDouble : MonoBehaviour
     {
         Debug.Log(timeBetweenSpawn_blocks);
 
-        if (blocksSpawned > 5 && blocksSpawned <= 10)
+        if (blocksSpawned > 10 && blocksSpawned <= 20)
         {
             activeList = med;
         }
 
-        if (blocksSpawned > 10 && blocksSpawned < 15)
+        if (blocksSpawned > 20 && blocksSpawned <= 30)
         {
             activeList = hard;
         }
 
-        if (blocksSpawned > 15)
+        if (blocksSpawned > 30)
         {
             activeList = hard;
         }
