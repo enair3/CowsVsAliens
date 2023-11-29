@@ -2173,7 +2173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013200, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HowToPlay
+      value: IntroCutscene
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013200, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2289,7 +2289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013206, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_Name
-      value: Game_button_toRules
+      value: Game_button_toIntro
       objectReference: {fileID: 0}
     - target: {fileID: 3222514275523816776, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_fontSize

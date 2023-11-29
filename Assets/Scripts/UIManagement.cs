@@ -38,6 +38,13 @@ public class UIManagement : MonoBehaviour
         Time.timeScale = 1;
 
     }
+    
+    // Christine: button goes to intro cutscene
+    public void IntroCutscene()
+    {
+        SceneManager.LoadScene("IntroCutscene");
+        Time.timeScale = 1;
+    }
 
     public void TutorialGame() // use for menu "play", pause panel "restart", game over "play again", just change text
     {
