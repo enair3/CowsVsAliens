@@ -45,6 +45,13 @@ public class UIManagement : MonoBehaviour
         SceneManager.LoadScene("IntroCutscene");
         Time.timeScale = 1;
     }
+	
+	// Christine: button goes to Game Over Scene
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+        Time.timeScale = 1;
+    }
 
     public void TutorialGame() // use for menu "play", pause panel "restart", game over "play again", just change text
     {
