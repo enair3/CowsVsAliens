@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2863325496093660524}
   m_Layer: 0
   m_Name: Block9_5Cows_LargeObsticlesMeadow_Med
-  m_TagString: med
+  m_TagString: regular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

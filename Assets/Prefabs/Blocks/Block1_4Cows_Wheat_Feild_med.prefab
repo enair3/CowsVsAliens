@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5174120418313177075}
   m_Layer: 0
   m_Name: Block1_4Cows_Wheat_Feild_med
-  m_TagString: med
+  m_TagString: regular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7917682696526037149}
   m_Layer: 0
   m_Name: Block23_3Cows_5FBI_FBICowFarm_hard
-  m_TagString: hard
+  m_TagString: regular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

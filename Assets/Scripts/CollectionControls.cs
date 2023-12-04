@@ -92,8 +92,8 @@ public class CollectionControls : MonoBehaviour
             if (!_collect)
             {
                 beamRenderer.sprite = neutralBeam;
-                PlayerController.playerInfo.playerParticles[0].Stop();
-                PlayerController.playerInfo.playerParticles[1].Stop();
+                //PlayerController.playerInfo.playerParticles[0].Stop();
+                //PlayerController.playerInfo.playerParticles[1].Stop();
             }
         }
 
