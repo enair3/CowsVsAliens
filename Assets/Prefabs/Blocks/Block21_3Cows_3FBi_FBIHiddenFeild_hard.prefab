@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2830149334044098600}
   m_Layer: 0
   m_Name: Block21_3Cows_3FBi_FBIHiddenFeild_hard
-  m_TagString: hard
+  m_TagString: regular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

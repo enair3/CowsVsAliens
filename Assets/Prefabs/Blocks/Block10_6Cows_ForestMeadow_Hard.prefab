@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9032927273928505578}
   m_Layer: 0
   m_Name: Block10_6Cows_ForestMeadow_Hard
-  m_TagString: hard
+  m_TagString: regular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CowBehavior : MonoBehaviour
 {
+    public GameVFX gameVFX;
+
     private GameObject player;
     private bool _cowInBeam;
     public float happinessValue;
@@ -17,6 +19,8 @@ public class CowBehavior : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         cowSFX = GameObject.Find("AudioSource_cow");
+
+        gameVFX = player.GetComponent<GameVFX>();
     }
 
     private void Update()
@@ -29,18 +33,17 @@ public class CowBehavior : MonoBehaviour
             // BOTH buttons to collect
             if (PlayerController.playerInfo.collectionControls._beamOn)
             {
-                // cow collection visuals - REVISIT
 
                 //if (Input.GetKeyDown(KeyCode.Backslash))
                 if (PlayerController.playerInfo.collectionControls._collect)
                 {
-                    //Debug.Log("got cow");
-
+                   
                     //cowSFX.GetComponent<AudioSource>().pitch = Random.Range(0, 1);
-                    //cowSFX.GetComponent<AudioSource>().PlayOneShot(cowSFX.GetComponent<AudioSource>().clip);
                     cowSFX.GetComponent<AudioSource>().Play();
-                    PlayerController.playerInfo.playerParticles[0].Play();
 
+                    gameVFX.gotCow = true;
+
+                    // stats
                     PlayerController.playerInfo.cowCount++;
                     PlayerController.playerInfo.happiness += happinessValue; // add 1 to happiness
 
@@ -53,6 +56,8 @@ public class CowBehavior : MonoBehaviour
             }
         }
     }
+
+
 
     // hi cow
     private void OnTriggerEnter2D(Collider2D collision)

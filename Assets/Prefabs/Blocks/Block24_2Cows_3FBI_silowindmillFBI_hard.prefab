@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7078124925208277426}
   m_Layer: 0
   m_Name: Block24_2Cows_3FBI_silowindmillFBI_hard
-  m_TagString: hard
+  m_TagString: regular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

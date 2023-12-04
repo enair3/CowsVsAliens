@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FBIBehavior : MonoBehaviour
 {
+    public GameVFX gameVFX;
+
     private GameObject player;
     private bool _fbiInBeam;
     [SerializeField] private float timeDetectedByFBI;
@@ -18,6 +20,9 @@ public class FBIBehavior : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         fbiSFX = GameObject.Find("AudioSource_fbi");
+
+        gameVFX = player.GetComponent<GameVFX>();
+
         timeDetectedByFBI = 0f;  
     }
 
@@ -28,20 +33,22 @@ public class FBIBehavior : MonoBehaviour
         {
             // level 1 severity: hover over FBI, NO BUTTONS PRESSED
             // if beam is off
-            PlayerController.playerInfo.conspiracy += 0.1f * timeDetectedByFBI;
-            PlayerController.playerInfo.conspiracy += 0.1f * timeDetectedByFBI;
+            PlayerController.playerInfo.conspiracy += 0.2f * timeDetectedByFBI;
+
+            gameVFX.conspiracyUp.SetActive(true);
 
             // level 2 severity: hover over FBI with beam on, 1 BUTTON PRESSED (\)
             // if beam is on
             if (PlayerController.playerInfo.collectionControls._beamOn)
             {
-                PlayerController.playerInfo.conspiracy += 0.2f * timeDetectedByFBI;
+                PlayerController.playerInfo.conspiracy += 0.4f * timeDetectedByFBI;
 
                 // level 3 severity: pick up FBI and NOT hiding FBI nor satellite, BOTH BUTTONS PRESSED (\ AND Space)
                 if (this.gameObject.tag == "FBI" && PlayerController.playerInfo.collectionControls._collect)
                 {
                     fbiSFX.GetComponent<AudioSource>().Play();
-                    PlayerController.playerInfo.playerParticles[1].Play();
+
+                    gameVFX.gotFBI = true;
 
                     //Debug.Log("got fbi");
                     PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
@@ -56,7 +63,8 @@ public class FBIBehavior : MonoBehaviour
                 {
                     //fbiSFX.GetComponent<AudioSource>().PlayOneShot(fbiSFX.GetComponent<AudioSource>().clip);
                     fbiSFX.GetComponent<AudioSource>().Play();
-                    PlayerController.playerInfo.playerParticles[1].Play();
+
+                    gameVFX.gotFBI = true;
 
                     Debug.Log("got fbi");
                     PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
@@ -72,6 +80,7 @@ public class FBIBehavior : MonoBehaviour
         if (!_fbiInBeam)
         {
             timeDetectedByFBI = 0f;
+            gameVFX.gotFBI = false;
         }
     }
 

@@ -16,9 +16,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 playerMovement;
 
-    // particle vars
-    public ParticleSystem[] playerParticles;
-
     // background bounds
     private float minX= -2.85f;
     private float maxX = 2.85f;
@@ -27,10 +24,10 @@ public class PlayerController : MonoBehaviour
 
     // player stats, can connect to UI objects
     public float cowCount = 0f;
-    public float happiness = 25f;
-    public float maxHappiness = 50f;
+    public float happiness = 15f;
+    public float maxHappiness = 30f;
     public float conspiracy = 0f;
-    public float maxConspiracy = 50f;
+    public float maxConspiracy = 30f;
 
     public bool inCowDrought;
     public float timeWithoutCowCollected;
@@ -46,11 +43,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         collectionControls = GameObject.FindObjectOfType<CollectionControls>();
-        
-        rb = GetComponent<Rigidbody2D>();
 
         alienSprite = playerSpriteRenderers.Alien.sprite;
         var playerSizeX = playerInfo.alienSprite.bounds.size.x / 4; // get alien sprite, get size for object boundaries
+
+        rb = GetComponent<Rigidbody2D>();
 
         // new bounds
         minX += playerSizeX;
@@ -70,8 +67,6 @@ public class PlayerController : MonoBehaviour
 
         // cow drought penalty
 
-        
-        //PlayerControllerDEMO.playerInfo.happiness -= (0.2f * (timeWithoutCowCollected - 8.0f)); 
         if (timeWithoutCowCollected >= 8.0f)
         {
             inCowDrought = true;
@@ -93,7 +88,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // need to recheck this
+
+
 void CowDroughtPenalty()
 {
     if (Time.timeScale == 1)

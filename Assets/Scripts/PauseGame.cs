@@ -21,6 +21,7 @@ public class PauseGame : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        StartCoroutine(DelayShow());
         ActivatePause();
     }
 
@@ -54,7 +55,7 @@ public class PauseGame : MonoBehaviour
 
     IEnumerator DelayShow() //won't show bc timescale = 0 when panel is on, waitforseconds doesn't go. need to fix
     {
-       yield return new WaitForSeconds(5f);
+       yield return new WaitForSeconds(1f);
        foreach (var btn in panelButtons)
        {
             btn.SetActive(true);

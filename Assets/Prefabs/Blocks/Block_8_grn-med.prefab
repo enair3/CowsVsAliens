@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3182935034652740618}
   m_Layer: 0
   m_Name: Block_8_grn-med
-  m_TagString: med
+  m_TagString: regular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
