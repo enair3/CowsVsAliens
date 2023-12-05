@@ -11,17 +11,24 @@ public class FBIBehavior : MonoBehaviour
     [SerializeField] private float timeDetectedByFBI;
 
     public SpriteRenderer fbiRenderer;
+    public GameObject fbiHighlight;
     public Sprite fbiGone;
 
     private GameObject fbiSFX;
+    private GameObject fbiYell;
+    public AudioClip[] fbiYellClip;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
         fbiSFX = GameObject.Find("AudioSource_fbi");
+        fbiYell = GameObject.Find("AudioSource_fbiYell");
+        fbiYell.GetComponent<AudioSource>().Stop();
 
         gameVFX = player.GetComponent<GameVFX>();
+        fbiHighlight.SetActive(false);
 
         timeDetectedByFBI = 0f;  
     }
@@ -35,7 +42,7 @@ public class FBIBehavior : MonoBehaviour
             // if beam is off
             PlayerController.playerInfo.conspiracy += 0.2f * timeDetectedByFBI;
 
-            gameVFX.conspiracyUp.SetActive(true);
+            fbiHighlight.SetActive(true);
 
             // level 2 severity: hover over FBI with beam on, 1 BUTTON PRESSED (\)
             // if beam is on
@@ -50,7 +57,7 @@ public class FBIBehavior : MonoBehaviour
 
                     gameVFX.gotFBI = true;
 
-                    //Debug.Log("got fbi");
+                    Debug.Log("got fbi");
                     PlayerController.playerInfo.conspiracy++; // add 1 to conspiracy
                     PlayerController.playerInfo.cowCount--; // subtract 1 cow
 
@@ -61,7 +68,6 @@ public class FBIBehavior : MonoBehaviour
 
                 if (this.gameObject.tag == "HidingFBI" && PlayerController.playerInfo.collectionControls._collect)
                 {
-                    //fbiSFX.GetComponent<AudioSource>().PlayOneShot(fbiSFX.GetComponent<AudioSource>().clip);
                     fbiSFX.GetComponent<AudioSource>().Play();
 
                     gameVFX.gotFBI = true;
@@ -80,7 +86,8 @@ public class FBIBehavior : MonoBehaviour
         if (!_fbiInBeam)
         {
             timeDetectedByFBI = 0f;
-            gameVFX.gotFBI = false;
+
+            fbiHighlight.SetActive(false);
         }
     }
 
@@ -94,6 +101,12 @@ public class FBIBehavior : MonoBehaviour
                 //Debug.Log("player fbi collision");
                 _fbiInBeam = true;
                 timeDetectedByFBI += Time.deltaTime; // start timer
+
+                fbiYell.GetComponent<AudioSource>().clip = fbiYellClip[Random.Range(0, 3)];
+                fbiYell.GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f);
+                fbiYell.GetComponent<AudioSource>().Play();
+
+                gameVFX.conspiracyUp.SetActive(true);
             }
         }
 
@@ -104,6 +117,10 @@ public class FBIBehavior : MonoBehaviour
                 //Debug.Log("player fbi collision");
                 _fbiInBeam = false;
                 timeDetectedByFBI += 0; // stop timer
+
+                fbiYell.GetComponent<AudioSource>().Stop();
+
+                gameVFX.conspiracyUp.SetActive(false);
             }
         }
     }
@@ -117,6 +134,10 @@ public class FBIBehavior : MonoBehaviour
             {
                 _fbiInBeam = false; // reset bool
                 timeDetectedByFBI = 0f; // reset timer
+
+                fbiYell.GetComponent<AudioSource>().Stop();
+
+                gameVFX.conspiracyUp.SetActive(false);
             }
         }
 
@@ -127,6 +148,10 @@ public class FBIBehavior : MonoBehaviour
                 //Debug.Log("player fbi collision");
                 _fbiInBeam = false;
                 timeDetectedByFBI += 0; // stop timer
+
+                fbiYell.GetComponent<AudioSource>().Stop();
+
+                gameVFX.conspiracyUp.SetActive(false);
             }
         }
     }

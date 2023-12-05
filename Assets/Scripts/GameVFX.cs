@@ -5,14 +5,18 @@ using UnityEngine;
 public class GameVFX : MonoBehaviour
 {
     //public static GameVFX gameVFX;
+    private Vector3 cowScale;
 
     // env, ui
     public ParticleSystem[] playerParticles;
     public GameObject redBorder;
+    public GameObject alertSFX;
     public GameObject cowFall;
 
     public GameObject happyUp;
     public GameObject conspiracyUp;
+
+    public GameObject obsExplosion_anim;
 
     // cow
     public bool gotCow;
@@ -30,6 +34,8 @@ public class GameVFX : MonoBehaviour
     void Start()
     {
         redBorder.SetActive(false);
+        alertSFX.GetComponent<AudioSource>().Stop();
+
         cowFall.SetActive(false);
 
         gotCow = false;
@@ -42,6 +48,7 @@ public class GameVFX : MonoBehaviour
 
         gotHit = false;
         obsVFX_timer = 0.5f;
+        obsExplosion_anim.SetActive(false);
     }
 
     // Update is called once per frame
@@ -52,10 +59,12 @@ public class GameVFX : MonoBehaviour
             || PlayerController.playerInfo.happiness <= (PlayerController.playerInfo.happiness * 0.4))
         {
             redBorder.SetActive(true);
+            alertSFX.GetComponent<AudioSource>().Play();
         }
         else
         {
             redBorder.SetActive(false);
+            alertSFX.GetComponent<AudioSource>().Stop();
         }
 
         // got cow
@@ -102,7 +111,15 @@ public class GameVFX : MonoBehaviour
 
         // start vfx
         playerParticles[1].Play();
-        cowFall.SetActive(true);
+        
+        if (PlayerController.playerInfo.cowCount != 0)
+        {
+            Vector3 cowScale = cowFall.GetComponent<RectTransform>().localScale;
+            cowScale.x *= -1;
+            cowFall.GetComponent<RectTransform>().localScale = cowScale;
+
+            cowFall.SetActive(true);
+        }
 
         if (fbiVFX_timer <= 0)
         {
@@ -121,7 +138,14 @@ public class GameVFX : MonoBehaviour
 
         // start vfx, DD NO FALL COW WHEN COUNT = 0
         playerParticles[2].Play();
-        cowFall.SetActive(true);
+        obsExplosion_anim.SetActive(true);
+
+        if (PlayerController.playerInfo.cowCount != 0)
+        {
+            //rand = Random.Range(0, 2);
+
+            cowFall.SetActive(true);
+        }
 
         if (obsVFX_timer <= 0)
         {
@@ -129,6 +153,7 @@ public class GameVFX : MonoBehaviour
             obsVFX_timer = 1f;
             gotHit = false;
             playerParticles[2].Stop();
+            obsExplosion_anim.SetActive(false);
             cowFall.SetActive(false);
         }
     }

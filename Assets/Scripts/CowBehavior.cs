@@ -11,16 +11,20 @@ public class CowBehavior : MonoBehaviour
     public float happinessValue;
 
     //public SpriteRenderer cowRenderer;
+    public GameObject cowHighlight;
 
     private GameObject cowSFX;
+    public AudioClip[] cowSounds;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         cowSFX = GameObject.Find("AudioSource_cow");
+        cowSFX.GetComponent<AudioSource>().Stop();
 
         gameVFX = player.GetComponent<GameVFX>();
+        cowHighlight.SetActive(false);
     }
 
     private void Update()
@@ -29,6 +33,7 @@ public class CowBehavior : MonoBehaviour
         if (_cowInBeam)
         {
             // enable outlined cow indicator sprite
+            cowHighlight.SetActive(true);
 
             // BOTH buttons to collect
             if (PlayerController.playerInfo.collectionControls._beamOn)
@@ -37,8 +42,10 @@ public class CowBehavior : MonoBehaviour
                 //if (Input.GetKeyDown(KeyCode.Backslash))
                 if (PlayerController.playerInfo.collectionControls._collect)
                 {
-                   
+
                     //cowSFX.GetComponent<AudioSource>().pitch = Random.Range(0, 1);
+                    cowSFX.GetComponent<AudioSource>().clip = cowSounds[Random.Range(0, 2)];
+                    cowSFX.GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f);
                     cowSFX.GetComponent<AudioSource>().Play();
 
                     gameVFX.gotCow = true;
@@ -54,6 +61,10 @@ public class CowBehavior : MonoBehaviour
                 }
 
             }
+        }
+        if (!_cowInBeam)
+        {
+            cowHighlight.SetActive(false);
         }
     }
 
