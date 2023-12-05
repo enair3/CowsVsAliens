@@ -16,6 +16,8 @@ public class GameVFX : MonoBehaviour
     public GameObject happyUp;
     public GameObject conspiracyUp;
 
+    public GameObject obsExplosion_anim;
+
     // cow
     public bool gotCow;
     public float cowVFX_timer;
@@ -46,6 +48,7 @@ public class GameVFX : MonoBehaviour
 
         gotHit = false;
         obsVFX_timer = 0.5f;
+        obsExplosion_anim.SetActive(false);
     }
 
     // Update is called once per frame
@@ -135,6 +138,7 @@ public class GameVFX : MonoBehaviour
 
         // start vfx, DD NO FALL COW WHEN COUNT = 0
         playerParticles[2].Play();
+        obsExplosion_anim.SetActive(true);
 
         if (PlayerController.playerInfo.cowCount != 0)
         {
@@ -149,6 +153,7 @@ public class GameVFX : MonoBehaviour
             obsVFX_timer = 1f;
             gotHit = false;
             playerParticles[2].Stop();
+            obsExplosion_anim.SetActive(false);
             cowFall.SetActive(false);
         }
     }

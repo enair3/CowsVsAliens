@@ -7,16 +7,27 @@ public class SpawnThisDouble : MonoBehaviour
     private List<GameObject> spawnedObjects = new List<GameObject>(); // keep track of what's spawned
 
     // spawning vars
-    public int mode;
     public int blocksSpawned;
     [SerializeField] private float timeBetweenSpawn_blocks;
 
+    // music
+    private GameObject musicMain;
+    private GameObject musicHideout;
+
+    public bool hideoutOn;
+    public int hideoutProb;
+    public GameObject hideoutAlert_text;
+
     // BLOCKS to spawn
-    //public GameObject[] blocks;
-    public GameObject[] activeList;
-    public GameObject[] easy;
-    public GameObject[] med;
-    public GameObject[] hard;
+    // intro progression
+    public List<GameObject> activeList;
+    public List<GameObject> easy;
+    public List<GameObject> med;
+    public List<GameObject> hard;
+
+    // random and event
+    public List<GameObject> regularBlocks;
+    public List<GameObject> hideoutBlocks;
 
     //public static List<GameObject[]> allBlocks;
 
@@ -25,21 +36,31 @@ public class SpawnThisDouble : MonoBehaviour
     public void Start()
     {
         timeBetweenSpawn_blocks = 6.5f;
-        mode = 1;
         blocksSpawned = 0;
+        hideoutProb = 4;
 
-        //need to load first
-        /*GameObject[] easy = GameObject.FindGameObjectsWithTag("easy");
-        GameObject[] med = GameObject.FindGameObjectsWithTag("med");
-        GameObject[] hard = GameObject.FindGameObjectsWithTag("hard");*/
+        musicMain = GameObject.Find("AudioSource_music");
+        musicMain.GetComponent<AudioSource>().Play();
+
+        musicHideout = GameObject.Find("AudioSource_hideout");
+        hideoutOn = false;
+        hideoutAlert_text.SetActive(false);
+
+        // load first
+        foreach (var e in easy)
+        {
+            regularBlocks.Add(e);
+        }
+        foreach (var m in med)
+        {
+            regularBlocks.Add(m);
+        }
+        foreach (var h in hard)
+        {
+            regularBlocks.Add(h);
+        }
 
         activeList = easy;
-
-        /*allBlocks.Add(easy);
-        allBlocks.Add(med);
-        allBlocks.Add(hard);
-
-        Debug.Log(allBlocks);*/
 
         InvokeRepeating("SpawnBlocks", 0f, timeBetweenSpawn_blocks);
     }
@@ -48,33 +69,63 @@ public class SpawnThisDouble : MonoBehaviour
     {
         Debug.Log(timeBetweenSpawn_blocks);
 
-        if (blocksSpawned > 10 && blocksSpawned <= 20)
-        {
-            activeList = med;
-        }
+        BlockProgression();
 
-        if (blocksSpawned > 20 && blocksSpawned <= 30)
-        {
-            activeList = hard;
-        }
-
-        if (blocksSpawned > 30)
-        {
-            activeList = hard;
-        }
     }
 
     // level design block spawning
     void SpawnBlocks()
     {
         WaitForSeconds resetTime = new WaitForSeconds(timeBetweenSpawn_blocks);
-        GameObject prefab = activeList[Random.Range(0, activeList.Length)]; // will need to revise to include order
+        GameObject prefab = activeList[Random.Range(0, activeList.Count)]; // will need to revise to include order
         GameObject clone = Instantiate(prefab, transform.position,
             transform.rotation);
 
         // add spawned to list
         spawnedObjects.Add(clone);
+
         blocksSpawned++;
+    }
+
+    void BlockProgression()
+    {
+        if (blocksSpawned > 2 && blocksSpawned <= 4)
+        {
+            activeList = med;
+        }
+
+        if (blocksSpawned > 4 && blocksSpawned <= 6)
+        {
+            activeList = hard;
+        }
+
+        if (blocksSpawned > 8) //15, incr by 5
+        {
+            activeList = regularBlocks;
+
+            // random prob hideout special event
+            if (blocksSpawned % 4 == 0)
+            {
+                hideoutOn = true;
+                musicMain.GetComponent<AudioSource>().volume = 0.15f;
+                musicHideout.GetComponent<AudioSource>().Play();
+
+                hideoutAlert_text.SetActive(true);
+                //hideoutAlert_text.GetComponent<UIVertex>().color.a += Time.deltaTime;
+                activeList = hideoutBlocks;
+
+
+                Debug.Log("hideout activated");
+            }
+            else
+            {
+                hideoutOn = false;
+                musicMain.GetComponent<AudioSource>().volume = 0.5f;
+
+                hideoutAlert_text.SetActive(false);
+                activeList = regularBlocks;
+            }
+        }
     }
 
 }
