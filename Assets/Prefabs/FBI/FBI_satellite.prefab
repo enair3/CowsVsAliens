@@ -84,9 +84,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b838eb0202614ba42aa2f5dcf1697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameVFX: {fileID: 0}
   timeDetectedByFBI: 0
   fbiRenderer: {fileID: 0}
+  fbiHighlight: {fileID: 0}
   fbiGone: {fileID: 0}
+  fbiYell: {fileID: 0}
+  fbiYellClip:
+  - {fileID: 8300000, guid: 76554094af1d66f4fb38d0622e4e90a5, type: 3}
+  - {fileID: 8300000, guid: 8153e722526243347a1dfc647aab8b49, type: 3}
+  - {fileID: 8300000, guid: 0a84d3bf9e5e0404aac736922cf63f17, type: 3}
 --- !u!1 &8045381848184236263
 GameObject:
   m_ObjectHideFlags: 0

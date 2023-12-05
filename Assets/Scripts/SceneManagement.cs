@@ -23,12 +23,25 @@ public class SceneManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerController.playerInfo.happiness <= 0 || 
-            PlayerController.playerInfo.conspiracy >= PlayerController.playerInfo.maxConspiracy)
+        // if happiness empty
+        if (PlayerController.playerInfo.happiness <= 0)
         {
             if (SceneManager.GetActiveScene().name == "Gameplay" )
             {
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("GameOver_noCow_Cutscene");
+            }
+            if (SceneManager.GetActiveScene().name == "Tutorial_game")
+            {
+                SceneManager.LoadScene("Tutorial_GameOver");
+            }
+        }
+
+        // if conspiracy full
+        if (PlayerController.playerInfo.conspiracy >= PlayerController.playerInfo.maxConspiracy)
+        {
+            if (SceneManager.GetActiveScene().name == "Gameplay")
+            {
+                SceneManager.LoadScene("GameOver_FBI_Cutscene");
             }
             if (SceneManager.GetActiveScene().name == "Tutorial_game")
             {
