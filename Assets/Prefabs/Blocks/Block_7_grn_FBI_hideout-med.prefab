@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 7375814017228431454}
   m_Layer: 0
   m_Name: Block_7_grn_FBI_hideout-med
-  m_TagString: regular
+  m_TagString: hideout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.6, y: 19.95}
+  m_Size: {x: 5.9, y: 19.95}
   m_EdgeRadius: 0
 --- !u!114 &7375814017228431454
 MonoBehaviour:

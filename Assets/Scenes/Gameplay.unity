@@ -5191,6 +5191,7 @@ MonoBehaviour:
   - {fileID: 5458906655030337355, guid: 667d93ffcaf4b724e937a9d9db1d7dbe, type: 3}
   - {fileID: 32727822126762905, guid: 289e083b9ea9d884c9d28678fca48d80, type: 3}
   - {fileID: 7091924120723924676, guid: f40d5fc8c3608694db94087ceaff7eba, type: 3}
+  - {fileID: 6309315553728196297, guid: 45b4065aaff10ce498f2d4090c749d95, type: 3}
   med:
   - {fileID: 1372440045744228113, guid: 26a5a24ac020faf449030670721a9a21, type: 3}
   - {fileID: 5338234441603067934, guid: 1a08b3fa94dd5174db20987ff5322a6f, type: 3}
@@ -5206,6 +5207,7 @@ MonoBehaviour:
   - {fileID: 7490416084669636558, guid: 70e7c25e9f4c9ee41aeaa5bed4c2ffe6, type: 3}
   - {fileID: 5694526171509760010, guid: f0f97f61fcb82d54689ec6a32fe0c2e7, type: 3}
   - {fileID: 5927331266147655161, guid: cd3bb938a85b3da46932ccbf8fe6453a, type: 3}
+  - {fileID: 239792481205895753, guid: c3aa9c2d350257240883e8a95b12a62b, type: 3}
   hard:
   - {fileID: 7036642287723038497, guid: b8a40bb80420f4243b21b59ff9b53519, type: 3}
   - {fileID: 8622895723656156262, guid: b3d9d5b6663e61644bed17bddb6bbd26, type: 3}
@@ -5217,9 +5219,19 @@ MonoBehaviour:
   - {fileID: 3106606460605644369, guid: adceed8e4fea14346b847335254c331d, type: 3}
   - {fileID: 400711912615527412, guid: 73b2b75643931754da9253138c93a731, type: 3}
   - {fileID: 8775175982601530698, guid: c09663d2d5872264ca1d5bf9289fe504, type: 3}
+  - {fileID: 2938514453683783583, guid: 089c8a43cdd99ae44afa72f59edfde61, type: 3}
+  - {fileID: 3599039045779297679, guid: d47bdf38601a9184b90695d8af652aa7, type: 3}
+  - {fileID: 2311326733958860812, guid: 95ec2360ff36fec4c96c7b860c4dcd85, type: 3}
+  - {fileID: 5230710770177653468, guid: 3cbd3adb179c7374dbc7d35d6b28c769, type: 3}
+  - {fileID: 1870853980104575426, guid: f2cde5ad2293ce0449a2461b7237bc8b, type: 3}
   regularBlocks: []
   hideoutBlocks:
-  - {fileID: 1025600484910880863, guid: 2086352a31e97754bb254e1f3a9f1392, type: 3}
+  - {fileID: 2938514453683783583, guid: 089c8a43cdd99ae44afa72f59edfde61, type: 3}
+  - {fileID: 3599039045779297679, guid: d47bdf38601a9184b90695d8af652aa7, type: 3}
+  - {fileID: 2311326733958860812, guid: 95ec2360ff36fec4c96c7b860c4dcd85, type: 3}
+  - {fileID: 5230710770177653468, guid: 3cbd3adb179c7374dbc7d35d6b28c769, type: 3}
+  - {fileID: 1870853980104575426, guid: f2cde5ad2293ce0449a2461b7237bc8b, type: 3}
+  - {fileID: 239792481205895753, guid: c3aa9c2d350257240883e8a95b12a62b, type: 3}
 --- !u!1 &1988203606
 GameObject:
   m_ObjectHideFlags: 0

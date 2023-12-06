@@ -102,30 +102,61 @@ public class SpawnThisDouble : MonoBehaviour
         if (blocksSpawned > 8) //15, incr by 5
         {
             activeList = regularBlocks;
+        }
 
-            // random prob hideout special event
-            if (blocksSpawned % 4 == 0)
-            {
-                hideoutOn = true;
-                musicMain.GetComponent<AudioSource>().volume = 0.15f;
-                musicHideout.GetComponent<AudioSource>().Play();
-
-                hideoutAlert_text.SetActive(true);
-                //hideoutAlert_text.GetComponent<UIVertex>().color.a += Time.deltaTime;
-                activeList = hideoutBlocks;
+        // when hideout block spawns
 
 
-                Debug.Log("hideout activated");
-            }
-            else
-            {
-                hideoutOn = false;
-                musicMain.GetComponent<AudioSource>().volume = 0.5f;
+        /*// random prob hideout special event
+       if (blocksSpawned % 4 == 0)
+       {
+           hideoutOn = true;
+           musicMain.GetComponent<AudioSource>().volume = 0.15f;
+           musicHideout.GetComponent<AudioSource>().Play();
 
-                hideoutAlert_text.SetActive(false);
-                activeList = regularBlocks;
-            }
+           hideoutAlert_text.SetActive(true);
+           //hideoutAlert_text.GetComponent<UIVertex>().color.a += Time.deltaTime;
+           activeList = hideoutBlocks;
+
+
+           Debug.Log("hideout activated");
+       }
+       else
+       {
+           hideoutOn = false;
+           musicMain.GetComponent<AudioSource>().volume = 0.5f;
+
+           hideoutAlert_text.SetActive(false);
+           activeList = regularBlocks;
+       } */
+    }
+
+    // if hideout block spawns
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "hideout")
+        {
+            hideoutOn = true;
+            musicMain.GetComponent<AudioSource>().volume = 0.15f;
+            musicHideout.GetComponent<AudioSource>().Play();
+
+            hideoutAlert_text.SetActive(true);
+            //hideoutAlert_text.GetComponent<UIVertex>().color.a += Time.deltaTime;
+            activeList = hideoutBlocks;
+
+            Debug.Log("hideout activated");
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.tag == "hideout")
+        {
+            hideoutOn = false;
+            musicMain.GetComponent<AudioSource>().volume = 0.5f;
+
+            hideoutAlert_text.SetActive(false);
+            activeList = regularBlocks;
+        }
+    }
 }
