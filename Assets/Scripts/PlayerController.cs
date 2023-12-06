@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private float maxY = 5f;
 
     // player stats, can connect to UI objects
-    public float cowCount = 0f;
+    public int cowCount = 0;
     public float happiness = 15f;
     public float maxHappiness = 30f;
     public float conspiracy = 0f;
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         // cow drought penalty
 
-        if (timeWithoutCowCollected >= 8.0f)
+        if (timeWithoutCowCollected >= 4.0f)
         {
             inCowDrought = true;
             CowDroughtPenalty();
@@ -97,7 +97,7 @@ void CowDroughtPenalty()
         if (inCowDrought)
         {
             // decrease happiness by value per time in drought, not incl threshold
-            happiness -= (0.0005f * (timeWithoutCowCollected - 8.0f));
+            happiness -= (0.0005f * (timeWithoutCowCollected - 4.0f));
         }
         else
         {
