@@ -21,16 +21,19 @@ public class HoverButton : MonoBehaviour
     void Update()
     {
         // check if active before action
+        // ui navigation opposite of conv for alt ctrl. diff builds for keyboard vs alt ctrl
         if (buttons[currentButton].isActiveAndEnabled)
         {
             // to next (right, down)
-            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            //if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) //keyboard
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow)) //alt ctrl
             {
                 ToNextButton();
             }
             // to previous (left, up)
-            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow))
-            {
+            //else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow)) //keyboard
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) // alt ctrl
+                {
                 ToPreviousButton();
             }
 

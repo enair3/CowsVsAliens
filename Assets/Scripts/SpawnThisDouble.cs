@@ -137,7 +137,7 @@ public class SpawnThisDouble : MonoBehaviour
         if (collision.tag == "hideout")
         {
             hideoutOn = true;
-            musicMain.GetComponent<AudioSource>().volume = 0.15f;
+            musicMain.GetComponent<AudioSource>().volume = 0.05f;
             musicHideout.GetComponent<AudioSource>().Play();
 
             hideoutAlert_text.SetActive(true);
