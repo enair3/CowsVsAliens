@@ -184,7 +184,6 @@ MonoBehaviour:
   fbiRenderer: {fileID: 2455173968230221131}
   fbiHighlight: {fileID: 8792765460751095051}
   fbiGone: {fileID: 21300000, guid: 21fa522c197daef46898f2b13d8bbb02, type: 3}
-  fbiYell: {fileID: 0}
   fbiYellClip:
   - {fileID: 8300000, guid: 76554094af1d66f4fb38d0622e4e90a5, type: 3}
   - {fileID: 8300000, guid: 8153e722526243347a1dfc647aab8b49, type: 3}
