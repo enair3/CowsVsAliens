@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour
 {
     public static SceneManagement sceneManager;
-
+    HighScores highScores;
 
     private void Awake()
     {
@@ -28,6 +28,8 @@ public class SceneManagement : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Gameplay" )
             {
+                //GetComponent<HighScores>().AddNewScore("John", PlayerController.playerInfo.cowCount);
+                //XMLManager.instance.SaveScores();
                 SceneManager.LoadScene("GameOver_noCow_Cutscene");
             }
             if (SceneManager.GetActiveScene().name == "Tutorial_game")
