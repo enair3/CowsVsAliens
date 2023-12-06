@@ -176,10 +176,16 @@ public class TutorialSpawnThisDouble : MonoBehaviour
             {
                 obstacle_text.SetActive(false);
                 toSkipText.SetActive(false);
-                readyToPlayPanel.SetActive(true);
-                Time.timeScale = 0;
+                
+                StartCoroutine(DelayShowReady());
             }
         }
     }
-       
+
+    IEnumerator DelayShowReady()
+    {
+        yield return new WaitForSeconds(1f);
+        readyToPlayPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
 }
