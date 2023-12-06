@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     // background bounds
     private float minX= -2.85f;
     private float maxX = 2.85f;
-    private float minY = -5f;
-    private float maxY = 5f;
+    private float minY = -3.9f;
+    private float maxY = 4f;
 
     // player stats, can connect to UI objects
     public int cowCount = 0;
