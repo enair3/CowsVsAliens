@@ -724,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2010549013560148413, guid: 124ef688804fac9419fbc3936d178da6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.95
+      value: 9.98
       objectReference: {fileID: 0}
     - target: {fileID: 2010549013560148413, guid: 124ef688804fac9419fbc3936d178da6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -761,6 +761,10 @@ PrefabInstance:
     - target: {fileID: 8182257553782602497, guid: 124ef688804fac9419fbc3936d178da6, type: 3}
       propertyPath: m_Name
       value: Background_grass2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388510478509288361, guid: 124ef688804fac9419fbc3936d178da6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124ef688804fac9419fbc3936d178da6, type: 3}
