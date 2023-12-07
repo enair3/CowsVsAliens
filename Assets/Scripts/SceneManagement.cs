@@ -6,11 +6,29 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour
 {
     public static SceneManagement sceneManager;
-    HighScores highScores;
+    public static SceneManagement Instance = null;
+    //HighScores highScores;
+
+    List<HighScoreEntry> scores = new List<HighScoreEntry>();
 
     private void Awake()
     {
         sceneManager = this;
+
+        if (SceneManager.GetActiveScene().name == "Gameplay")
+        {
+            DontDestroyOnLoad(sceneManager);
+
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else if (Instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 
     // Start is called before the first frame update
@@ -18,6 +36,8 @@ public class SceneManagement : MonoBehaviour
     {
         var currentScene = SceneManager.GetActiveScene();
         var currentSceneName = currentScene.name;
+        //scoreSaver = GameObject.Find("XMLManager");
+        scores = AddScore.addScore.scores;
     }
 
     // Update is called once per frame
@@ -28,9 +48,14 @@ public class SceneManagement : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Gameplay" )
             {
-                //GetComponent<HighScores>().AddNewScore("John", PlayerController.playerInfo.cowCount);
+
                 //XMLManager.instance.SaveScores();
+                //AddScore.addScore.AddNewScore("name", 6);
+                //XMLManager.instance.Save();
+                Debug.Log("saving_noCowEnd");
+                AddScore.addScore.AddNewScore("name", PlayerController.playerInfo.cowCount);
                 SceneManager.LoadScene("GameOver_noCow_Cutscene");
+                Debug.Log("done saving");
             }
             if (SceneManager.GetActiveScene().name == "Tutorial_game")
             {
@@ -43,7 +68,10 @@ public class SceneManagement : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Gameplay")
             {
+                Debug.Log("saving_FBIcaught");
+                AddScore.addScore.AddNewScore("name", PlayerController.playerInfo.cowCount);
                 SceneManager.LoadScene("GameOver_FBI_Cutscene");
+                Debug.Log("done saving");
             }
             if (SceneManager.GetActiveScene().name == "Tutorial_game")
             {

@@ -6,5 +6,7 @@ using UnityEngine;
 public class HighScoreEntry
 {
     public string name;
-    public int score = PlayerController.playerInfo.cowCount;
+    //public PlayerController playerInfo;
+    //public int score;
+    public int score;
 }

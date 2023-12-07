@@ -66,11 +66,8 @@ public class SpawnThisDouble : MonoBehaviour
     }
 
     private void Update()
-    {
-        Debug.Log(timeBetweenSpawn_blocks);
-
+    { 
         BlockProgression();
-
     }
 
     // level design block spawning

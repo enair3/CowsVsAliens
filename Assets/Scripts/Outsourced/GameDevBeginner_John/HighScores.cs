@@ -5,34 +5,41 @@ using UnityEngine;
 
 public class HighScores : MonoBehaviour
 {
+    public static HighScores highScores;
     public HighScoreDisplay[] highScoreDisplayArray;
     List<HighScoreEntry> scores = new List<HighScoreEntry>();
     void Start()
     {
-        // Adds some test data
-        //AddNewScore("John", PlayerController.playerInfo.cowCount);
-        //AddNewScore("name", PlayerController.playerInfo.cowCount);
-        UpdateDisplay();
+        scores = AddScore.addScore.scores;
+        XMLManager.instance.Load();
 
+        UpdateDisplay();
     }
+
     void UpdateDisplay()
     {
         //AddNewScore("name", score);
         scores.Sort((HighScoreEntry x, HighScoreEntry y) => y.score.CompareTo(x.score));
         for (int i = 0; i < highScoreDisplayArray.Length; i++)
         {
+            
             if (i < scores.Count)
             {
+                //AddNewScore(scores[i].name, scores[i].score);
+
                 highScoreDisplayArray[i].DisplayHighScore(scores[i].name, scores[i].score);
+                Debug.Log("Added");
             }
             else
             {
                 highScoreDisplayArray[i].HideEntryDisplay();
             }
+            Debug.Log("display");
         }
     }
-    public void AddNewScore(string entryName, int entryScore)
+    /*public void AddNewScore(string entryName, int entryScore)
     {
         scores.Add(new HighScoreEntry { name = entryName, score = entryScore });
-    }
+        Debug.Log("add score");
+    }*/
 }
