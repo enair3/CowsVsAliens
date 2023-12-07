@@ -716,6 +716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background_grass
       objectReference: {fileID: 0}
+    - target: {fileID: 1460532770149905354, guid: 2ba54e3c491f08940b13c2a78b9a73c5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3450151541657977535, guid: 2ba54e3c491f08940b13c2a78b9a73c5, type: 3}
       propertyPath: m_RootOrder
       value: 12

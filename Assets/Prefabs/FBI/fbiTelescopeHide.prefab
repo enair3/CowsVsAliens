@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b45a9ed473eae74468a2a67c8c9e954d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -184,7 +184,6 @@ MonoBehaviour:
   fbiRenderer: {fileID: 6614526265894432631}
   fbiHighlight: {fileID: 2837188049789791739}
   fbiGone: {fileID: 21300000, guid: a1b24c5149cae844f8422ec2660c6e5e, type: 3}
-  fbiYell: {fileID: 0}
   fbiYellClip:
   - {fileID: 8300000, guid: 76554094af1d66f4fb38d0622e4e90a5, type: 3}
   - {fileID: 8300000, guid: 8153e722526243347a1dfc647aab8b49, type: 3}
