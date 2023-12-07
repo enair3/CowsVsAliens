@@ -56,7 +56,7 @@ public class GameVFX : MonoBehaviour
     {
         // red border alert
         if (PlayerController.playerInfo.conspiracy >= (PlayerController.playerInfo.maxConspiracy * 0.6) 
-            || PlayerController.playerInfo.happiness <= (PlayerController.playerInfo.happiness * 0.4))
+            || PlayerController.playerInfo.happiness <= (PlayerController.playerInfo.maxHappiness * 0.4))
         {
             redBorder.SetActive(true);
             alertSFX.GetComponent<AudioSource>().Play();

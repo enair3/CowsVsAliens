@@ -5,14 +5,14 @@ using UnityEngine;
 public class AssetsCredPanel : MonoBehaviour
 {
     public GameObject creds;
-    public GameObject roles;
+    public GameObject prev_creds;
     public GameObject thisButton;
     
     // Start is called before the first frame update
     void Start()
     {
         creds.SetActive(false);
-        roles.SetActive(true);
+        prev_creds.SetActive(true);
         thisButton.SetActive(false);
     }
 
@@ -27,7 +27,7 @@ public class AssetsCredPanel : MonoBehaviour
     {
         yield return new WaitForSeconds(0.8f);
         creds.SetActive(true);
-        roles.SetActive(false);
+        prev_creds.SetActive(false);
         thisButton.SetActive(true);
     }
 }
