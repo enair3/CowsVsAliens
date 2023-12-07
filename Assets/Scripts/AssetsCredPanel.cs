@@ -11,9 +11,12 @@ public class AssetsCredPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        creds.SetActive(false);
-        prev_creds.SetActive(true);
-        thisButton.SetActive(false);
+        if (prev_creds.activeSelf)
+        {
+            creds.SetActive(false);
+            prev_creds.SetActive(true);
+            thisButton.SetActive(false);
+        }
     }
 
     public void AssetCredits()

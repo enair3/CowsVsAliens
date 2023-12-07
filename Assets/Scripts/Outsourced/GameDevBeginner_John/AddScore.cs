@@ -8,7 +8,7 @@ public class AddScore : MonoBehaviour
     public static AddScore addScore;
     public List<HighScoreEntry> scores = new List<HighScoreEntry>();
 
-    private void Start()
+    private void Awake()
     {
         addScore = this;
         
