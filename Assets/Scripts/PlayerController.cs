@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // edge cases
-        if (cowCount <= 0)
+        if (cowCount < 0)
         {
             cowCount = 0;
         }
@@ -99,7 +99,6 @@ public class PlayerController : MonoBehaviour
                 happiness = maxHappiness;
         }
     }
-
 
 
 void CowDroughtPenalty()
