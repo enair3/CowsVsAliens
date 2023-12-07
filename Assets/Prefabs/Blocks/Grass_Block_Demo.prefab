@@ -255,9 +255,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b838eb0202614ba42aa2f5dcf1697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameVFX: {fileID: 0}
   timeDetectedByFBI: 0
   fbiRenderer: {fileID: 0}
+  fbiHighlight: {fileID: 0}
   fbiGone: {fileID: 0}
+  fbiYellClip: []
 --- !u!114 &3032675874286557883
 MonoBehaviour:
   m_ObjectHideFlags: 0
