@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba071725afa9914e8a02097b8c1f7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoFileName: intro_Anim_Pixelized_NOAUDIO.mp4
+  videoFileName: IntroCutscene_wAudio_2.mp4
   vidPlayer: {fileID: 173732159}
 --- !u!4 &173732161
 Transform:
