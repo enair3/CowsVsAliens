@@ -803,7 +803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ffc8b9cdf80ab6d41814fee238b173a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ab11985388391342b208d47ea522213, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3068,7 +3068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4111099482245079384, guid: 13bd788e3760477439f0b8404453d496, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4111099482245079384, guid: 13bd788e3760477439f0b8404453d496, type: 3}
       propertyPath: m_AnchorMax.x
