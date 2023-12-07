@@ -10,14 +10,18 @@ public class XMLManager : MonoBehaviour
     public Leaderboard leaderboard;
     void Awake()
     {
+        Debug.Log("loadXML");
         instance = this;
         if (!Directory.Exists(Application.persistentDataPath + "/HighScores/"))
         {
             Directory.CreateDirectory(Application.persistentDataPath + "/HighScores/");
         }
 
-        Load();
+        //Load();
+        //SaveScores(leaderboard.list);
+        
     }
+
     public void SaveScores(List<HighScoreEntry> scoresToSave)
     {
         leaderboard.list = scoresToSave;
@@ -25,8 +29,8 @@ public class XMLManager : MonoBehaviour
         FileStream stream = new FileStream(Application.persistentDataPath + "/HighScores/highscores.xml", FileMode.Create);
         serializer.Serialize(stream, leaderboard);
         stream.Close();
-        Save();
     }
+
     public List<HighScoreEntry> LoadScores()
     {
         if (File.Exists(Application.persistentDataPath + "/HighScores/highscores.xml"))
@@ -39,12 +43,13 @@ public class XMLManager : MonoBehaviour
     }
 
     List<HighScoreEntry> scores;
-    void Save()
+    public void Save()
     {
         XMLManager.instance.SaveScores(scores);
+        Debug.Log("saved");
     }
 
-    void Load()
+    public void Load()
     {
         scores = XMLManager.instance.LoadScores();
     }

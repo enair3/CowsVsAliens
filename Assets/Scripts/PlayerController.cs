@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController playerInfo; // ref this script in other scripts
+    public static PlayerController Instance = null;
     public CollectionControls collectionControls;
 
     // sprite vars
@@ -35,6 +36,16 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         playerInfo = this;
+
+        /*if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }*/
+
         Time.timeScale = 1;
         //DontDestroyOnLoad(transform.root);
     }
@@ -69,6 +80,7 @@ public class PlayerController : MonoBehaviour
 
         if (timeWithoutCowCollected >= 4.0f)
         {
+            //start penalty
             inCowDrought = true;
             CowDroughtPenalty();
         }
@@ -96,8 +108,10 @@ void CowDroughtPenalty()
     {
         if (inCowDrought)
         {
-            // decrease happiness by value per time in drought, not incl threshold
-            happiness -= (0.0005f * (timeWithoutCowCollected - 4.0f));
+                // decrease happiness by value for start
+                // faster decr w incr timeWithoutCowCollected
+                happiness -= (0.0005f * (timeWithoutCowCollected - 4.0f));
+                //happiness -= (1f * Time.deltaTime);
         }
         else
         {
