@@ -139,7 +139,7 @@ public class SpawnThisDouble : MonoBehaviour
 
             hideoutAlert_text.SetActive(true);
             //hideoutAlert_text.GetComponent<UIVertex>().color.a += Time.deltaTime;
-            activeList = hideoutBlocks;
+            //activeList = hideoutBlocks;
 
             Debug.Log("hideout activated");
         }

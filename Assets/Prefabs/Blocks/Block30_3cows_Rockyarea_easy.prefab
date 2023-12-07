@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3826237443351981268}
   m_Layer: 0
   m_Name: Block30_3cows_Rockyarea_easy
-  m_TagString: hideout
+  m_TagString: regular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

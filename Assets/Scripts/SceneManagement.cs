@@ -10,6 +10,7 @@ public class SceneManagement : MonoBehaviour
     //HighScores highScores;
 
     List<HighScoreEntry> scores = new List<HighScoreEntry>();
+    public List<string> names;
 
     private void Awake()
     {
@@ -38,6 +39,7 @@ public class SceneManagement : MonoBehaviour
         var currentSceneName = currentScene.name;
         //scoreSaver = GameObject.Find("XMLManager");
         scores = AddScore.addScore.scores;
+        names = AlienNames.alienNames.names;
     }
 
     // Update is called once per frame
@@ -48,12 +50,10 @@ public class SceneManagement : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Gameplay" )
             {
-
-                //XMLManager.instance.SaveScores();
-                //AddScore.addScore.AddNewScore("name", 6);
-                //XMLManager.instance.Save();
                 Debug.Log("saving_noCowEnd");
-                AddScore.addScore.AddNewScore("name", PlayerController.playerInfo.cowCount);
+                AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
+                                              PlayerController.playerInfo.cowCount);
+                AlienNames.alienNames.alienNameIndex++;
                 SceneManager.LoadScene("GameOver_noCow_Cutscene");
                 Debug.Log("done saving");
             }
@@ -69,7 +69,9 @@ public class SceneManagement : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Gameplay")
             {
                 Debug.Log("saving_FBIcaught");
-                AddScore.addScore.AddNewScore("name", PlayerController.playerInfo.cowCount);
+                AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
+                                              PlayerController.playerInfo.cowCount);
+                AlienNames.alienNames.alienNameIndex++;
                 SceneManager.LoadScene("GameOver_FBI_Cutscene");
                 Debug.Log("done saving");
             }
