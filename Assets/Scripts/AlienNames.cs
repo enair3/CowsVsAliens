@@ -14,7 +14,7 @@ public class AlienNames : MonoBehaviour
     {
         alienNames = this;
 
-        names = new List<string>() {"myumyu", "raak" , "sanzh", "kulipi",
+        names = new List<string>() {"myumy", "raak" , "sanzh", "kulip",
                                     "aran", "ciqt", "veram", "teep", 
                                     "bbrhh", "wedxe"};
     }
@@ -23,7 +23,7 @@ public class AlienNames : MonoBehaviour
     {
         if (alienNameIndex == (names.Count - 1))
         {
-            names.Add("team " + alienNameIndex.ToString());
+            names.Add("te " + alienNameIndex.ToString());
         }
     }
 

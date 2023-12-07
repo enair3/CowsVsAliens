@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // edge cases
-        if (cowCount < 0)
+        if (cowCount <= 0)
         {
             cowCount = 0;
         }
@@ -110,7 +110,7 @@ void CowDroughtPenalty()
         {
                 // decrease happiness by value for start
                 // faster decr w incr timeWithoutCowCollected
-                happiness -= 0.0006f * (timeWithoutCowCollected - 4.0f);
+                happiness -= 0.0005f * (timeWithoutCowCollected - 4.0f);
                 //happiness -= (1f * Time.deltaTime);
         }
         else

@@ -86,17 +86,17 @@ public class SpawnThisDouble : MonoBehaviour
 
     void BlockProgression()
     {
-        if (blocksSpawned > 2 && blocksSpawned <= 4)
+        if (blocksSpawned > 5 && blocksSpawned <= 10)
         {
             activeList = med;
         }
 
-        if (blocksSpawned > 4 && blocksSpawned <= 6)
+        if (blocksSpawned > 10 && blocksSpawned <= 15)
         {
             activeList = hard;
         }
 
-        if (blocksSpawned > 8) //15, incr by 5
+        if (blocksSpawned > 15) //15, incr by 5
         {
             activeList = regularBlocks;
         }
