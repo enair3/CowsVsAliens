@@ -51,6 +51,7 @@ public class SceneManagement : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Gameplay" )
             {
                 Debug.Log("saving_noCowEnd");
+                Debug.Log(AlienNames.alienNames.alienNameIndex);
                 AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
                                               PlayerController.playerInfo.cowCount);
                 AlienNames.alienNames.alienNameIndex++;
