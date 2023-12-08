@@ -26,7 +26,7 @@ public class SceneManagement : MonoBehaviour
             }
             else if (Instance != this)
             {
-                Destroy(gameObject);
+                Destroy(this);
             }
         }
 
@@ -54,7 +54,7 @@ public class SceneManagement : MonoBehaviour
                 Debug.Log(AlienNames.alienNames.alienNameIndex);
                 AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
                                               PlayerController.playerInfo.cowCount);
-                AlienNames.alienNames.alienNameIndex++;
+                //AlienNames.alienNames.alienNameIndex++;
                 SceneManager.LoadScene("GameOver_noCow_Cutscene");
                 Debug.Log("done saving");
             }

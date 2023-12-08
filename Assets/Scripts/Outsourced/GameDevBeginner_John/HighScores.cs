@@ -34,7 +34,6 @@ public class HighScores : MonoBehaviour
             {
                 highScoreDisplayArray[i].HideEntryDisplay();
             }
-            Debug.Log("display");
         }
     }
     /*public void AddNewScore(string entryName, int entryScore)

@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7562216106978887485}
   - component: {fileID: 7562216106978887486}
+  - component: {fileID: 1870156838}
+  - component: {fileID: 1870156839}
+  - component: {fileID: 1870156840}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -44,4 +47,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b7b95fed75c4f4d8bb9377ddb47dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreManager: {fileID: 0}
+  names: []
+--- !u!114 &1870156838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562216106978887487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc54c4f4aeeaecc48a34e1df3562953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1870156839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562216106978887487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926b73c6ce61ca7469150bd11ffa1338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  names: []
+  alienNameIndex: 0
+--- !u!114 &1870156840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562216106978887487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85201d33887fbe4f81b2a1609a130cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
