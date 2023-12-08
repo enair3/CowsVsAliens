@@ -7,6 +7,7 @@ public class AlienNames : MonoBehaviour
     public static AlienNames alienNames;
 
     public List<string> names = new List<string>();
+    public string nameX;
     public int alienNameIndex;
 
     // Start is called before the first frame update

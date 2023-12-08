@@ -52,7 +52,9 @@ public class SceneManagement : MonoBehaviour
             {
                 Debug.Log("saving_noCowEnd");
                 Debug.Log(AlienNames.alienNames.alienNameIndex);
-                AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
+                /*AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
+                                              PlayerController.playerInfo.cowCount); */
+                AddScore.addScore.AddNewScore("te " + Random.Range(0, 100).ToString(),
                                               PlayerController.playerInfo.cowCount);
                 //AlienNames.alienNames.alienNameIndex++;
                 SceneManager.LoadScene("GameOver_noCow_Cutscene");
@@ -70,9 +72,11 @@ public class SceneManagement : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Gameplay")
             {
                 Debug.Log("saving_FBIcaught");
-                AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
+                /*AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
+                                              PlayerController.playerInfo.cowCount); */
+                AddScore.addScore.AddNewScore("fb " + Random.Range(0, 100).ToString(),
                                               PlayerController.playerInfo.cowCount);
-                AlienNames.alienNames.alienNameIndex++;
+                //AlienNames.alienNames.alienNameIndex++;
                 SceneManager.LoadScene("GameOver_FBI_Cutscene");
                 Debug.Log("done saving");
             }
