@@ -17,7 +17,7 @@ public class AddScore : MonoBehaviour
     public void AddNewScore(string entryName, int entryScore)
     {
         scores.Add(new HighScoreEntry { name = entryName, score = entryScore });
-        AlienNames.alienNames.alienNameIndex++;
+        //AlienNames.alienNames.alienNameIndex++;
         XMLManager.instance.Save();
         Debug.Log("add score");
     }
