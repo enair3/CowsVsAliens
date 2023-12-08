@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013201, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013201, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_AnchorMin.x
@@ -258,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013201, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013201, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_SizeDelta.x
@@ -314,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013201, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 34.2
+      value: -265.8
       objectReference: {fileID: 0}
     - target: {fileID: 3222514273635013201, guid: c67529b5b759c8c4ba99406aa03f10ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -796,7 +796,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
