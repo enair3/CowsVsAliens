@@ -7,7 +7,7 @@ public class AlienNames : MonoBehaviour
     public static AlienNames alienNames;
 
     public List<string> names = new List<string>();
-    public int alienNameIndex = 0;
+    public int alienNameIndex;
 
     // Start is called before the first frame update
     private void Awake()
@@ -17,6 +17,8 @@ public class AlienNames : MonoBehaviour
         names = new List<string>() {"myumy", "raak" , "sanzh", "kulip",
                                     "aran", "ciqt", "veram", "teep", 
                                     "bbrhh", "wedxe"};
+
+        alienNameIndex = 0;
     }
 
     private void Update()
