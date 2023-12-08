@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8718456660262369751}
   - component: {fileID: -684212626973297569}
-  - component: {fileID: 5384145185500173}
   - component: {fileID: 7876592086046803433}
+  - component: {fileID: 1990977616974854854}
   m_Layer: 0
   m_Name: Barn
   m_TagString: Untagged
@@ -56,38 +56,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &5384145185500173
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718731755757786438}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.017481677, y: 3.3860273}
-      - {x: -1.9124842, y: 2.5963697}
-      - {x: -2.7812967, y: 1.7420036}
-      - {x: -2.756213, y: -2.102963}
-      - {x: 2.786981, y: -2.0723348}
-      - {x: 2.7842865, y: 1.7367747}
-      - {x: 1.9432508, y: 2.5572457}
 --- !u!114 &7876592086046803433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +68,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1249853ceb0ddb54a81ec66b544b7d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameVFX: {fileID: 0}
+--- !u!61 &1990977616974854854
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3718731755757786438}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.71403325}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.868968, y: 3.2704904}
+  m_EdgeRadius: 0
 --- !u!1 &9156193022523105518
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +166,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1822124341
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c0b88f73b22f405428e70c43259c5319, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
