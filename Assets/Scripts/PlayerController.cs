@@ -101,7 +101,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
 void CowDroughtPenalty()
 {
     if (Time.timeScale == 1)
@@ -110,7 +109,7 @@ void CowDroughtPenalty()
         {
                 // decrease happiness by value for start
                 // faster decr w incr timeWithoutCowCollected
-                happiness -= 0.0006f * (timeWithoutCowCollected - 4.0f);
+                happiness -= 0.0005f * (timeWithoutCowCollected - 4.0f);
                 //happiness -= (1f * Time.deltaTime);
         }
         else

@@ -4873,37 +4873,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -47}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1870156835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7562216106978887487, guid: 08a76e1a67bb36740be8b94512b18dde, type: 3}
-  m_PrefabInstance: {fileID: 7562216108005626471}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1870156838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870156835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc54c4f4aeeaecc48a34e1df3562953c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1870156839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870156835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 926b73c6ce61ca7469150bd11ffa1338, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  names: []
-  alienNameIndex: 0
 --- !u!1001 &1916525014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6167,7 +6136,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager_gameplay
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 08a76e1a67bb36740be8b94512b18dde, type: 3}
 --- !u!1001 &8764859052163744034
 PrefabInstance:

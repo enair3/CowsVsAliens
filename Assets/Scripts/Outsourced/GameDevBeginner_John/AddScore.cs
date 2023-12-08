@@ -8,7 +8,7 @@ public class AddScore : MonoBehaviour
     public static AddScore addScore;
     public List<HighScoreEntry> scores = new List<HighScoreEntry>();
 
-    private void Awake()
+    private void Start()
     {
         addScore = this;
         
@@ -17,6 +17,8 @@ public class AddScore : MonoBehaviour
     public void AddNewScore(string entryName, int entryScore)
     {
         scores.Add(new HighScoreEntry { name = entryName, score = entryScore });
+        AlienNames.alienNames.alienNameIndex++;
+        XMLManager.instance.Save();
         Debug.Log("add score");
     }
 }
