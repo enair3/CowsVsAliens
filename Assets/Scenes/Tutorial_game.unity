@@ -1955,7 +1955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &623429190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3816,6 +3816,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   names: []
+  randomNames:
+  - a
+  - b
+  - c
+  - d
+  - e
+  - f
+  - g
+  - h
+  - i
+  - j
+  - k
+  - l
+  - m
+  - n
+  - o
+  - p
+  - q
+  - r
+  - s
+  - t
+  - u
+  - v
+  - w
+  - x
+  - y
+  - z
+  entryName: 
 --- !u!4 &1130321242
 Transform:
   m_ObjectHideFlags: 0

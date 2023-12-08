@@ -2128,7 +2128,7 @@ GameObject:
   - component: {fileID: 1081182990}
   - component: {fileID: 1081182989}
   m_Layer: 5
-  m_Name: yourship_txt
+  m_Name: yourufo_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2174,7 +2174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your Ship
+  m_text: Your UFO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a581ce1681ce904ca0c86478f2d4779, type: 2}
   m_sharedMaterial: {fileID: -3550068478113886045, guid: 2a581ce1681ce904ca0c86478f2d4779, type: 2}
