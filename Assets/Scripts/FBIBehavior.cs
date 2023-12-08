@@ -40,7 +40,7 @@ public class FBIBehavior : MonoBehaviour
         {
             // level 1 severity: hover over FBI, NO BUTTONS PRESSED
             // if beam is off
-            PlayerController.playerInfo.conspiracy += 0.3f * timeDetectedByFBI;
+            PlayerController.playerInfo.conspiracy += 0.6f * timeDetectedByFBI;
 
             fbiHighlight.SetActive(true);
 
@@ -48,7 +48,7 @@ public class FBIBehavior : MonoBehaviour
             // if beam is on
             if (PlayerController.playerInfo.collectionControls._beamOn)
             {
-                PlayerController.playerInfo.conspiracy += 0.6f * timeDetectedByFBI;
+                PlayerController.playerInfo.conspiracy += 0.8f * timeDetectedByFBI;
 
                 // level 3 severity: pick up FBI and NOT hiding FBI nor satellite, BOTH BUTTONS PRESSED (\ AND Space)
                 if (this.gameObject.tag == "FBI" && PlayerController.playerInfo.collectionControls._collect)

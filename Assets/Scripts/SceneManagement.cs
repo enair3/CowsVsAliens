@@ -11,6 +11,10 @@ public class SceneManagement : MonoBehaviour
 
     List<HighScoreEntry> scores = new List<HighScoreEntry>();
     public List<string> names;
+    public List<string> randomNames = new List<string>() { "a", "b", "c", "d", "e", "f",
+                                                            "g", "h", "i", "j", "k", "l",
+                                                            "m", "n", "o", "p", "q", "r",
+                                                            "s", "t", "u", "v", "w", "x", "y", "z"};
 
     private void Awake()
     {
@@ -54,7 +58,8 @@ public class SceneManagement : MonoBehaviour
                 Debug.Log(AlienNames.alienNames.alienNameIndex);
                 /*AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
                                               PlayerController.playerInfo.cowCount); */
-                AddScore.addScore.AddNewScore("te " + Random.Range(0, 100).ToString(),
+                AddScore.addScore.AddNewScore(
+                                              randomNames[Random.Range(0, randomNames.Count -1)] + randomNames[Random.Range(0, randomNames.Count - 1)],
                                               PlayerController.playerInfo.cowCount);
                 //AlienNames.alienNames.alienNameIndex++;
                 SceneManager.LoadScene("GameOver_noCow_Cutscene");
@@ -74,7 +79,8 @@ public class SceneManagement : MonoBehaviour
                 Debug.Log("saving_FBIcaught");
                 /*AddScore.addScore.AddNewScore(names[AlienNames.alienNames.alienNameIndex],
                                               PlayerController.playerInfo.cowCount); */
-                AddScore.addScore.AddNewScore("fb " + Random.Range(0, 100).ToString(),
+                AddScore.addScore.AddNewScore(
+                                              randomNames[Random.Range(0, randomNames.Count - 1)] + randomNames[Random.Range(0, randomNames.Count - 1)],
                                               PlayerController.playerInfo.cowCount);
                 //AlienNames.alienNames.alienNameIndex++;
                 SceneManager.LoadScene("GameOver_FBI_Cutscene");

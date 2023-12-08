@@ -171,8 +171,19 @@ public class TutorialSpawnThisDouble : MonoBehaviour
                 activeText = obstacle_text;
             }
 
-            // next empty field, ask to repeat tutorial or play game
-            if (blocksSpawned > 12)
+            // empty before ready to play
+            if (blocksSpawned >= 11) // empty field, buffer for obstacles
+            {
+                currentBlock = tutorialList[0];
+            }
+
+            if (textTimer > 58f)
+            {
+                obstacle_text.SetActive(false);
+            }
+
+                // next empty field, ask to repeat tutorial or play game
+                if (blocksSpawned > 12)
             {
                 obstacle_text.SetActive(false);
                 toSkipText.SetActive(false);

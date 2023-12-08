@@ -1955,7 +1955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &623429190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1996,7 +1996,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Collect cows!
+  m_text: 'Collect cows!
+
+    P1 - hold beam
+
+    P2 - press to collect'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e9f65be623922d48b4f35e7ecc4812a, type: 2}
   m_sharedMaterial: {fileID: 4144819241459346368, guid: 0e9f65be623922d48b4f35e7ecc4812a, type: 2}
@@ -3811,6 +3815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b7b95fed75c4f4d8bb9377ddb47dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  names: []
 --- !u!4 &1130321242
 Transform:
   m_ObjectHideFlags: 0
@@ -6991,6 +6996,7 @@ MonoBehaviour:
   - {fileID: 1025600484910880863, guid: 99b550c763953cd4ba2efff1e3255294, type: 3}
   - {fileID: 1025600484910880863, guid: 4c9049ca002fb814580a7026a3f9d700, type: 3}
   - {fileID: 564678358758580704, guid: 8dc132602245a154db51174761471ce3, type: 3}
+  - {fileID: 1025600484910880863, guid: 99b550c763953cd4ba2efff1e3255294, type: 3}
   tutorialText:
   - {fileID: 1422918658}
   - {fileID: 623429189}
