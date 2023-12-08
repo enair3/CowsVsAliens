@@ -9,6 +9,7 @@ public class NameText : MonoBehaviour
     void Update()
     {
 
-        nameUI.text = string.Format(SceneManagement.sceneManager.names[AlienNames.alienNames.alienNameIndex - 1]);
+        //nameUI.text = string.Format(SceneManagement.sceneManager.names[AlienNames.alienNames.alienNameIndex - 1]);
+        nameUI.text = SceneManagement.sceneManager.entryName;
     }
 }
