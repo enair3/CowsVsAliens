@@ -25,13 +25,19 @@ public class HoverButton : MonoBehaviour
         if (buttons[currentButton].isActiveAndEnabled)
         {
             // to next (right, down)
+            // KEYBOARD
             //if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) //keyboard
+
+            // ALT CTRL
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow)) //alt ctrl
             {
                 ToNextButton();
             }
             // to previous (left, up)
+            // KEYBOARD
             //else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow)) //keyboard
+
+            //ALT CTRL
             else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) // alt ctrl
                 {
                 ToPreviousButton();
