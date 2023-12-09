@@ -33,6 +33,7 @@ public class TutorialSpawnThisDouble : MonoBehaviour
     public GameObject relieveDroughtText;
     public GameObject FBI_text;
     public GameObject obstacle_text;
+    public GameObject tutEnd_text;
 
     void Start()
     {
@@ -48,6 +49,7 @@ public class TutorialSpawnThisDouble : MonoBehaviour
         cowDroughtText.SetActive(false);
         FBI_text.SetActive(false);
         obstacle_text.SetActive(false);
+        tutEnd_text.SetActive(false);
 
         activeText = movementText;
         toSkipText = GameObject.Find("PauseToSkip_text");
@@ -172,20 +174,22 @@ public class TutorialSpawnThisDouble : MonoBehaviour
             }
 
             // empty before ready to play
-            if (blocksSpawned >= 11) // empty field, buffer for obstacles
+            if (blocksSpawned == 11) // empty field, buffer for obstacles
             {
                 currentBlock = tutorialList[0];
             }
 
-            if (textTimer > 58f)
+            if (textTimer > 75f)
             {
                 obstacle_text.SetActive(false);
+                tutEnd_text.SetActive(true);
+                activeText = tutEnd_text;
             }
 
                 // next empty field, ask to repeat tutorial or play game
-                if (blocksSpawned > 12)
+            if (blocksSpawned > 12)
             {
-                obstacle_text.SetActive(false);
+                tutEnd_text.SetActive(false);
                 toSkipText.SetActive(false);
                 
                 StartCoroutine(DelayShowReady());
